@@ -10,8 +10,8 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "outDir": "./dist/app",
-    "declaration": true,  // Generate .d.ts files
-    "declarationMap": true  // Optional, generate declaration maps
+    "declaration": true,
+    "declarationMap": true
   },
   "include": ["src"],
   "exclude": ["node_modules"]

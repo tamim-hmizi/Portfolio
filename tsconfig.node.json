@@ -10,8 +10,8 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "outDir": "./dist/node",
-    "declaration": true,  // Generate .d.ts files
-    "declarationMap": true  // Optional, generate declaration maps
+    "declaration": true,
+    "declarationMap": true
   },
   "include": ["vite.config.ts"],
   "exclude": ["node_modules"]
