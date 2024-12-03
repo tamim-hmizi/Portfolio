@@ -39,7 +39,6 @@ const ExperienceSection: React.FC = () => {
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                     <h3 className="text-2xl font-semibold text-gray-800">Network Support</h3>
                     <p className="text-gray-600">Responding to tickets solving B2B Network problems at Tunisie-Telecom C-NOC service .</p>
-
                 </div>
             </motion.div>
         </motion.section>

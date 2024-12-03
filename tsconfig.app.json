@@ -7,10 +7,11 @@
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "bundler",
-
     "skipLibCheck": true,
     "isolatedModules": true,
-    "outDir": "./dist/app"
+    "outDir": "./dist/app",
+    "declaration": true,  // Generate .d.ts files
+    "declarationMap": true  // Optional, generate declaration maps
   },
   "include": ["src"],
   "exclude": ["node_modules"]

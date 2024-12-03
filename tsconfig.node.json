@@ -7,10 +7,12 @@
     "module": "ESNext",
     "strict": true,
     "moduleResolution": "bundler",
-
     "skipLibCheck": true,
     "isolatedModules": true,
-    "outDir": "./dist/node"
+    "outDir": "./dist/node",
+    "declaration": true,  // Generate .d.ts files
+    "declarationMap": true  // Optional, generate declaration maps
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"],
+  "exclude": ["node_modules"]
 }
