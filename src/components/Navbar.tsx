@@ -28,17 +28,17 @@ const Navbar: React.FC = () => {
         <Link to="/Portfolio" className="hover:text-pink-400">
           Home
         </Link>
-        <Link to="/experience" className="hover:text-pink-400">
+        <Link to="/Portfolio/experience" className="hover:text-pink-400">
           Experience
         </Link>
 
-        <Link to="/education" className="hover:text-purple-400">
+        <Link to="/Portfolio/education" className="hover:text-purple-400">
           Education
         </Link>
-        <Link to="/skills" className="hover:text-blue-400">
+        <Link to="/Portfolio/skills" className="hover:text-blue-400">
           Skills
         </Link>
-        <Link to="/contact" className="hover:text-blue-400">
+        <Link to="/Portfolio/contact" className="hover:text-blue-400">
           Contact
         </Link>
       </div>
@@ -57,14 +57,14 @@ const Navbar: React.FC = () => {
         <div className="flex justify-center items-center h-full">
           <div className="space-y-4 text-center text-white">
             <Link
-              to="/"
+              to="/Portfolio"
               className="hover:text-pink-300 block select-none"
               onClick={closeMenu}
             >
               Home
             </Link>
             <Link
-              to="/experience"
+              to="/Portfolio/experience"
               className="hover:text-pink-300 block select-none"
               onClick={closeMenu}
             >
@@ -72,21 +72,21 @@ const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              to="/education"
+              to="/Portfolio/education"
               className="hover:text-pink-300 block select-none"
               onClick={closeMenu}
             >
               Education
             </Link>
             <Link
-              to="/skills"
+              to="/Portfolio/skills"
               className="hover:text-pink-300 block select-none"
               onClick={closeMenu}
             >
               Skills
             </Link>
             <Link
-              to="/contact"
+              to="/Portfolio/contact"
               className="hover:text-pink-300 block select-none"
               onClick={closeMenu}
             >

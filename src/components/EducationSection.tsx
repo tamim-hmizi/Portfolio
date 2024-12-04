@@ -22,7 +22,7 @@ const EducationSection: React.FC = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
           <h3 className="text-2xl font-semibold text-gray-800">Esprit</h3>
           <p className="text-gray-600">
-            Bachelor’s Degree in Software Engineering with a specialization in
+            Master’s Degree in Software Engineering with a specialization in
             Cloud Computing and DevOps.
           </p>
         </div>

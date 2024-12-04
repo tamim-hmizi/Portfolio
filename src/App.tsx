@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import ProfileSection from "./components/ProfileSection";
 import ExperienceSection from "./components/ExperienceSection";
 
@@ -28,13 +33,12 @@ const App: React.FC = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/Portfolio" replace/>} />
+          <Route path="/" element={<Navigate to="/Portfolio" replace />} />
           <Route path="/Portfolio" element={<ProfileSection />} />
-          <Route path="/experience" element={<ExperienceSection />} />
-
-          <Route path="/education" element={<EducationSection />} />
-          <Route path="/skills" element={<SkillsSection />} />
-          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/Portfolio/experience" element={<ExperienceSection />} />
+          <Route path="/Portfolio/education" element={<EducationSection />} />
+          <Route path="/Portfolio/skills" element={<SkillsSection />} />
+          <Route path="/Portfolio/contact" element={<ContactSection />} />
         </Routes>
       </Router>
     </div>

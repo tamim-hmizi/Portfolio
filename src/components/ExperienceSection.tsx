@@ -1,5 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  FaAws,
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaPython,
+  FaGitAlt,
+} from "react-icons/fa";
+import { SiNextdotjs, SiMongodb, SiJenkins, SiTerraform } from "react-icons/si";
+import { MdSupportAgent } from "react-icons/md";
 
 const ExperienceSection: React.FC = () => {
   return (
@@ -14,8 +24,8 @@ const ExperienceSection: React.FC = () => {
         Experience
       </h2>
       <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-6">
-        I have worked on several exciting projects involving cloud computing,
-        DevOps practices, and full-stack development.
+        Leveraging expertise in cloud computing, DevOps, and full-stack
+        development.
       </p>
       <motion.div
         className="w-full max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -23,49 +33,49 @@ const ExperienceSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
+        {/* InternRFC Card */}
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-800">InternRFC</h3>
-          <p className="text-gray-600">
-            Creating an Intern management system for interns working at RFC .
-          </p>
-          <p className="text-gray-600">
-            A cloud native app built with Next.js using aws cloud services .
-          </p>
-          <p className="text-gray-600">
-            AWS services used : S3 , DynamoDB , ECR , EKS , CloudWatch .
-          </p>
-          <p className="text-gray-600">
-            DEVOPS tools used : git , jenkins , docker , terraform .
-          </p>
-          <p className="text-gray-600">
-            Languages used : Node.js , Javascript .
-          </p>
-          <p className="text-gray-600">
-            Frameworks used : Next.js , React.js .
-          </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-800">Tutorial App</h3>
-          <p className="text-gray-600">
-            Creating a tutorial app with MERN stack for ESPRIT students .
-          </p>
-          <p className="text-gray-600">
-            Courses data are scraped using PYTHON .
-          </p>
-          <p className="text-gray-600">
-            Languages used : Node.js , Javascript , Python .
-          </p>
-          <p className="text-gray-600">
-            Frameworks used : React.js , Express.js .
-          </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-800">
-            Network Support
+          <h3 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
+            <SiNextdotjs className="text-blue-500" /> InternRFC
           </h3>
-          <p className="text-gray-600">
-            Responding to tickets solving B2B Network problems at
-            Tunisie-Telecom C-NOC service .
+          <p className="text-gray-600 mt-2">
+            Built a cloud-native app to streamline intern management for RFC.
+          </p>
+          <div className="flex gap-2 text-blue-500 mt-4">
+            <FaAws size={24} />
+            <FaDocker size={24} />
+            <SiJenkins size={24} />
+            <SiTerraform size={24} />
+            <FaGitAlt size={24} />
+            <SiNextdotjs size={24} />
+          </div>
+        </div>
+
+        {/* Tutorial App Card */}
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
+            <FaReact className="text-blue-500" /> Tutorial App
+          </h3>
+          <p className="text-gray-600 mt-2">
+            Developed a MERN stack app with scraped course data for ESPRIT
+            students.
+          </p>
+          <div className="flex gap-2 text-blue-500 mt-4">
+            <FaGitAlt size={24} />
+            <SiMongodb size={24} />
+            <FaNodeJs size={24} />
+            <FaPython size={24} />
+            <FaReact size={24} />
+          </div>
+        </div>
+
+        {/* Network Support Card */}
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
+            <MdSupportAgent className="text-blue-500" /> Network Support
+          </h3>
+          <p className="text-gray-600 mt-2">
+            Resolved B2B network issues at Tunisie-Telecom's C-NOC service.
           </p>
         </div>
       </motion.div>
