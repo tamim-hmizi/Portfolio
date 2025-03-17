@@ -59,7 +59,7 @@ const ContactSection: React.FC = () => {
             <FaFacebook className="hover:text-blue-700" />
           </a>
           <a
-            href="https://www.instagram.com/tamim_hmizi/"
+            href="https://www.instagram.com/tamim.hmizi/"
             target="_blank"
             rel="noopener noreferrer"
           >
