@@ -25,6 +25,9 @@ import {
   SiOpenstack,
   SiSymfony,
   SiMicrosoftazure,
+  SiHelm,
+  SiSonarqube,
+  SiFastapi,
 } from "react-icons/si";
 
 const SkillsSection: React.FC = () => {
@@ -67,6 +70,8 @@ const SkillsSection: React.FC = () => {
             <SiPrometheus className="text-6xl text-[#E6522C]" />
             <SiGrafana className="text-6xl text-[#F46800]" />
             <SiAzuredevops className="text-6xl text-[#0078D7]" />
+            <SiHelm className="text-6xl text-[#0F1689]" />
+            <SiSonarqube className="text-6xl text-[#4E9BCD]" />
           </div>
         </div>
 
@@ -84,6 +89,7 @@ const SkillsSection: React.FC = () => {
             <SiFlask className="text-6xl text-[#000000]" />
             <SiLaravel className="text-6xl text-[#FF2D20]" />
             <SiSymfony className="text-6xl text-[#000000]" />
+            <SiFastapi className="text-6xl text-[#05998b]" />
           </div>
         </div>
       </motion.div>

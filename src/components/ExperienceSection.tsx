@@ -1,14 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaAws, FaReact, FaNodeJs, FaDocker, FaPython, FaGitAlt } from "react-icons/fa";
 import {
-  FaAws,
-  FaReact,
-  FaNodeJs,
-  FaDocker,
-  FaPython,
-  FaGitAlt,
-} from "react-icons/fa";
-import { SiNextdotjs, SiMongodb, SiJenkins, SiTerraform } from "react-icons/si";
+  SiNextdotjs,
+  SiMongodb,
+  SiJenkins,
+  SiTerraform,
+  SiKubernetes,
+  SiHelm,
+  SiSonarqube,
+  SiPrometheus,
+  SiGrafana,
+  SiFastapi,
+} from "react-icons/si";
 import { MdSupportAgent } from "react-icons/md";
 
 const ExperienceSection: React.FC = () => {
@@ -33,6 +37,29 @@ const ExperienceSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
+        {/* QuickOps Card */}
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
+            <SiNextdotjs className="text-blue-500" /> QuickOps — DevOps-as-a-Service
+          </h3>
+          <p className="text-gray-600 mt-2">
+            End-of-study SaaS that analyzes GitHub repos, suggests infrastructure
+            and CI/CD pipelines, and provisions to VMs or Kubernetes with
+            monitoring and security configured.
+          </p>
+          <div className="flex gap-2 text-blue-500 mt-4 flex-wrap">
+            <FaDocker size={24} />
+            <SiJenkins size={24} />
+            <SiTerraform size={24} />
+            <SiKubernetes size={24} />
+            <SiHelm size={24} />
+            <SiSonarqube size={24} />
+            <SiPrometheus size={24} />
+            <SiGrafana size={24} />
+            <SiFastapi size={24} />
+            <FaGitAlt size={24} />
+          </div>
+        </div>
         {/* InternRFC Card */}
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
