@@ -19,12 +19,21 @@ const EducationSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h3 className="text-2xl font-semibold text-gray-800">Esprit</h3>
-          <p className="text-gray-600">
-            Master’s Degree in Software Engineering with a specialization in
-            Cloud Computing and DevOps.
-          </p>
+        <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-6 flex items-center gap-4">
+          <img
+            src="/Portfolio/espritlogo.jpg"
+            alt="Esprit logo"
+            className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-md shadow-sm bg-white"
+          />
+          <div className="text-left">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+              Esprit
+            </h3>
+            <p className="text-gray-600 text-sm md:text-base">
+              Master’s Degree in Software Engineering with a specialization in
+              Cloud Computing and DevOps.
+            </p>
+          </div>
         </div>
       </motion.div>
     </motion.section>

@@ -13,7 +13,7 @@ import SkillsSection from "./components/SkillsSection";
 import ContactSection from "./components/ContactSection";
 import Navbar from "./components/Navbar";
 import FloatingBackground from "./components/FloatingBackground";
-import ProjectsSection from "./components/ProjectsSection";
+
 
 const App: React.FC = () => {
   const positions = [

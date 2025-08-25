@@ -1,12 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaFacebook,
-  FaInstagram,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const ContactSection: React.FC = () => {
   return (
@@ -18,7 +12,7 @@ const ContactSection: React.FC = () => {
       transition={{ duration: 1 }}
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-        Contact
+        Contact / Recruit
       </h2>
       <motion.div
         className="w-full max-w-3xl"
@@ -27,14 +21,14 @@ const ContactSection: React.FC = () => {
         transition={{ delay: 0.5 }}
       >
         <p className="text-lg md:text-xl text-gray-200 mb-6">
-          Feel free to reach out to me on LinkedIn, GitHub, Facebook, Instagram,
-          or via email!
+          Recruiting? I'm open to junior roles in Cloud, DevOps, and platform
+          engineering. Email me or use LinkedIn.
         </p>
         <a
-          href="mailto:hmizitamim@hotmail.com"
-          className=" text-white hover:text-blue-400  mb-4 block"
+          href="mailto:hmizitamim@hotmail.com?subject=Hiring%20Inquiry"
+          className="inline-flex items-center gap-3 px-5 py-3 rounded-md bg-[#2563eb] text-white hover:bg-blue-600 mb-4"
         >
-          <FaEnvelope className="inline mr-2" /> hmizitamim@hotmail.com
+          <FaEnvelope className="inline" /> Email: hmizitamim@hotmail.com
         </a>
         <div className="flex justify-center space-x-6 text-white text-2xl">
           <a
@@ -50,20 +44,6 @@ const ContactSection: React.FC = () => {
             rel="noopener noreferrer"
           >
             <FaGithub className="hover:text-gray-700" />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61566773492798"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook className="hover:text-blue-700" />
-          </a>
-          <a
-            href="https://www.instagram.com/tamim.hmizi/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram className="hover:text-pink-600" />
           </a>
         </div>
       </motion.div>
