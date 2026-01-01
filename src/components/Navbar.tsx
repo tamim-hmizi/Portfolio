@@ -14,31 +14,31 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full text-white p-4 flex justify-between items-center z-20">
+    <nav className="fixed top-0 left-0 w-full text-white p-4 flex justify-between items-center z-20 bg-black/30 backdrop-blur-sm border-b border-yellow-600/20">
       <div className="flex items-center">
         <Link
           to="/Portfolio"
-          className="text-lg font-semibold hover:text-pink-400 select-none"
+          className="text-lg font-semibold hover:text-yellow-500 select-none transition-colors"
         >
           MyPortfolio
         </Link>
       </div>
 
       <div className="md:flex space-x-4 hidden select-none">
-        <Link to="/Portfolio" className="hover:text-pink-400">
+        <Link to="/Portfolio" className="hover:text-yellow-500 transition-colors">
           Home
         </Link>
-        <Link to="/Portfolio/experience" className="hover:text-pink-400">
+        <Link to="/Portfolio/experience" className="hover:text-yellow-500 transition-colors">
           Experience
         </Link>
 
-        <Link to="/Portfolio/education" className="hover:text-purple-400">
+        <Link to="/Portfolio/education" className="hover:text-yellow-500 transition-colors">
           Education
         </Link>
-        <Link to="/Portfolio/skills" className="hover:text-blue-400">
+        <Link to="/Portfolio/skills" className="hover:text-yellow-500 transition-colors">
           Skills
         </Link>
-        <Link to="/Portfolio/contact" className="hover:text-blue-400">
+        <Link to="/Portfolio/contact" className="hover:text-yellow-500 transition-colors">
           Contact
         </Link>
       </div>
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={`md:hidden absolute top-0 left-0 w-full h-screen bg-black bg-opacity-60 ${
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-95 z-30 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
@@ -58,14 +58,14 @@ const Navbar: React.FC = () => {
           <div className="space-y-4 text-center text-white">
             <Link
               to="/Portfolio"
-              className="hover:text-pink-300 block select-none"
+              className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Home
             </Link>
             <Link
               to="/Portfolio/experience"
-              className="hover:text-pink-300 block select-none"
+              className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Experience
@@ -73,21 +73,21 @@ const Navbar: React.FC = () => {
 
             <Link
               to="/Portfolio/education"
-              className="hover:text-pink-300 block select-none"
+              className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Education
             </Link>
             <Link
               to="/Portfolio/skills"
-              className="hover:text-pink-300 block select-none"
+              className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Skills
             </Link>
             <Link
               to="/Portfolio/contact"
-              className="hover:text-pink-300 block select-none"
+              className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Contact
