@@ -39,7 +39,7 @@ const EducationSection: React.FC = () => {
                 ESPRIT — Ariana, Tunisia
               </p>
               <p className="text-yellow-400 text-sm md:text-base font-semibold mb-4">
-                Sep 2020 - Aug 2025
+                2020 -- 2025
               </p>
             </div>
           </div>

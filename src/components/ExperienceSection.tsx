@@ -39,49 +39,12 @@ const ExperienceSection: React.FC = () => {
           Leveraging expertise in cloud computing, DevOps, and full-stack development to deliver innovative solutions.
         </p>
 
-        {/* Founder & CEO Card - Full Width */}
-        <motion.div
-          className="w-full mb-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          <a 
-            href="https://axynoxia.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="relative bg-gray-800 border-2 border-yellow-600/30 p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-500/20 hover:border-yellow-500 flex flex-col cursor-pointer block"
-          >
-            <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-yellow-500">
-                Founder & CEO
-              </h3>
-              <img 
-                src="https://axynoxia.com/logo.png" 
-                alt="Axynoxia Logo" 
-                className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 object-contain"
-              />
-            </div>
-            <p className="text-gray-300 mt-1 flex-grow text-sm sm:text-base md:text-lg mb-2">
-              <span className="text-yellow-400 font-semibold">Jan 2025 -- Present</span> | Axynoxia — Enterprise Technology Consulting
-            </p>
-            <p className="text-gray-300 mt-1 flex-grow text-sm sm:text-base md:text-lg">
-              Founded and lead Axynoxia, an enterprise technology consulting firm specializing in scalable software solutions, AI implementations, and cloud architecture for Fortune 500 companies.
-            </p>
-            <div className="mt-4 text-sm sm:text-base text-gray-300 space-y-2">
-              <div>
-                <strong className="text-yellow-500">Key Activities:</strong> Oversee development of custom software solutions. Manage client relationships and drive business growth. Deliver innovative technology solutions across diverse industries.
-              </div>
-            </div>
-          </a>
-        </motion.div>
-
-        {/* Other Experience Cards in Grid */}
+        {/* Experience Cards in Grid */}
         <motion.div
           className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.3 }}
         >
           {/* Infrastructure Consultant Card */}
           <a 
@@ -103,33 +66,37 @@ const ExperienceSection: React.FC = () => {
             <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-2">
               <span className="text-yellow-400 font-semibold">Oct 2025 -- Present</span> | RFC — Ariana, Tunisia
             </p>
-            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base">
-              Provide strategic guidance on infrastructure solutions, focusing on cloud services, data center modernization, and network security.
+            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-3">
+              Operate and support production cloud and hybrid infrastructure environments used to deliver SaaS and enterprise services.
             </p>
-            <div className="mt-4 text-sm text-gray-300 space-y-2">
-              <div>
-                <strong className="text-yellow-500">Key Responsibilities:</strong> Design and implement scalable, secure IT infrastructures tailored to client business needs. Lead infrastructure projects involving automation, cloud migration, and DevOps practices.
-              </div>
+            <div className="mt-4 text-sm text-gray-300 space-y-1.5">
+              <div>• Monitor compute, storage, and infrastructure components using <strong className="text-yellow-400">Grafana dashboards</strong> for inventory, capacity tracking, alerting, and service health.</div>
+              <div>• Implement and maintain <strong className="text-yellow-400">Prometheus-based metrics pipelines</strong> for proactive alerting and incident detection.</div>
+              <div>• Deploy and administer <strong className="text-yellow-400">Gitea</strong> on Linux virtual machines as a self-hosted Git platform.</div>
+              <div>• Configure, troubleshoot, and maintain <strong className="text-yellow-400">Fortinet firewalls</strong>, including security policies, segmentation, routing, and NAT.</div>
+              <div>• Operate <strong className="text-yellow-400">Commvault backup infrastructure</strong>, handling backup execution, failure analysis, restore validation, and reporting.</div>
+              <div>• Deliver technical workshops and training sessions for clients on infrastructure usage and backup strategy.</div>
+              <div>• Manage <strong className="text-yellow-400">Active Directory</strong> objects and participate in <strong className="text-yellow-400">Microsoft 365</strong> tenant administration.</div>
             </div>
             <div className="mt-5 pt-3 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
                 <span
                   className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="AWS"
+                  title="Grafana"
                 >
-                  <FaAws size={16} />
+                  <SiGrafana size={16} />
                 </span>
                 <span
                   className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Terraform"
+                  title="Prometheus"
                 >
-                  <SiTerraform size={16} />
+                  <SiPrometheus size={16} />
                 </span>
                 <span
                   className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Kubernetes"
+                  title="Git"
                 >
-                  <SiKubernetes size={16} />
+                  <FaGitAlt size={16} />
                 </span>
                 <span
                   className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
@@ -150,7 +117,7 @@ const ExperienceSection: React.FC = () => {
           >
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-lg md:text-xl font-semibold text-yellow-500">
-                PFE Intern — DevOps Platform Engineer
+                DevOps Platform Engineer — Final Year Project (PFE), RFC
               </h3>
               <img
                 src="/Portfolio/rfclogo.png"
@@ -159,15 +126,19 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Feb 2025 -- Aug 2025</span> | RFC — Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Feb 2025 -- Aug 2025</span>
             </p>
-            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base">
-              Architected and developed a <strong className="text-yellow-400">DevOps-as-a-Service (DaaS) platform</strong> that analyzes GitHub repositories, suggests optimal infrastructure configurations, and provisions to VMs or Kubernetes clusters with automated monitoring and security.
+            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-3">
+              Designed and implemented a <strong className="text-yellow-400">DevOps-as-a-Service platform</strong> to automate application analysis, deployment, and monitoring.
             </p>
-            <div className="mt-4 text-sm text-gray-300 space-y-2">
-              <div>
-                <strong className="text-yellow-500">Key Achievements:</strong> Built full-stack auto-provisioning platform (React, Express.js, MongoDB, FastAPI). Implemented AI-driven recommendation engine. <strong className="text-yellow-400">Reduced infrastructure provisioning time by 70%</strong>.
-              </div>
+            <div className="mt-4 text-sm text-gray-300 space-y-1.5">
+              <div>• Built a modular architecture with React frontend, Express.js API gateway, FastAPI microservices, and MongoDB.</div>
+              <div>• Integrated the <strong className="text-yellow-400">GitHub API</strong> to analyze repositories, dependencies, and build workflows.</div>
+              <div>• Designed and implemented CI/CD pipelines using <strong className="text-yellow-400">Jenkins</strong>, covering build, test, quality, security, and deployment stages.</div>
+              <div>• Automated infrastructure provisioning using <strong className="text-yellow-400">Terraform</strong> and configuration management with <strong className="text-yellow-400">Ansible</strong>.</div>
+              <div>• Containerized applications using <strong className="text-yellow-400">Docker</strong> and managed artefacts with <strong className="text-yellow-400">Nexus</strong>.</div>
+              <div>• Implemented observability using <strong className="text-yellow-400">Prometheus</strong> and <strong className="text-yellow-400">Grafana</strong>.</div>
+              <div>• Reduced infrastructure provisioning time by approximately <strong className="text-yellow-400">70%</strong>.</div>
             </div>
             <div className="mt-5 pt-3 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
@@ -235,7 +206,7 @@ const ExperienceSection: React.FC = () => {
             </div>
           </a>
 
-          {/* Full Stack Engineer Card */}
+          {/* Cloud & Full Stack Engineer Card */}
           <a 
             href="https://rfc.com.tn" 
             target="_blank" 
@@ -244,7 +215,7 @@ const ExperienceSection: React.FC = () => {
           >
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-lg md:text-xl font-semibold text-yellow-500">
-                Full Stack Engineer
+                Cloud & Full Stack Engineer
               </h3>
               <img
                 src="/Portfolio/rfclogo.png"
@@ -253,15 +224,14 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jul 2024 -- Aug 2024</span> | RFC — Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Jul 2024 -- Aug 2024</span> | RFC — Internship
             </p>
-            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base">
-              Developed and deployed cloud-native applications using Next.js with server-side rendering on AWS infrastructure (IAM, EKS, ECR, DynamoDB, CloudWatch). Built intern management system with authentication and real-time sync.
+            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-3">
+              Developed cloud-native web applications deployed on AWS.
             </p>
-            <div className="mt-4 text-sm text-gray-300 space-y-2">
-              <div>
-                <strong className="text-yellow-500">Key Achievement:</strong> Automated CI/CD pipelines with Jenkins, Terraform, Docker, GitHub Actions. <strong className="text-yellow-400">Reduced deployment time by 40%</strong>.
-              </div>
+            <div className="mt-4 text-sm text-gray-300 space-y-1.5">
+              <div>• Designed CI/CD pipelines using <strong className="text-yellow-400">Jenkins</strong>, <strong className="text-yellow-400">Docker</strong>, <strong className="text-yellow-400">Terraform</strong>, and <strong className="text-yellow-400">GitHub Actions</strong>.</div>
+              <div>• Implemented <strong className="text-yellow-400">IAM</strong> security controls and monitoring with <strong className="text-yellow-400">CloudWatch</strong>.</div>
             </div>
             <div className="mt-5 pt-3 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
@@ -295,12 +265,6 @@ const ExperienceSection: React.FC = () => {
                 >
                   <FaGitAlt size={16} />
                 </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Next.js"
-                >
-                  <SiNextdotjs size={16} />
-                </span>
               </div>
             </div>
           </a>
@@ -323,15 +287,16 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jul 2023 -- Aug 2023</span> | ESPRIT — Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Jul 2023 -- Aug 2023</span> | ESPRIT — Internship
             </p>
-            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base">
-              Developed a comprehensive search-engine style web application using the MERN stack (MongoDB, Express.js, React, Node.js) to help ESPRIT students find and access course information efficiently.
+            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-3">
+              Developed a full MERN-stack academic web platform.
             </p>
-            <div className="mt-4 text-sm text-gray-300 space-y-2">
-              <div>
-                <strong className="text-yellow-500">Key Features:</strong> Advanced search with React hooks and MongoDB aggregation. Python web scraping with BeautifulSoup and Scrapy. Responsive UI with modern UX principles.
-              </div>
+            <div className="mt-4 text-sm text-gray-300 space-y-1.5">
+              <div>• Implemented advanced search, filtering, and indexing logic using <strong className="text-yellow-400">MongoDB</strong>.</div>
+              <div>• Built backend services with <strong className="text-yellow-400">Express.js</strong> and <strong className="text-yellow-400">Node.js</strong>.</div>
+              <div>• Implemented Python-based web scraping for automated data ingestion.</div>
+              <div>• Designed responsive UI components and improved user experience.</div>
             </div>
             <div className="mt-5 pt-3 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
@@ -378,7 +343,7 @@ const ExperienceSection: React.FC = () => {
           >
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-lg md:text-xl font-semibold text-yellow-500">
-                Network Engineer C-NOC
+                Network Engineer Intern (C-NOC) — Tunisie Telecom
               </h3>
               <img
                 src="/Portfolio/tunisie-telecom-logo.png"
@@ -387,15 +352,14 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Aug 2021 -- Sep 2021</span> | Tunisie Telecom — Tunis, Tunisia
+              <span className="text-yellow-400 font-semibold">Aug 2021 -- Sep 2021</span>
             </p>
-            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base">
-              Provided B2B network support and maintenance; monitored links and resolved connectivity incidents.
+            <p className="text-gray-300 mt-1 flex-grow text-sm md:text-base mb-3">
+              Worked in the national B2B Network Operations Center.
             </p>
-            <div className="mt-4 text-sm text-gray-300 space-y-2">
-              <div>
-                <strong className="text-yellow-500">Focus:</strong> Network troubleshooting, incident resolution, and maintaining service quality.
-              </div>
+            <div className="mt-4 text-sm text-gray-300 space-y-1.5">
+              <div>• Monitored enterprise network links and handled connectivity incidents.</div>
+              <div>• Assisted in troubleshooting routing and service availability issues.</div>
             </div>
             <div className="mt-5 pt-3 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">

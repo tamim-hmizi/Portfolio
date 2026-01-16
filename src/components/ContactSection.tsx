@@ -22,8 +22,7 @@ const ContactSection: React.FC = () => {
       >
         <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 md:mb-8 px-2">
           Recruiting? I'm open to roles in Cloud, DevOps, and platform engineering. 
-          <strong className="text-yellow-500"> Infrastructure Consultant</strong> at <strong>RFC</strong> | 
-          <strong className="text-yellow-500"> Founder & CEO</strong> of <strong>Axynoxia</strong>. 
+          <strong className="text-yellow-500"> Infrastructure Consultant</strong> at <strong>RFC</strong>. 
           Email me or use LinkedIn.
         </p>
         

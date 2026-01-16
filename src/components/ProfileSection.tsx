@@ -36,13 +36,13 @@ const ProfileSection: React.FC = () => {
         transition={{ duration: 1, delay: 0.45 }}
       >
         <span className="inline-block bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Full Stack Software Engineer
+          Infrastructure Consultant
         </span>
         <span className="inline-block bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
           Cloud & DevOps
         </span>
         <span className="inline-block bg-yellow-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Infrastructure Consultant
+          SaaS & Full-Stack
         </span>
         <span className="inline-block bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
           Open to opportunities
@@ -55,12 +55,12 @@ const ProfileSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <strong className="text-yellow-500">Full Stack Software Engineer</strong> with a focus on Cloud, DevOps, and Web. I design scalable and secure systems, automate complex processes, and deliver reliable digital solutions that drive efficiency and growth.
+        <strong className="text-yellow-500">Infrastructure Consultant / Cloud & DevOps Engineer</strong> with hands-on experience working in a company specialized in <strong>cloud platforms, DevOps practices, and SaaS / full-stack application development</strong>. Experienced in designing, deploying, automating, monitoring, and operating <strong>hybrid and cloud-native infrastructures</strong> supporting modern software products. Strong background in CI/CD, observability, networking, backup systems, and end-to-end application delivery in enterprise and production-like environments.
       </motion.p>
 
       <div className="mt-4 z-10 text-xs sm:text-sm text-gray-300 px-4">
         <p className="max-w-md mx-auto">
-          <strong className="text-yellow-500">Infrastructure Consultant</strong> at <strong>RFC</strong> | <strong className="text-yellow-500">Founder & CEO</strong> of <strong>Axynoxia</strong> | Open to Cloud/DevOps or platform engineering roles. Remote or hybrid.
+          <strong className="text-yellow-500">Infrastructure Consultant</strong> at <strong>RFC</strong> | Open to Cloud/DevOps or platform engineering roles. Remote or hybrid.
         </p>
       </div>
 
