@@ -47,6 +47,17 @@ import {
   SiSpring,
   SiGooglecloud,
   SiGitlab,
+  SiBitbucket,
+  SiGitea,
+  SiOpenstack,
+  SiDigitalocean,
+  SiC,
+  SiCsharp,
+  SiGnubash,
+  SiAssemblyscript,
+  SiTrivy,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
 
 const SkillsSection: React.FC = () => {
@@ -70,7 +81,7 @@ const SkillsSection: React.FC = () => {
       >
         {/* Cloud Platforms Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">☁️ Cloud Platforms</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Cloud Platforms</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <FaAws className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -84,12 +95,20 @@ const SkillsSection: React.FC = () => {
               <SiGooglecloud className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">GCP</span>
             </div>
+            <div className="flex flex-col items-center group">
+              <SiOpenstack className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">OpenStack</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiDigitalocean className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">DigitalOcean</span>
+            </div>
           </div>
         </div>
 
         {/* DevOps & Automation Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">🔧 DevOps & Automation</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">DevOps and Automation</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <FaGitAlt className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -147,12 +166,24 @@ const SkillsSection: React.FC = () => {
               <SiSonarqube className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">SonarQube</span>
             </div>
+            <div className="flex flex-col items-center group">
+              <SiTrivy className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Trivy</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiBitbucket className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Bitbucket</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiGitea className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Gitea</span>
+            </div>
           </div>
         </div>
 
         {/* Programming Languages Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">💻 Programming Languages</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Programming Languages</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <FaPython className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -178,12 +209,28 @@ const SkillsSection: React.FC = () => {
               <SiCplusplus className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">C/C++</span>
             </div>
+            <div className="flex flex-col items-center group">
+              <SiC className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">C</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiCsharp className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">C#</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiGnubash className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Bash</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiAssemblyscript className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Assembly</span>
+            </div>
           </div>
         </div>
 
         {/* Frontend Frameworks Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">🌐 Frontend Frameworks</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Frontend Frameworks</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <FaReact className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -201,12 +248,20 @@ const SkillsSection: React.FC = () => {
               <SiVuedotjs className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Vue.js</span>
             </div>
+            <div className="flex flex-col items-center group">
+              <SiHtml5 className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">HTML</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiCss3 className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">CSS</span>
+            </div>
           </div>
         </div>
 
         {/* Backend Frameworks Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">⚙️ Backend Frameworks</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Backend Frameworks</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <SiFastapi className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -253,7 +308,7 @@ const SkillsSection: React.FC = () => {
 
         {/* Databases Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">💾 Databases</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Databases</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <SiMongodb className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -280,7 +335,7 @@ const SkillsSection: React.FC = () => {
 
         {/* Operating Systems Section */}
         <div className="flex flex-col items-center space-y-4">
-          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">🖥️ Operating Systems</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Operating Systems</h3>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
             <div className="flex flex-col items-center group">
               <SiLinux className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />

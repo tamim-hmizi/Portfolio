@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactSection: React.FC = () => {
   return (
@@ -39,7 +39,7 @@ const ContactSection: React.FC = () => {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
-              <span className="text-yellow-500 text-xl">📞</span>
+              <FaPhoneAlt className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Phone:</span>
               <a 
                 href="tel:+21621611816"
@@ -49,9 +49,22 @@ const ContactSection: React.FC = () => {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
-              <span className="text-yellow-500 text-xl">📍</span>
+              <FaMapMarkerAlt className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Location:</span>
               <span className="text-yellow-400 font-semibold">Ariana, Tunisia</span>
+            </div>
+          </div>
+          <div className="mt-4 pt-4 border-t border-yellow-600/30">
+            <div className="flex flex-wrap gap-2 justify-center text-yellow-500">
+              <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
+                AR
+              </span>
+              <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
+                EN
+              </span>
+              <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
+                FR
+              </span>
             </div>
           </div>
         </div>

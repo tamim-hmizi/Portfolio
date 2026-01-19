@@ -6,15 +6,15 @@ const ProfileSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-12 pt-24 md:pt-28"
+      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-10 pt-16 md:pt-20"
     >
       <div className="absolute inset-0 bg-black opacity-30 pointer-events-none" />
 
       <motion.img
         src="/Portfolio/me.jpg"
         alt="Tamim Hmizi"
-        className="w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 rounded-full border-4 border-yellow-500 mb-6 object-cover shadow-xl z-10 select-none shadow-yellow-500/50"
-        style={{ objectPosition: 'center 30%' }}
+        className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full border-4 border-yellow-500 mb-4 object-cover shadow-xl z-10 select-none shadow-yellow-500/50"
+        style={{ objectPosition: 'center 90%' }}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -55,7 +55,7 @@ const ProfileSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <strong className="text-yellow-500">Infrastructure Consultant / Cloud & DevOps Engineer</strong> with hands-on experience working in a company specialized in <strong>cloud platforms, DevOps practices, and SaaS / full-stack application development</strong>. Experienced in designing, deploying, automating, monitoring, and operating <strong>hybrid and cloud-native infrastructures</strong> supporting modern software products. Strong background in CI/CD, observability, networking, backup systems, and end-to-end application delivery in enterprise and production-like environments.
+        <strong className="text-yellow-500">Cloud & DevOps Engineer and Infrastructure Consultant</strong> with experience in <strong>SaaS and full-stack application delivery</strong>. Capable of managing the complete lifecycle of modern software systems, from infrastructure design and automation to CI/CD, deployment, monitoring, and production operations. Strong background in <strong>hybrid and cloud-native environments</strong>, DevOps pipelines, observability, security, and enterprise IT systems supporting scalable applications.
       </motion.p>
 
       <div className="mt-4 z-10 text-xs sm:text-sm text-gray-300 px-4">
