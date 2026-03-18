@@ -39,13 +39,13 @@ const ProfileSection: React.FC = () => {
           Infrastructure Consultant
         </span>
         <span className="inline-block bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Cloud & DevOps
+          Full Stack & Cloud DevOps
         </span>
         <span className="inline-block bg-yellow-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          SaaS & Full-Stack
+          IaC & Automation
         </span>
         <span className="inline-block bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Open to opportunities
+          Multi-Cloud (Azure, AWS, OpenStack)
         </span>
       </motion.div>
 
@@ -55,12 +55,12 @@ const ProfileSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <strong className="text-yellow-500">Cloud & DevOps Engineer and Infrastructure Consultant</strong> with experience in <strong>SaaS and full-stack application delivery</strong>. Capable of managing the complete lifecycle of modern software systems, from infrastructure design and automation to CI/CD, deployment, monitoring, and production operations. Strong background in <strong>hybrid and cloud-native environments</strong>, DevOps pipelines, observability, security, and enterprise IT systems supporting scalable applications.
+        <strong className="text-yellow-500">Full Stack and Cloud DevOps Engineer</strong> with over 4 years of hands-on project experience. Specialized in <strong>Kubernetes, Terraform, CI/CD, and multi-cloud environments</strong> (Azure, AWS, OpenStack). Strong focus on <strong>automation, infrastructure-as-code (IaC), and building scalable, secure applications</strong>.
       </motion.p>
 
       <div className="mt-4 z-10 text-xs sm:text-sm text-gray-300 px-4">
         <p className="max-w-md mx-auto">
-          <strong className="text-yellow-500">Infrastructure Consultant</strong> at <strong>RFC</strong> | Open to Cloud/DevOps or platform engineering roles. Remote or hybrid.
+          Currently <strong className="text-yellow-500">Infrastructure Consultant</strong> at <strong>RFC (Microsoft CSP & Gold Partner)</strong> | Ariana, Tunisia
         </p>
       </div>
 
@@ -82,7 +82,7 @@ const ProfileSection: React.FC = () => {
           <span>Resume (EN)</span>
         </motion.a>
         <motion.a
-          href="/Portfolio/Resume_frensh.pdf"
+          href="/Portfolio/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download

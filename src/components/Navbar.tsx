@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 w-full text-white p-4 flex justify-between items-center z-20 bg-black/30 backdrop-blur-sm border-b border-yellow-600/20">
       <div className="flex items-center">
         <Link
-          to="/Portfolio"
+          to="/"
           className="text-lg font-semibold hover:text-yellow-500 select-none transition-colors"
         >
           MyPortfolio
@@ -25,20 +25,22 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="md:flex space-x-4 hidden select-none">
-        <Link to="/Portfolio" className="hover:text-yellow-500 transition-colors">
+        <Link to="/" className="hover:text-yellow-500 transition-colors">
           Home
         </Link>
-        <Link to="/Portfolio/experience" className="hover:text-yellow-500 transition-colors">
+        <Link to="/experience" className="hover:text-yellow-500 transition-colors">
           Experience
         </Link>
-
-        <Link to="/Portfolio/education" className="hover:text-yellow-500 transition-colors">
+        <Link to="/projects" className="hover:text-yellow-500 transition-colors">
+          Projects
+        </Link>
+        <Link to="/education" className="hover:text-yellow-500 transition-colors">
           Education
         </Link>
-        <Link to="/Portfolio/skills" className="hover:text-yellow-500 transition-colors">
+        <Link to="/skills" className="hover:text-yellow-500 transition-colors">
           Skills
         </Link>
-        <Link to="/Portfolio/contact" className="hover:text-yellow-500 transition-colors">
+        <Link to="/contact" className="hover:text-yellow-500 transition-colors">
           Contact
         </Link>
       </div>
@@ -57,36 +59,42 @@ const Navbar: React.FC = () => {
         <div className="flex justify-center items-center h-full">
           <div className="space-y-4 text-center text-white">
             <Link
-              to="/Portfolio"
+              to="/"
               className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Home
             </Link>
             <Link
-              to="/Portfolio/experience"
+              to="/experience"
               className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Experience
             </Link>
-
             <Link
-              to="/Portfolio/education"
+              to="/projects"
+              className="hover:text-yellow-500 block select-none transition-colors"
+              onClick={closeMenu}
+            >
+              Projects
+            </Link>
+            <Link
+              to="/education"
               className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Education
             </Link>
             <Link
-              to="/Portfolio/skills"
+              to="/skills"
               className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >
               Skills
             </Link>
             <Link
-              to="/Portfolio/contact"
+              to="/contact"
               className="hover:text-yellow-500 block select-none transition-colors"
               onClick={closeMenu}
             >

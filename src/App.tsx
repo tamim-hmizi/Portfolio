@@ -3,11 +3,10 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 import ProfileSection from "./components/ProfileSection";
 import ExperienceSection from "./components/ExperienceSection";
-
+import ProjectsSection from "./components/ProjectsSection";
 import EducationSection from "./components/EducationSection";
 import SkillsSection from "./components/SkillsSection";
 import ContactSection from "./components/ContactSection";
@@ -31,15 +30,15 @@ const App: React.FC = () => {
         <FloatingBackground key={index} position={position} index={index} />
       ))}
 
-      <Router>
+      <Router basename="/Portfolio">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/Portfolio" replace />} />
-          <Route path="/Portfolio" element={<ProfileSection />} />
-          <Route path="/Portfolio/experience" element={<ExperienceSection />} />
-          <Route path="/Portfolio/education" element={<EducationSection />} />
-          <Route path="/Portfolio/skills" element={<SkillsSection />} />
-          <Route path="/Portfolio/contact" element={<ContactSection />} />
+          <Route path="/" element={<ProfileSection />} />
+          <Route path="/experience" element={<ExperienceSection />} />
+          <Route path="/projects" element={<ProjectsSection />} />
+          <Route path="/education" element={<EducationSection />} />
+          <Route path="/skills" element={<SkillsSection />} />
+          <Route path="/contact" element={<ContactSection />} />
         </Routes>
       </Router>
     </div>

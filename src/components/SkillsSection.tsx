@@ -11,10 +11,12 @@ import {
   FaJava,
   FaPython,
   FaGithub,
+  FaServer,
+  FaDatabase,
+  FaWindows,
 } from "react-icons/fa";
 import {
   SiTerraform,
-  SiAzuredevops,
   SiKubernetes,
   SiPrometheus,
   SiGrafana,
@@ -25,9 +27,8 @@ import {
   SiLaravel,
   SiNestjs,
   SiSymfony,
-  SiMicrosoftazure,
   SiHelm,
-  SiSonarqube,
+  SiSonarqubeserver,
   SiFastapi,
   SiMongodb,
   SiMysql,
@@ -41,24 +42,19 @@ import {
   SiCplusplus,
   SiLinux,
   SiUbuntu,
-  SiWindows,
-  SiElasticsearch,
   SiGraphql,
   SiSpring,
   SiGooglecloud,
   SiGitlab,
-  SiBitbucket,
-  SiGitea,
   SiOpenstack,
-  SiDigitalocean,
   SiC,
-  SiCsharp,
+  SiSharp,
   SiGnubash,
   SiAssemblyscript,
-  SiTrivy,
   SiHtml5,
-  SiCss3,
+  SiCss,
 } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 
 const SkillsSection: React.FC = () => {
   return (
@@ -88,7 +84,7 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">AWS</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiMicrosoftazure className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <VscAzure className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Azure</span>
             </div>
             <div className="flex flex-col items-center group">
@@ -100,8 +96,8 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">OpenStack</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiDigitalocean className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">DigitalOcean</span>
+              <FaServer className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Proxmox</span>
             </div>
           </div>
         </div>
@@ -135,12 +131,16 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Jenkins</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiGitlab className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">GitLab CI</span>
+              <SiSonarqubeserver className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">SonarQube</span>
             </div>
             <div className="flex flex-col items-center group">
-              <FaGithub className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">GitHub Actions</span>
+              <FaDatabase className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Nexus</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiHelm className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Helm</span>
             </div>
             <div className="flex flex-col items-center group">
               <SiPrometheus className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
@@ -151,32 +151,12 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Grafana</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiElasticsearch className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">ELK Stack</span>
+              <FaGithub className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">GitHub Actions</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiAzuredevops className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">Azure DevOps</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <SiHelm className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">Helm</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <SiSonarqube className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">SonarQube</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <SiTrivy className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">Trivy</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <SiBitbucket className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">Bitbucket</span>
-            </div>
-            <div className="flex flex-col items-center group">
-              <SiGitea className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">Gitea</span>
+              <SiGitlab className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">GitLab CI</span>
             </div>
           </div>
         </div>
@@ -214,7 +194,7 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">C</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiCsharp className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <SiSharp className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">C#</span>
             </div>
             <div className="flex flex-col items-center group">
@@ -253,7 +233,7 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">HTML</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiCss3 className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <SiCss className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">CSS</span>
             </div>
           </div>
@@ -346,7 +326,7 @@ const SkillsSection: React.FC = () => {
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Ubuntu</span>
             </div>
             <div className="flex flex-col items-center group">
-              <SiWindows className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <FaWindows className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Windows</span>
             </div>
           </div>

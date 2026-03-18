@@ -35,6 +35,9 @@ const EducationSection: React.FC = () => {
               <h3 className="text-xl md:text-2xl font-semibold text-yellow-500 mb-1">
                 Software Engineering Degree -- ESPRIT
               </h3>
+              <p className="text-gray-300 text-base md:text-lg mb-1">
+                Specialty: <strong className="text-yellow-400">ArcTIC – Cloud Architecture and DevOps</strong>
+              </p>
               <p className="text-gray-300 text-base md:text-lg mb-2">
                 Ariana, Tunisia
               </p>

@@ -20,10 +20,8 @@ const ContactSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 md:mb-8 px-2">
-          Recruiting? I'm open to roles in Cloud, DevOps, and platform engineering. 
-          <strong className="text-yellow-500"> Infrastructure Consultant</strong> at <strong>RFC</strong>. 
-          Email me or use LinkedIn.
+        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-12">
+          I'm always open to discussing new opportunities, technical challenges, or cloud/DevOps collaborations. Feel free to reach out via any of the channels below.
         </p>
         
         <div className="bg-gray-800 border-2 border-yellow-600/30 p-4 md:p-6 rounded-xl mb-6">

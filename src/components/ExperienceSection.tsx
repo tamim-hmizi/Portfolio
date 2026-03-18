@@ -7,20 +7,19 @@ import {
   FaDocker,
   FaPython,
   FaGitAlt,
+  FaMicrosoft,
 } from "react-icons/fa";
 import {
-  SiNextdotjs,
   SiMongodb,
   SiJenkins,
   SiTerraform,
   SiKubernetes,
-  SiHelm,
-  SiSonarqube,
-  SiPrometheus,
-  SiGrafana,
   SiFastapi,
+  SiAnsible,
+  SiFortinet,
 } from "react-icons/si";
-import { MdSupportAgent } from "react-icons/md";
+import { MdSupportAgent, MdBackup } from "react-icons/md";
+import { VscAzure } from "react-icons/vsc";
 
 const ExperienceSection: React.FC = () => {
   return (
@@ -64,51 +63,29 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Oct 2025 -- Present</span> | RFC -- Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Oct 2024 – Present</span> | RFC (Microsoft CSP & Gold Partner) -- Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
-              Operate and support production hybrid cloud infrastructure to deliver SaaS and enterprise services.
+              Consulting and engineering for large-scale IT infrastructure, cloud adoption, and managed services.
             </p>
             <div className="mt-4 text-sm text-gray-300 space-y-1.5">
-              <div>- Operate and support Azure Stack Hub integrated with public Azure for hybrid cloud delivery.</div>
-              <div>- Administer and troubleshoot enterprise network and security infrastructure using <strong className="text-yellow-400">Fortinet firewalls</strong> and <strong className="text-yellow-400">Cisco</strong> networking equipment.</div>
-              <div>- Implement endpoint and server protection using <strong className="text-yellow-400">Trend Micro</strong> across infrastructure environments.</div>
-              <div>- Operate <strong className="text-yellow-400">Commvault</strong> backup infrastructure with backup execution, restore validation, failure analysis, and reporting.</div>
-              <div>- Provide infrastructure support through incident handling, troubleshooting, and service request resolution.</div>
-              <div>- Deliver technical workshops and client training on infrastructure usage, security, and backup strategy.</div>
-              <div>- Manage <strong className="text-yellow-400">Active Directory</strong> services and participate in <strong className="text-yellow-400">Microsoft 365</strong> tenant administration.</div>
+              <div>- Designing and deploying hybrid cloud solutions using <strong className="text-yellow-400">Azure Stack Hub</strong> and public Azure services.</div>
+              <div>- Infrastructure hardening and security implementation using <strong className="text-yellow-400">Fortinet</strong> and <strong className="text-yellow-400">Trend Micro</strong>.</div>
+              <div>- Managing enterprise backup and recovery solutions with <strong className="text-yellow-400">Commvault</strong>.</div>
+              <div>- Providing advanced level support for complex infrastructure incidents and service requests.</div>
+              <div>- Conducting technical workshops for clients on cloud infrastructure and security best practices.</div>
             </div>
-            <div className="mt-3 pt-2 border-t border-yellow-600/30">
+              <div className="mt-3 pt-2 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Grafana"
-                >
-                  <SiGrafana size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Prometheus"
-                >
-                  <SiPrometheus size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Git"
-                >
-                  <FaGitAlt size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Docker"
-                >
-                  <FaDocker size={16} />
-                </span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Azure Stack Hub"><VscAzure size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Fortinet"><SiFortinet size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Commvault"><MdBackup size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="M365"><FaMicrosoft size={16} /></span>
               </div>
             </div>
           </a>
 
-          {/* PFE Intern - DevOps Platform Engineer Card */}
+          {/* DevOps Platform Engineer Card */}
           <a 
             href="https://rfc.com.tn" 
             target="_blank" 
@@ -117,7 +94,7 @@ const ExperienceSection: React.FC = () => {
           >
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-lg md:text-xl font-semibold text-yellow-500">
-                DevOps Platform Engineer -- Final Year Project (PFE), RFC
+                DevOps Platform Engineer (Final Year Project)
               </h3>
               <img
                 src="/Portfolio/rfclogo.png"
@@ -126,85 +103,26 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Feb 2025 -- Aug 2025</span>
+              <span className="text-yellow-400 font-semibold">Feb 2024 – Aug 2024</span> | RFC -- Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Designed and implemented a <strong className="text-yellow-400">DevOps-as-a-Service platform</strong> to automate application analysis, deployment, and monitoring.
             </p>
             <div className="mt-4 text-sm text-gray-300 space-y-1.5">
-              <div>- Built a monolithic core with React, Express.js, FastAPI, and MongoDB, with clear separation between frontend, API gateway, and backend services.</div>
-              <div>- Integrated an AI-driven analysis engine to inspect Git repositories, dependencies, and runtime requirements.</div>
-              <div>- Implemented multi-architecture deployment logic for VM-based monolithic apps and AKS microservices deployments.</div>
-              <div>- Developed two MERN e-commerce applications as deployment use cases for VM and AKS paths.</div>
-              <div>- Automated VM-based deployments using <strong className="text-yellow-400">Terraform</strong>, <strong className="text-yellow-400">Ansible</strong>, and <strong className="text-yellow-400">Docker</strong> / Docker Compose.</div>
-              <div>- Implemented AKS microservices deployments using AKS Engine, kubectl, and Kubernetes YAML templates.</div>
-              <div>- Built CI/CD pipelines with <strong className="text-yellow-400">Jenkins</strong> for build, test, quality, security, artifact management, and deployment.</div>
-              <div>- Integrated <strong className="text-yellow-400">SonarQube</strong> for code quality and <strong className="text-yellow-400">Nexus</strong> for artifacts.</div>
-              <div>- Implemented observability with <strong className="text-yellow-400">Prometheus</strong> and <strong className="text-yellow-400">Grafana</strong>.</div>
-              <div>- Reduced infrastructure provisioning and deployment time by approximately <strong className="text-yellow-400">70%</strong>.</div>
+              <div>- Developed a platform core using <strong className="text-yellow-400">React, Express.js, and FastAPI</strong> with an AI-driven repository analysis engine.</div>
+              <div>- Automated provisioning for VM-based apps using <strong className="text-yellow-400">Terraform and Ansible</strong>.</div>
+              <div>- Implemented microservices orchestration on <strong className="text-yellow-400">Azure Kubernetes Service (AKS)</strong>.</div>
+              <div>- Built robust CI/CD pipelines with <strong className="text-yellow-400">Jenkins, SonarQube, and Nexus</strong>.</div>
+              <div>- Integrated full-stack observability with <strong className="text-yellow-400">Prometheus and Grafana</strong>.</div>
+              <div>- Reduced deployment and provisioning time by approximately <strong className="text-yellow-400">70%</strong>.</div>
             </div>
             <div className="mt-3 pt-2 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Docker"
-                >
-                  <FaDocker size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Jenkins"
-                >
-                  <SiJenkins size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Terraform"
-                >
-                  <SiTerraform size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Kubernetes"
-                >
-                  <SiKubernetes size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Helm"
-                >
-                  <SiHelm size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="SonarQube"
-                >
-                  <SiSonarqube size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Prometheus"
-                >
-                  <SiPrometheus size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Grafana"
-                >
-                  <SiGrafana size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="FastAPI"
-                >
-                  <SiFastapi size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Git"
-                >
-                  <FaGitAlt size={16} />
-                </span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Kubernetes"><SiKubernetes size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Terraform"><SiTerraform size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Jenkins"><SiJenkins size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Ansible"><SiAnsible size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="FastAPI"><SiFastapi size={16} /></span>
               </div>
             </div>
           </a>
