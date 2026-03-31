@@ -121,7 +121,7 @@ Both resumes are also accessible through the portfolio website.
 ## 📧 Contact
 
 - **Email:** tamimhmizi@icloud.com
-- **Phone:** +216 21 611 816
+- **Phone:** +216 54 886 068
 - **Location:** Ariana, Tunisia
 - **LinkedIn:** [linkedin.com/in/tamimhmizi](https://linkedin.com/in/tamimhmizi)
 - **GitHub:** [github.com/tamim-hmizi](https://github.com/tamim-hmizi)

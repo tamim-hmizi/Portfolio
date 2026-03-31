@@ -40,10 +40,10 @@ const ContactSection: React.FC = () => {
               <FaPhoneAlt className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Phone:</span>
               <a 
-                href="tel:+21621611816"
+                href="tel:+21654886068"
                 className="text-yellow-400 hover:text-yellow-500 transition-colors font-semibold"
               >
-                +216 21 611 816
+                +216 54 886 068
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
