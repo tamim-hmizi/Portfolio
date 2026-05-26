@@ -36,10 +36,10 @@ const ProfileSection: React.FC = () => {
         transition={{ duration: 1, delay: 0.45 }}
       >
         <span className="inline-block bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Infrastructure Consultant
+          Full Stack Engineer
         </span>
         <span className="inline-block bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Full Stack & Cloud DevOps
+          Cloud & DevOps
         </span>
         <span className="inline-block bg-yellow-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
           IaC & Automation
@@ -50,19 +50,43 @@ const ProfileSection: React.FC = () => {
       </motion.div>
 
       <motion.p
-        className="text-base md:text-lg text-gray-200 max-w-3xl mx-auto mt-2 px-4 sm:px-6 z-10"
+        className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto mt-2 px-4 sm:px-6 z-10 leading-relaxed"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <strong className="text-yellow-500">Full Stack and Cloud DevOps Engineer</strong> with over 4 years of hands-on project experience. Specialized in <strong>Kubernetes, Terraform, CI/CD, and multi-cloud environments</strong> (Azure, AWS, OpenStack). Strong focus on <strong>automation, infrastructure-as-code (IaC), and building scalable, secure applications</strong>.
+        <span className="text-yellow-500 font-semibold">Cloud & DevOps Engineer</span> by expertise.{" "}
+        <span className="text-yellow-500 font-semibold">Full-Stack Engineer</span> by passion.{" "}
+        <span className="italic text-gray-300">I build it and I run it.</span>
       </motion.p>
 
-      <div className="mt-4 z-10 text-xs sm:text-sm text-gray-300 px-4">
-        <p className="max-w-md mx-auto">
-          Currently <strong className="text-yellow-500">Infrastructure Consultant</strong> at <strong>RFC (Microsoft CSP & Gold Partner)</strong> | Ariana, Tunisia
-        </p>
-      </div>
+      {/* Where I worked */}
+      <motion.div
+        className="mt-5 z-10 flex flex-col items-center gap-2"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.75 }}
+      >
+        <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Where I've worked</p>
+        <div className="flex flex-wrap justify-center items-center gap-3">
+          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
+            <img src="/Portfolio/BASSETTI-GROUP.webp" alt="Bassetti Group" className="w-5 h-5 object-contain" />
+            <span className="text-xs text-gray-300 font-medium">Bassetti Group</span>
+          </div>
+          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
+            <img src="/Portfolio/rfclogo.png" alt="RFC" className="w-5 h-5 object-contain bg-white rounded-sm" />
+            <span className="text-xs text-gray-300 font-medium">RFC</span>
+          </div>
+          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
+            <img src="/Portfolio/espritlogo.jpg" alt="ESPRIT" className="w-5 h-5 object-contain bg-white rounded-sm" />
+            <span className="text-xs text-gray-300 font-medium">ESPRIT</span>
+          </div>
+          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
+            <img src="/Portfolio/tunisie-telecom-logo.png" alt="Tunisie Telecom" className="w-5 h-5 object-contain bg-white rounded-sm" />
+            <span className="text-xs text-gray-300 font-medium">Tunisie Telecom</span>
+          </div>
+        </div>
+      </motion.div>
 
       {/* Resume Downloads */}
       <div className="mt-6 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">

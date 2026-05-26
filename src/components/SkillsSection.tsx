@@ -53,6 +53,9 @@ import {
   SiAssemblyscript,
   SiHtml5,
   SiCss,
+  SiFlutter,
+  SiTraefikproxy,
+  SiPrisma,
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 
@@ -97,7 +100,7 @@ const SkillsSection: React.FC = () => {
             </div>
             <div className="flex flex-col items-center group">
               <FaServer className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
-              <span className="text-xs sm:text-sm text-gray-300 mt-1">Proxmox</span>
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">DigitalOcean</span>
             </div>
           </div>
         </div>
@@ -157,6 +160,10 @@ const SkillsSection: React.FC = () => {
             <div className="flex flex-col items-center group">
               <SiGitlab className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">GitLab CI</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiTraefikproxy className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Traefik</span>
             </div>
           </div>
         </div>
@@ -236,6 +243,10 @@ const SkillsSection: React.FC = () => {
               <SiCss className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">CSS</span>
             </div>
+            <div className="flex flex-col items-center group">
+              <SiFlutter className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Flutter</span>
+            </div>
           </div>
         </div>
 
@@ -309,6 +320,10 @@ const SkillsSection: React.FC = () => {
             <div className="flex flex-col items-center group">
               <SiRedis className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Redis</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiPrisma className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Prisma</span>
             </div>
           </div>
         </div>

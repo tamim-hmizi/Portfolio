@@ -17,6 +17,8 @@ import {
   SiFastapi,
   SiAnsible,
   SiFortinet,
+  SiAngular,
+  SiDotnet,
 } from "react-icons/si";
 import { MdSupportAgent, MdBackup } from "react-icons/md";
 import { VscAzure } from "react-icons/vsc";
@@ -45,10 +47,49 @@ const ExperienceSection: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
+          {/* Bassetti Group Card — Current Role */}
+          <a
+            href="https://www.bassetti-group.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative bg-gray-800 border-2 border-yellow-500 p-5 md:p-6 rounded-xl shadow-lg shadow-yellow-500/10 flex flex-col text-left xl:col-span-12 cursor-pointer transition-all duration-300 hover:shadow-yellow-500/20"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <h3 className="text-lg md:text-xl font-semibold text-yellow-500 flex flex-wrap items-center gap-2">
+                Full Stack Engineer — Bassetti Group (TEEXMA)
+                <span className="bg-yellow-500 text-black text-xs font-bold px-2 py-0.5 rounded-full">CURRENT</span>
+              </h3>
+              <img
+                src="/Portfolio/BASSETTI-GROUP.webp"
+                alt="Bassetti Group"
+                className="w-10 h-10 object-contain rounded-md bg-white p-1 shadow-sm flex-shrink-0 ml-4"
+              />
+            </div>
+            <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
+              <span className="text-yellow-400 font-semibold">May 2025 – Present</span> | Remote
+            </p>
+            <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
+              Full stack development on <strong className="text-yellow-400">TEEXMA</strong> — an enterprise no-code collaborative platform for technical and scientific data management, used by <strong className="text-yellow-400">1M+ users</strong> in regulated industries (Aerospace, Energy, Automotive, Chemical, Pharmaceutical) for clients including Airbus, Safran, Framatome, and Saint-Gobain.
+            </p>
+            <div className="mt-4 text-sm text-gray-300 space-y-1.5">
+              <div>- Full stack development on enterprise applications using <strong className="text-yellow-400">.NET, Angular, JavaScript, HTML, and CSS</strong> on the TEEXMA platform.</div>
+              <div>- Maintenance and extension of <strong className="text-yellow-400">legacy Delphi modules</strong> constituting the central processing engine of TEEXMA.</div>
+              <div>- Containerizing application workloads with <strong className="text-yellow-400">Docker</strong> and contributing to DevOps automation workflows.</div>
+            </div>
+            <div className="mt-3 pt-2 border-t border-yellow-600/30">
+              <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title=".NET"><SiDotnet size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Angular"><SiAngular size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Docker"><FaDocker size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Git"><FaGitAlt size={16} /></span>
+              </div>
+            </div>
+          </a>
+
           {/* Infrastructure Consultant Card */}
-          <a 
-            href="https://rfc.com.tn" 
-            target="_blank" 
+          <a
+            href="https://rfc.com.tn"
+            target="_blank"
             rel="noopener noreferrer"
             className="relative bg-gray-800 border-2 border-yellow-600/30 p-5 md:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-500/20 hover:border-yellow-500 flex flex-col cursor-pointer block text-left xl:col-span-6"
           >
@@ -63,19 +104,20 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Oct 2024 – Present</span> | RFC (Microsoft CSP & Gold Partner) -- Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Oct 2024 – May 2025</span> | RFC (Microsoft Gold CSP Partner) -- Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
-              Consulting and engineering for large-scale IT infrastructure, cloud adoption, and managed services.
+              Consulting and engineering for large-scale hybrid cloud infrastructure, sovereign cloud environments, and enterprise security.
             </p>
             <div className="mt-4 text-sm text-gray-300 space-y-1.5">
-              <div>- Designing and deploying hybrid cloud solutions using <strong className="text-yellow-400">Azure Stack Hub</strong> and public Azure services.</div>
-              <div>- Infrastructure hardening and security implementation using <strong className="text-yellow-400">Fortinet</strong> and <strong className="text-yellow-400">Trend Micro</strong>.</div>
-              <div>- Managing enterprise backup and recovery solutions with <strong className="text-yellow-400">Commvault</strong>.</div>
-              <div>- Providing advanced level support for complex infrastructure incidents and service requests.</div>
-              <div>- Conducting technical workshops for clients on cloud infrastructure and security best practices.</div>
+              <div>- Designed and optimized hybrid cloud infrastructures integrating <strong className="text-yellow-400">Azure Stack Hub</strong> with public Azure services.</div>
+              <div>- Architected sovereign cloud environments ensuring data residency and Microsoft-certified compliance.</div>
+              <div>- Enterprise security and networking with <strong className="text-yellow-400">Fortinet SD-WAN</strong> and <strong className="text-yellow-400">Cisco</strong> for multi-tenant infrastructure.</div>
+              <div>- Managed critical backup operations with <strong className="text-yellow-400">Commvault</strong> including automated restore validation.</div>
+              <div>- Automated recurring tasks across Linux and Windows Server fleets, reducing manual workload by <strong className="text-yellow-400">40%</strong>.</div>
+              <div>- Delivered technical workshops as Infrastructure <strong className="text-yellow-400">SME</strong> on cloud-native security and Microsoft 365 governance.</div>
             </div>
-              <div className="mt-3 pt-2 border-t border-yellow-600/30">
+            <div className="mt-3 pt-2 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
                 <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Azure Stack Hub"><VscAzure size={16} /></span>
                 <span className="p-1 rounded bg-gray-700 border border-yellow-600/30" title="Fortinet"><SiFortinet size={16} /></span>
@@ -86,9 +128,9 @@ const ExperienceSection: React.FC = () => {
           </a>
 
           {/* DevOps Platform Engineer Card */}
-          <a 
-            href="https://rfc.com.tn" 
-            target="_blank" 
+          <a
+            href="https://rfc.com.tn"
+            target="_blank"
             rel="noopener noreferrer"
             className="relative bg-gray-800 border-2 border-yellow-600/30 p-5 md:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-500/20 hover:border-yellow-500 flex flex-col cursor-pointer block text-left xl:col-span-6"
           >
@@ -103,13 +145,13 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Feb 2024 – Aug 2024</span> | RFC -- Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Feb 2025 – Aug 2025</span> | RFC -- Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Designed and implemented a <strong className="text-yellow-400">DevOps-as-a-Service platform</strong> to automate application analysis, deployment, and monitoring.
             </p>
             <div className="mt-4 text-sm text-gray-300 space-y-1.5">
-              <div>- Developed a platform core using <strong className="text-yellow-400">React, Express.js, and FastAPI</strong> with an AI-driven repository analysis engine.</div>
+              <div>- Developed a platform core using <strong className="text-yellow-400">React, Express.js, and FastAPI</strong> with an AI-driven (LLM) repository analysis engine.</div>
               <div>- Automated provisioning for VM-based apps using <strong className="text-yellow-400">Terraform and Ansible</strong>.</div>
               <div>- Implemented microservices orchestration on <strong className="text-yellow-400">Azure Kubernetes Service (AKS)</strong>.</div>
               <div>- Built robust CI/CD pipelines with <strong className="text-yellow-400">Jenkins, SonarQube, and Nexus</strong>.</div>
@@ -128,9 +170,9 @@ const ExperienceSection: React.FC = () => {
           </a>
 
           {/* Cloud & Full Stack Engineer Card */}
-          <a 
-            href="https://rfc.com.tn" 
-            target="_blank" 
+          <a
+            href="https://rfc.com.tn"
+            target="_blank"
             rel="noopener noreferrer"
             className="relative bg-gray-800 border-2 border-yellow-600/30 p-5 md:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-500/20 hover:border-yellow-500 flex flex-col cursor-pointer block text-left xl:col-span-4"
           >
@@ -157,44 +199,19 @@ const ExperienceSection: React.FC = () => {
             </div>
             <div className="mt-3 pt-2 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="AWS"
-                >
-                  <FaAws size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Docker"
-                >
-                  <FaDocker size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Jenkins"
-                >
-                  <SiJenkins size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Terraform"
-                >
-                  <SiTerraform size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Git"
-                >
-                  <FaGitAlt size={16} />
-                </span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="AWS"><FaAws size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Docker"><FaDocker size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Jenkins"><SiJenkins size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Terraform"><SiTerraform size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Git"><FaGitAlt size={16} /></span>
               </div>
             </div>
           </a>
 
           {/* Web Developer Card */}
-          <a 
-            href="https://esprit.tn" 
-            target="_blank" 
+          <a
+            href="https://esprit.tn"
+            target="_blank"
             rel="noopener noreferrer"
             className="relative bg-gray-800 border-2 border-yellow-600/30 p-5 md:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-500/20 hover:border-yellow-500 flex flex-col cursor-pointer block text-left xl:col-span-4"
           >
@@ -219,48 +236,22 @@ const ExperienceSection: React.FC = () => {
               <div>- Normalized and stored data in a structured database for efficient search and filtering.</div>
               <div>- Developed backend services to rank and recommend courses based on user criteria.</div>
               <div>- Built a responsive interface to search, compare, and discover relevant courses.</div>
-              <div>- Ensured data reliability by targeting verified course providers.</div>
             </div>
             <div className="mt-3 pt-2 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Git"
-                >
-                  <FaGitAlt size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="MongoDB"
-                >
-                  <SiMongodb size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Node.js"
-                >
-                  <FaNodeJs size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Python"
-                >
-                  <FaPython size={16} />
-                </span>
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="React"
-                >
-                  <FaReact size={16} />
-                </span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Git"><FaGitAlt size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="MongoDB"><SiMongodb size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Node.js"><FaNodeJs size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Python"><FaPython size={16} /></span>
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="React"><FaReact size={16} /></span>
               </div>
             </div>
           </a>
 
           {/* Network Engineer Card */}
-          <a 
-            href="https://www.tunisietelecom.tn/particulier/" 
-            target="_blank" 
+          <a
+            href="https://www.tunisietelecom.tn/particulier/"
+            target="_blank"
             rel="noopener noreferrer"
             className="relative bg-gray-800 border-2 border-yellow-600/30 p-5 md:p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-yellow-500/20 hover:border-yellow-500 flex flex-col cursor-pointer block text-left xl:col-span-4"
           >
@@ -286,10 +277,7 @@ const ExperienceSection: React.FC = () => {
             </div>
             <div className="mt-3 pt-2 border-t border-yellow-600/30">
               <div className="flex flex-wrap gap-2 justify-start text-yellow-500">
-                <span
-                  className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30"
-                  title="Network Engineering"
-                >
+                <span className="p-1 rounded bg-gray-700 hover:bg-yellow-600/20 border border-yellow-600/30" title="Network Engineering">
                   <MdSupportAgent size={16} />
                 </span>
               </div>
