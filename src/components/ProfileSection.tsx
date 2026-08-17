@@ -113,7 +113,7 @@ const ProfileSection: React.FC = () => {
       {/* Resume Downloads */}
       <div className="mt-4 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
         <motion.a
-          href="/Portfolio/Resume.pdf"
+          href="/Portfolio/resume-en.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -128,7 +128,7 @@ const ProfileSection: React.FC = () => {
           <span>Resume (EN)</span>
         </motion.a>
         <motion.a
-          href="/Portfolio/cv.pdf"
+          href="/Portfolio/cv-fr.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
