@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalendarCheck } from "react-icons/fa";
 
 const ContactSection: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const ContactSection: React.FC = () => {
       transition={{ duration: 1 }}
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-        <span className="text-yellow-500">Contact</span> / Recruit
+        <span className="text-yellow-500">Let's</span> talk
       </h2>
       <motion.div
         className="w-full max-w-3xl"
@@ -20,20 +20,33 @@ const ContactSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-12">
-          I'm always open to discussing new opportunities, technical challenges, or cloud/DevOps collaborations. Feel free to reach out via any of the channels below.
+        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+          Got something to build, scale, or fix? Tell me what you're working on
+          and I'll tell you straight whether I'm the right person for it. The
+          fastest way is to book a call.
         </p>
-        
+
+        <motion.a
+          href="https://calendly.com/axynoxia/axynoxia-discovery-call"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-3 mb-10 rounded-lg bg-yellow-500 text-gray-900 font-bold shadow-lg shadow-yellow-500/20 border-2 border-yellow-400 transition-all"
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          <FaCalendarCheck className="text-xl" /> Book a discovery call
+        </motion.a>
+
         <div className="bg-gray-800 border-2 border-yellow-600/30 p-4 md:p-6 rounded-xl mb-6">
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
               <FaEnvelope className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Email:</span>
               <a 
-                href="mailto:tamimhmizi@icloud.com?subject=Hiring%20Inquiry"
+                href="mailto:tamim.hmizi@axynoxia.com?subject=Project%20Inquiry"
                 className="text-yellow-400 hover:text-yellow-500 transition-colors font-semibold break-all sm:break-normal"
               >
-                tamimhmizi@icloud.com
+                tamim.hmizi@axynoxia.com
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
@@ -63,6 +76,9 @@ const ContactSection: React.FC = () => {
               <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
                 FR
               </span>
+              <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
+                DE
+              </span>
             </div>
           </div>
         </div>
@@ -89,7 +105,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         <motion.a
-          href="mailto:tamimhmizi@icloud.com?subject=Hiring%20Inquiry"
+          href="mailto:tamim.hmizi@axynoxia.com?subject=Project%20Inquiry"
           className="inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 font-semibold shadow-md border-2 border-yellow-500 transition-all"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

@@ -150,7 +150,10 @@ const ProjectsSection: React.FC = () => {
           <span className="text-yellow-500">Key</span> Projects
         </h2>
         <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 md:mb-12 text-center">
-          A selection of major projects focusing on cloud architecture, automation, and full-stack engineering.
+          Products and platforms I designed, built and put into production —
+          full-stack engineering, cloud architecture and automation. Client work
+          is delivered through{" "}
+          <span className="text-yellow-500 font-semibold">Axynoxia</span>.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFileAlt } from "react-icons/fa";
+import { FaFileAlt, FaCalendarCheck } from "react-icons/fa";
 
 const ProfileSection: React.FC = () => {
   return (
@@ -36,16 +36,16 @@ const ProfileSection: React.FC = () => {
         transition={{ duration: 1, delay: 0.45 }}
       >
         <span className="inline-block bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Full Stack Engineer
+          Founder of Axynoxia
         </span>
         <span className="inline-block bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Cloud & DevOps
+          Full-Stack Engineer
         </span>
         <span className="inline-block bg-yellow-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          IaC & Automation
+          Cloud & DevOps
         </span>
         <span className="inline-block bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Multi-Cloud (Azure, AWS, OpenStack)
+          AI & Automation
         </span>
       </motion.div>
 
@@ -55,43 +55,65 @@ const ProfileSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <span className="text-yellow-500 font-semibold">Cloud & DevOps Engineer</span> by expertise.{" "}
-        <span className="text-yellow-500 font-semibold">Full-Stack Engineer</span> by passion.{" "}
-        <span className="italic text-gray-300">I build it and I run it.</span>
+        I design, build and run software end to end — products and the cloud
+        infrastructure underneath them.{" "}
+        <span className="italic text-gray-300">I build it, I ship it, and I keep it running.</span>
       </motion.p>
 
-      {/* Where I worked */}
+      {/* What I do */}
       <motion.div
         className="mt-5 z-10 flex flex-col items-center gap-2"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.75 }}
       >
-        <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Where I've worked</p>
+        <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">
+          What I do
+        </p>
         <div className="flex flex-wrap justify-center items-center gap-3">
-          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
-            <img src="/Portfolio/BASSETTI-GROUP.webp" alt="Bassetti Group" className="w-5 h-5 object-contain" />
-            <span className="text-xs text-gray-300 font-medium">Bassetti Group</span>
-          </div>
-          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
-            <img src="/Portfolio/rfclogo.png" alt="RFC" className="w-5 h-5 object-contain bg-white rounded-sm" />
-            <span className="text-xs text-gray-300 font-medium">RFC</span>
-          </div>
-          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
-            <img src="/Portfolio/espritlogo.jpg" alt="ESPRIT" className="w-5 h-5 object-contain bg-white rounded-sm" />
-            <span className="text-xs text-gray-300 font-medium">ESPRIT</span>
-          </div>
-          <div className="flex items-center gap-2 bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5">
-            <img src="/Portfolio/tunisie-telecom-logo.png" alt="Tunisie Telecom" className="w-5 h-5 object-contain bg-white rounded-sm" />
-            <span className="text-xs text-gray-300 font-medium">Tunisie Telecom</span>
-          </div>
+          {[
+            "Custom software",
+            "Cloud & DevOps",
+            "AI & automation",
+            "E-commerce",
+            "Integrations",
+          ].map((item) => (
+            <div
+              key={item}
+              className="bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5"
+            >
+              <span className="text-xs text-gray-300 font-medium">{item}</span>
+            </div>
+          ))}
         </div>
+        <p className="text-sm text-gray-400 mt-3 max-w-xl">
+          Client work is delivered through{" "}
+          <span className="text-yellow-500 font-semibold">Axynoxia</span>, my
+          software engineering company —{" "}
+          <span className="italic">Elevating Enterprise Standards.</span>
+        </p>
       </motion.div>
 
+      {/* Primary CTA */}
+      <motion.a
+        href="https://calendly.com/axynoxia/axynoxia-discovery-call"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 z-10 inline-flex items-center gap-3 px-8 py-3 rounded-lg bg-yellow-500 text-gray-900 font-bold shadow-lg shadow-yellow-500/20 border-2 border-yellow-400 transition-all"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        <FaCalendarCheck className="w-5 h-5" />
+        <span>Book a call</span>
+      </motion.a>
+
       {/* Resume Downloads */}
-      <div className="mt-6 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <div className="mt-4 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
         <motion.a
-          href="/Portfolio/Resume.pdf"
+          href="/Portfolio/resume-en.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -106,7 +128,7 @@ const ProfileSection: React.FC = () => {
           <span>Resume (EN)</span>
         </motion.a>
         <motion.a
-          href="/Portfolio/cv.pdf"
+          href="/Portfolio/cv-fr.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download

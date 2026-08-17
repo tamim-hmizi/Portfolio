@@ -19,6 +19,7 @@ import {
   SiFortinet,
   SiAngular,
   SiDotnet,
+  SiNestjs,
 } from "react-icons/si";
 import { MdSupportAgent, MdBackup } from "react-icons/md";
 import { VscAzure } from "react-icons/vsc";
@@ -47,6 +48,53 @@ const ExperienceSection: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
+          {/* Axynoxia Card — Founder */}
+          <div className="relative bg-gray-800 border-2 border-yellow-400 p-5 md:p-6 rounded-xl shadow-lg shadow-yellow-500/20 flex flex-col text-left xl:col-span-12 transition-all duration-300">
+            <div className="flex items-start justify-between mb-4">
+              <h3 className="text-lg md:text-xl font-semibold text-yellow-500 flex flex-wrap items-center gap-2">
+                Founder &amp; Software Engineer — Axynoxia
+                <span className="bg-yellow-500 text-black text-xs font-bold px-2 py-0.5 rounded-full">
+                  CURRENT
+                </span>
+              </h3>
+              <span className="w-10 h-10 flex items-center justify-center rounded-md border border-yellow-500/50 bg-gray-900 text-yellow-500 text-xl font-bold flex-shrink-0 ml-4">
+                A
+              </span>
+            </div>
+            <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
+              <span className="text-yellow-400 font-semibold">Jan 2026 – Present</span> | Tunis, Tunisia
+            </p>
+            <p className="text-gray-400 text-sm mb-3 italic">
+              Elevating Enterprise Standards.
+            </p>
+            <ul className="text-gray-300 text-sm md:text-base space-y-1.5 list-disc list-inside">
+              <li>
+                Founded and run a software engineering company serving clients across Europe and Tunisia — custom
+                software, cloud &amp; DevOps, AI and intelligent automation, integrations, and e-commerce.
+              </li>
+              <li>
+                Own the full delivery lifecycle on every engagement: scoping, architecture, full-stack build, cloud
+                provisioning, CI/CD, observability, and production operations.
+              </li>
+              <li>
+                Shipped and operate production systems — a high-concurrency ticketing platform, a Flutter app live on
+                the App Store and Google Play, a real estate CMS, and Shopify storefronts.
+              </li>
+              <li>
+                Building multi-tenant SaaS in-house: a modular ERP and an enterprise ticketing platform on NestJS,
+                Prisma, PostgreSQL, Redis and Traefik.
+              </li>
+            </ul>
+            <div className="flex flex-wrap gap-3 text-yellow-500 text-xl mt-4 pt-3 border-t border-yellow-600/20">
+              <FaReact title="React" />
+              <SiNestjs title="NestJS" />
+              <FaNodeJs title="Node.js" />
+              <FaDocker title="Docker" />
+              <SiKubernetes title="Kubernetes" />
+              <SiTerraform title="Terraform" />
+            </div>
+          </div>
+
           {/* Bassetti Group Card — Current Role */}
           <a
             href="https://www.bassetti-group.com/"
@@ -66,7 +114,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">May 2025 – Present</span> | Remote
+              <span className="text-yellow-400 font-semibold">Apr 2026 – Present</span> | Tunis, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Full stack development on <strong className="text-yellow-400">TEEXMA</strong> — an enterprise no-code collaborative platform for technical and scientific data management, used by <strong className="text-yellow-400">1M+ users</strong> in regulated industries (Aerospace, Energy, Automotive, Chemical, Pharmaceutical) for clients including Airbus, Safran, Framatome, and Saint-Gobain.
@@ -104,7 +152,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Oct 2024 – May 2025</span> | RFC (Microsoft Gold CSP Partner) -- Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Oct 2025 – May 2026</span> | RFC (Microsoft Gold CSP Partner) -- Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Consulting and engineering for large-scale hybrid cloud infrastructure, sovereign cloud environments, and enterprise security.
