@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           to="/"
           className="text-lg font-semibold hover:text-yellow-500 select-none transition-colors"
         >
-          MyPortfolio
+          Tamim Hmizi
         </Link>
       </div>
 
