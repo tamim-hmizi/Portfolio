@@ -43,10 +43,10 @@ const ContactSection: React.FC = () => {
               <FaEnvelope className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Email:</span>
               <a 
-                href="mailto:tamim.hmizi@axynoxia.com?subject=Project%20Inquiry"
+                href="mailto:tamimhmizi@icloud.com?subject=Project%20Inquiry"
                 className="text-yellow-400 hover:text-yellow-500 transition-colors font-semibold break-all sm:break-normal"
               >
-                tamim.hmizi@axynoxia.com
+                tamimhmizi@icloud.com
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
@@ -105,7 +105,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         <motion.a
-          href="mailto:tamim.hmizi@axynoxia.com?subject=Project%20Inquiry"
+          href="mailto:tamimhmizi@icloud.com?subject=Project%20Inquiry"
           className="inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 font-semibold shadow-md border-2 border-yellow-500 transition-all"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
