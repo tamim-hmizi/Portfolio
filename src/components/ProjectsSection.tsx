@@ -12,6 +12,10 @@ import {
   FaExternalLinkAlt,
   FaGooglePlay,
   FaApple,
+  FaSolarPanel,
+  FaFileInvoiceDollar,
+  FaRobot,
+  FaHandshake,
 } from "react-icons/fa";
 import {
   SiNestjs,
@@ -37,6 +41,8 @@ import {
   SiNextdotjs,
   SiPrometheus,
   SiGrafana,
+  SiLangchain,
+  SiTemporal,
 } from "react-icons/si";
 
 interface Project {
@@ -94,7 +100,39 @@ const ProjectsSection: React.FC = () => {
       url: "https://omhyfamily.com",
       domain: "omhyfamily.com",
     },
+    {
+      title: "Habiter Mieux",
+      description: "French solar-panel lead-generation landing page for client Habiter Mieux — conversion-focused funnel with quote-request forms feeding directly into the sales pipeline.",
+      tech: [<FaReact title="React" />, <FaSolarPanel title="Solar / Energy" />],
+      url: "https://habitermieux-renov.com",
+      domain: "habitermieux-renov.com",
+    },
+    {
+      title: "NexGen Studios",
+      description: "Marketing website for German client NexGen Studios — Next.js App Router, Dockerized with Nginx for production deployment.",
+      tech: [<SiNextdotjs title="Next.js" />, <FaDocker title="Docker" />],
+    },
     // — Other projects —
+    {
+      title: "Axynoxia Energie",
+      description: "Enterprise EMS + SCADA/HMI for a hybrid solar and battery power plant, modeled on a real utility-scale PV project — live telemetry, alarms, and plant control dashboards.",
+      tech: [<FaSolarPanel title="Energy / SCADA" />, <FaReact title="React" />, <SiPrometheus title="Monitoring" />],
+    },
+    {
+      title: "ProInvoice",
+      description: "Enterprise SaaS invoicing platform built for the Tunisian market — 2FA authentication, PDF/Excel generation, and a fully Swagger-documented API.",
+      tech: [<FaFileInvoiceDollar title="Invoicing" />, <SiNestjs title="NestJS" />, <SiPostgresql title="PostgreSQL" />],
+    },
+    {
+      title: "Axynoxia LeadGen",
+      description: "AI-native sales engine: real-time prospect data scraping, live context analysis, and autonomous hyper-personalized outreach orchestrated with LangGraph and Temporal.",
+      tech: [<FaRobot title="AI Automation" />, <SiLangchain title="LangGraph" />, <SiTemporal title="Temporal" />, <SiNextdotjs title="Next.js" />],
+    },
+    {
+      title: "Axynoxia CRM & Leasing",
+      description: "Enterprise CRM and lease-management platform for the Tunisian leasing market — BCT-compliant, IFRS 16 accounting logic, multi-tenant MERN architecture.",
+      tech: [<FaHandshake title="CRM" />, <SiMongodb title="MongoDB" />, <FaReact title="React" />, <FaNodeJs title="Node.js" />],
+    },
     {
       title: "Enterprise Monitoring Platform",
       description: "Real-time monitoring of Azure Stack Hub infrastructure health, storage fabric, and tenant VM performance (IOPS/Compute) using custom Python/Flask exporters, Prometheus, and Grafana.",
@@ -141,10 +179,10 @@ const ProjectsSection: React.FC = () => {
     <motion.section
       id="projects"
       className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="w-full max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white text-center">

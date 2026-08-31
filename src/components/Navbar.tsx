@@ -58,11 +58,9 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 md:h-16">
         <a
           href="#home"
-          className="flex items-center gap-2 text-base md:text-lg font-bold text-white hover:text-yellow-500 select-none transition-colors tracking-tight"
+          className="text-base md:text-lg font-bold text-white hover:text-yellow-500 select-none transition-colors tracking-tight"
         >
-          <img src="/Portfolio/axynoxia-logo.png" alt="" className="w-8 h-8 md:w-9 md:h-9 object-contain rounded-md bg-white p-1" />
           Tamim Hmizi
-          <span className="hidden sm:inline text-yellow-500 font-normal"> · Axynoxia</span>
         </a>
 
         {/* Desktop nav */}

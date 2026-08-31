@@ -30,7 +30,7 @@ const ExperienceSection: React.FC = () => {
     <motion.section
       id="experience"
       className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       exit={{ opacity: 0, y: -100 }}
