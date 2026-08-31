@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaReact,
@@ -55,7 +55,10 @@ interface Project {
   android?: string;
 }
 
+const INITIAL_COUNT = 6;
+
 const ProjectsSection: React.FC = () => {
+  const [showAll, setShowAll] = useState(false);
   const projects: Project[] = [
     // — Live projects first —
     {
@@ -117,21 +120,29 @@ const ProjectsSection: React.FC = () => {
       title: "Axynoxia Energie",
       description: "Enterprise EMS + SCADA/HMI for a hybrid solar and battery power plant, modeled on a real utility-scale PV project — live telemetry, alarms, and plant control dashboards.",
       tech: [<FaSolarPanel title="Energy / SCADA" />, <FaReact title="React" />, <SiPrometheus title="Monitoring" />],
+      url: "https://energie.products.axynoxia.com",
+      domain: "energie.products.axynoxia.com",
     },
     {
       title: "ProInvoice",
       description: "Enterprise SaaS invoicing platform built for the Tunisian market — 2FA authentication, PDF/Excel generation, and a fully Swagger-documented API.",
       tech: [<FaFileInvoiceDollar title="Invoicing" />, <SiNestjs title="NestJS" />, <SiPostgresql title="PostgreSQL" />],
+      url: "https://invoice.products.axynoxia.com",
+      domain: "invoice.products.axynoxia.com",
     },
     {
       title: "Axynoxia LeadGen",
       description: "AI-native sales engine: real-time prospect data scraping, live context analysis, and autonomous hyper-personalized outreach orchestrated with LangGraph and Temporal.",
       tech: [<FaRobot title="AI Automation" />, <SiLangchain title="LangGraph" />, <SiTemporal title="Temporal" />, <SiNextdotjs title="Next.js" />],
+      url: "https://leadgen.products.axynoxia.com",
+      domain: "leadgen.products.axynoxia.com",
     },
     {
       title: "Axynoxia CRM & Leasing",
       description: "Enterprise CRM and lease-management platform for the Tunisian leasing market — BCT-compliant, IFRS 16 accounting logic, multi-tenant MERN architecture.",
       tech: [<FaHandshake title="CRM" />, <SiMongodb title="MongoDB" />, <FaReact title="React" />, <FaNodeJs title="Node.js" />],
+      url: "https://crm-leasing.products.axynoxia.com",
+      domain: "crm-leasing.products.axynoxia.com",
     },
     {
       title: "Enterprise Monitoring Platform",
@@ -142,11 +153,15 @@ const ProjectsSection: React.FC = () => {
       title: "Axynoxia ERP",
       description: "Industrial multi-tenant SaaS ERP with modular CRM, inventory, and accounting — featuring MFA, RBAC, Argon2 security, and Traefik-based service routing.",
       tech: [<SiNestjs title="NestJS" />, <SiPrisma title="Prisma" />, <SiPostgresql title="PostgreSQL" />, <SiRedis title="Redis" />, <SiTraefikproxy title="Traefik" />],
+      url: "https://erp.products.axynoxia.com",
+      domain: "erp.products.axynoxia.com",
     },
     {
       title: "Tickety",
       description: "High-concurrency SaaS ticketing platform supporting thousands of simultaneous bookings per second with real-time WebSocket seat sync and atomic transactions.",
       tech: [<FaReact title="React" />, <SiNestjs title="NestJS" />, <SiPrisma title="Prisma" />, <SiPostgresql title="PostgreSQL" />],
+      url: "https://tickets.products.axynoxia.com",
+      domain: "tickets.products.axynoxia.com",
     },
     {
       title: "MERN E-commerce",
@@ -175,14 +190,18 @@ const ProjectsSection: React.FC = () => {
     },
   ];
 
+  // Live/linked projects surface first so the initially-visible set is the most compelling.
+  const sortedProjects = [...projects].sort((a, b) => {
+    const aLive = a.url || a.ios || a.android ? 0 : 1;
+    const bLive = b.url || b.ios || b.android ? 0 : 1;
+    return aLive - bLive;
+  });
+  const visibleProjects = showAll ? sortedProjects : sortedProjects.slice(0, INITIAL_COUNT);
+
   return (
-    <motion.section
+    <section
       id="projects"
       className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="w-full max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white text-center">
@@ -199,7 +218,7 @@ const ProjectsSection: React.FC = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={index}
               className={`bg-gray-800 border-2 p-6 rounded-xl shadow-lg transition-all text-left flex flex-col justify-between ${
@@ -281,8 +300,19 @@ const ProjectsSection: React.FC = () => {
             </motion.div>
           ))}
         </div>
+
+        {sortedProjects.length > INITIAL_COUNT && (
+          <button
+            onClick={() => setShowAll((v) => !v)}
+            className="mt-8 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-yellow-600/40 text-yellow-500 font-semibold text-sm hover:border-yellow-500 hover:bg-yellow-500/10 transition-all"
+          >
+            {showAll
+              ? "Show fewer projects"
+              : `Show ${sortedProjects.length - INITIAL_COUNT} more projects`}
+          </button>
+        )}
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -27,14 +27,9 @@ import { FaCalendarCheck } from "react-icons/fa";
 
 const ExperienceSection: React.FC = () => {
   return (
-    <motion.section
+    <section
       id="experience"
       className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 1 }}
     >
       <div className="w-full max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white text-center">
@@ -351,7 +346,7 @@ const ExperienceSection: React.FC = () => {
 
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

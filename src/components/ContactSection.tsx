@@ -4,13 +4,9 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "re
 
 const ContactSection: React.FC = () => {
   return (
-    <motion.section
+    <section
       id="contact"
       className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
         <span className="text-yellow-500">Let's</span> talk
@@ -75,9 +71,6 @@ const ContactSection: React.FC = () => {
               <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
                 FR
               </span>
-              <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
-                DE
-              </span>
             </div>
           </div>
         </div>
@@ -112,7 +105,7 @@ const ContactSection: React.FC = () => {
           <FaEnvelope className="text-xl" /> Send Email
         </motion.a>
       </motion.div>
-    </motion.section>
+    </section>
   );
 };
 
