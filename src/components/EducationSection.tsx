@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 const EducationSection: React.FC = () => {
   return (
     <motion.section
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-12 pt-24 md:pt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 1 }}
+      id="education"
+      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.8 }}
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
         <span className="text-yellow-500">Education</span>
@@ -36,7 +37,7 @@ const EducationSection: React.FC = () => {
                 Software Engineering Degree -- ESPRIT
               </h3>
               <p className="text-gray-300 text-base md:text-lg mb-1">
-                Specialty: <strong className="text-yellow-400">ArcTIC – Cloud Architecture and DevOps</strong>
+                Specialty: <strong className="text-yellow-400">Cloud Computing – Cloud Architecture and DevOps</strong>
               </p>
               <p className="text-gray-300 text-base md:text-lg mb-2">
                 Ariana, Tunisia

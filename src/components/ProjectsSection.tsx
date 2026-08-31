@@ -139,21 +139,25 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <motion.section
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-12 pt-24 md:pt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 1 }}
+      id="projects"
+      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.8 }}
     >
       <div className="w-full max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white text-center">
           <span className="text-yellow-500">Key</span> Projects
         </h2>
-        <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 md:mb-12 text-center">
+        <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-2 text-center">
           Products and platforms I designed, built and put into production —
           full-stack engineering, cloud architecture and automation. Client work
           is delivered through{" "}
           <span className="text-yellow-500 font-semibold">Axynoxia</span>.
+        </p>
+        <p className="text-sm text-gray-500 italic max-w-2xl mx-auto mb-8 md:mb-12 text-center">
+          Every project below — Axynoxia products, Axynoxia client engagements, and independent work — was designed and built solely by me, end to end.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

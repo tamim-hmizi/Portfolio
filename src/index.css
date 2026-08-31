@@ -33,4 +33,10 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: #d97706 #1f2937;
+  scroll-behavior: smooth;
+}
+
+/* Offset anchored sections so the fixed navbar doesn't cover their heading */
+section[id] {
+  scroll-margin-top: 4rem;
 }

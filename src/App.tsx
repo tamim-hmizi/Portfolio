@@ -1,18 +1,12 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
 import ProfileSection from "./components/ProfileSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
-import EducationSection from "./components/EducationSection";
 import SkillsSection from "./components/SkillsSection";
+import EducationSection from "./components/EducationSection";
 import ContactSection from "./components/ContactSection";
 import Navbar from "./components/Navbar";
 import FloatingBackground from "./components/FloatingBackground";
-
 
 const App: React.FC = () => {
   const positions = [
@@ -25,22 +19,20 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="font-sans text-gray-200 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden min-h-screen relative">
+    <div className="font-sans text-gray-200 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-x-hidden min-h-screen relative">
       {positions.map((position, index) => (
         <FloatingBackground key={index} position={position} index={index} />
       ))}
 
-      <Router basename="/Portfolio">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<ProfileSection />} />
-          <Route path="/experience" element={<ExperienceSection />} />
-          <Route path="/projects" element={<ProjectsSection />} />
-          <Route path="/education" element={<EducationSection />} />
-          <Route path="/skills" element={<SkillsSection />} />
-          <Route path="/contact" element={<ContactSection />} />
-        </Routes>
-      </Router>
+      <Navbar />
+      <main>
+        <ProfileSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <EducationSection />
+        <ContactSection />
+      </main>
     </div>
   );
 };

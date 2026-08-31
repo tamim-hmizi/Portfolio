@@ -62,11 +62,12 @@ import { VscAzure } from "react-icons/vsc";
 const SkillsSection: React.FC = () => {
   return (
     <motion.section
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-12 pt-24 md:pt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 1 }}
+      id="skills"
+      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.8 }}
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
         <span className="text-yellow-500">Technical</span> Skills

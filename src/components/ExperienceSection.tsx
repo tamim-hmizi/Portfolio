@@ -27,9 +27,11 @@ import { VscAzure } from "react-icons/vsc";
 const ExperienceSection: React.FC = () => {
   return (
     <motion.section
-      className="min-h-[85vh] flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-12 pt-24 md:pt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      id="experience"
+      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
       exit={{ opacity: 0, y: -100 }}
       transition={{ duration: 1 }}
     >
@@ -62,7 +64,7 @@ const ExperienceSection: React.FC = () => {
               </span>
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jan 2026 – Present</span> | Tunis, Tunisia
+              <span className="text-yellow-400 font-semibold">Jan 2026 – Present</span> | Tunis, Tunisia | <a href="mailto:tamim.hmizi@axynoxia.com" className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2">tamim.hmizi@axynoxia.com</a>
             </p>
             <p className="text-gray-400 text-sm mb-3 italic">
               Elevating Enterprise Standards.

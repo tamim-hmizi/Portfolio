@@ -5,11 +5,12 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalenda
 const ContactSection: React.FC = () => {
   return (
     <motion.section
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-12 pt-24 md:pt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 1 }}
+      id="contact"
+      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.8 }}
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
         <span className="text-yellow-500">Let's</span> talk
@@ -42,11 +43,21 @@ const ContactSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
               <FaEnvelope className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Email:</span>
-              <a 
+              <a
                 href="mailto:tamimhmizi@icloud.com?subject=Project%20Inquiry"
                 className="text-yellow-400 hover:text-yellow-500 transition-colors font-semibold break-all sm:break-normal"
               >
                 tamimhmizi@icloud.com
+              </a>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
+              <FaEnvelope className="text-yellow-500 text-xl flex-shrink-0 opacity-0 sm:opacity-100" />
+              <span className="text-sm md:text-base font-semibold">Axynoxia (client work):</span>
+              <a
+                href="mailto:tamim.hmizi@axynoxia.com?subject=Project%20Inquiry"
+                className="text-yellow-400 hover:text-yellow-500 transition-colors font-semibold break-all sm:break-normal"
+              >
+                tamim.hmizi@axynoxia.com
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
