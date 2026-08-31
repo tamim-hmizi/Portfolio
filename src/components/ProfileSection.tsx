@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFileAlt, FaCalendarCheck } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
 
 const ProfileSection: React.FC = () => {
   return (
@@ -60,6 +60,28 @@ const ProfileSection: React.FC = () => {
         <span className="italic text-gray-300">I build it, I ship it, and I keep it running.</span>
       </motion.p>
 
+      {/* Trust stats */}
+      <motion.div
+        className="mt-5 z-10 flex flex-wrap justify-center items-center gap-x-8 gap-y-3"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.68 }}
+      >
+        {[
+          { value: "6+", label: "Years Experience" },
+          { value: "1M+", label: "Users Served" },
+          { value: "70%", label: "Faster Deployments" },
+          { value: "3", label: "Languages: AR · FR · EN" },
+        ].map((stat) => (
+          <div key={stat.label} className="flex flex-col items-center">
+            <span className="text-xl md:text-2xl font-extrabold text-yellow-500">{stat.value}</span>
+            <span className="text-[11px] md:text-xs text-gray-400 uppercase tracking-wide text-center">
+              {stat.label}
+            </span>
+          </div>
+        ))}
+      </motion.div>
+
       {/* What I do */}
       <motion.div
         className="mt-5 z-10 flex flex-col items-center gap-2"
@@ -94,24 +116,8 @@ const ProfileSection: React.FC = () => {
         </p>
       </motion.div>
 
-      {/* Primary CTA */}
-      <motion.a
-        href="https://calendly.com/axynoxia/axynoxia-discovery-call"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 z-10 inline-flex items-center gap-3 px-8 py-3 rounded-lg bg-yellow-500 text-gray-900 font-bold shadow-lg shadow-yellow-500/20 border-2 border-yellow-400 transition-all"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
-        whileHover={{ scale: 1.04 }}
-        whileTap={{ scale: 0.97 }}
-      >
-        <FaCalendarCheck className="w-5 h-5" />
-        <span>Book a call</span>
-      </motion.a>
-
       {/* Resume Downloads */}
-      <div className="mt-4 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <div className="mt-6 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
         <motion.a
           href="/Portfolio/resume-en.pdf"
           target="_blank"

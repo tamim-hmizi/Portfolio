@@ -56,6 +56,14 @@ import {
   SiFlutter,
   SiTraefikproxy,
   SiPrisma,
+  SiPostman,
+  SiFigma,
+  SiNotion,
+  SiStripe,
+  SiPaypal,
+  SiShopify,
+  SiCloudflare,
+  SiHostinger,
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 
@@ -344,6 +352,49 @@ const SkillsSection: React.FC = () => {
             <div className="flex flex-col items-center group">
               <FaWindows className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
               <span className="text-xs sm:text-sm text-gray-300 mt-1">Windows</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Tools & Platforms Section */}
+        <div className="flex flex-col items-center space-y-4">
+          <h3 className="text-xl sm:text-2xl font-semibold text-yellow-500 mb-2">Tools and Platforms</h3>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-3 sm:p-4 bg-gray-800/50 rounded-xl border border-yellow-600/30 w-full">
+            <div className="flex flex-col items-center group">
+              <FaGithub className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">GitHub</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiPostman className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Postman</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiFigma className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Figma</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiNotion className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Notion</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiShopify className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Shopify</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiCloudflare className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Cloudflare</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiHostinger className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Hostinger</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiStripe className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">Stripe</span>
+            </div>
+            <div className="flex flex-col items-center group">
+              <SiPaypal className="text-4xl sm:text-5xl md:text-6xl text-yellow-500 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm text-gray-300 mt-1">PayPal</span>
             </div>
           </div>
         </div>

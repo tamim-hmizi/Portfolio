@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalendarCheck } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactSection: React.FC = () => {
   return (
@@ -21,22 +21,10 @@ const ContactSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10">
           Got something to build, scale, or fix? Tell me what you're working on
-          and I'll tell you straight whether I'm the right person for it. The
-          fastest way is to book a call.
+          and I'll tell you straight whether I'm the right person for it.
         </p>
-
-        <motion.a
-          href="https://calendly.com/axynoxia/axynoxia-discovery-call"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-3 mb-10 rounded-lg bg-yellow-500 text-gray-900 font-bold shadow-lg shadow-yellow-500/20 border-2 border-yellow-400 transition-all"
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          <FaCalendarCheck className="text-xl" /> Book a discovery call
-        </motion.a>
 
         <div className="bg-gray-800 border-2 border-yellow-600/30 p-4 md:p-6 rounded-xl mb-6">
           <div className="space-y-4">

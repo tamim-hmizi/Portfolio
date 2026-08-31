@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaTimes, FaFileDownload, FaChevronDown } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const NAV_LINKS = [
   { id: "home", label: "Home" },
@@ -12,7 +12,6 @@ const NAV_LINKS = [
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,10 +40,7 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const closeAll = () => {
-    setIsMenuOpen(false);
-    setIsResumeOpen(false);
-  };
+  const closeMenu = () => setIsMenuOpen(false);
 
   const linkClass = (id: string) =>
     `relative py-1 transition-colors ${
@@ -62,8 +58,9 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 md:h-16">
         <a
           href="#home"
-          className="text-base md:text-lg font-bold text-white hover:text-yellow-500 select-none transition-colors tracking-tight"
+          className="flex items-center gap-2 text-base md:text-lg font-bold text-white hover:text-yellow-500 select-none transition-colors tracking-tight"
         >
+          <img src="/Portfolio/axynoxia-logo.png" alt="" className="w-8 h-8 md:w-9 md:h-9 object-contain rounded-md bg-white p-1" />
           Tamim Hmizi
           <span className="hidden sm:inline text-yellow-500 font-normal"> · Axynoxia</span>
         </a>
@@ -75,46 +72,6 @@ const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-
-          {/* Resume dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsResumeOpen(true)}
-            onMouseLeave={() => setIsResumeOpen(false)}
-          >
-            <button
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-yellow-600 hover:bg-yellow-700 text-white font-semibold text-sm transition-colors"
-              aria-haspopup="true"
-              aria-expanded={isResumeOpen}
-              onClick={() => setIsResumeOpen((v) => !v)}
-            >
-              <FaFileDownload size={13} />
-              Resume
-              <FaChevronDown size={10} className={`transition-transform ${isResumeOpen ? "rotate-180" : ""}`} />
-            </button>
-            {isResumeOpen && (
-              <div className="absolute right-0 mt-1 w-40 bg-gray-900 border border-yellow-600/30 rounded-lg shadow-xl overflow-hidden">
-                <a
-                  href="/Portfolio/resume-en.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="block px-4 py-2 text-sm text-gray-200 hover:bg-yellow-600/20 hover:text-yellow-400 transition-colors"
-                >
-                  English (PDF)
-                </a>
-                <a
-                  href="/Portfolio/cv-fr.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="block px-4 py-2 text-sm text-gray-200 hover:bg-yellow-600/20 hover:text-yellow-400 transition-colors border-t border-yellow-600/10"
-                >
-                  Français (PDF)
-                </a>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Mobile toggle */}
@@ -138,34 +95,12 @@ const Navbar: React.FC = () => {
             <a
               key={link.id}
               href={`#${link.id}`}
-              onClick={closeAll}
+              onClick={closeMenu}
               className={active === link.id ? "text-yellow-500 font-semibold" : "text-gray-200 hover:text-yellow-400"}
             >
               {link.label}
             </a>
           ))}
-          <div className="flex gap-3 mt-4">
-            <a
-              href="/Portfolio/resume-en.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              onClick={closeAll}
-              className="px-4 py-2 rounded-lg bg-yellow-600 text-white font-semibold text-sm"
-            >
-              Resume (EN)
-            </a>
-            <a
-              href="/Portfolio/cv-fr.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              onClick={closeAll}
-              className="px-4 py-2 rounded-lg bg-amber-700 text-white font-semibold text-sm"
-            >
-              CV (FR)
-            </a>
-          </div>
         </div>
       </div>
     </nav>

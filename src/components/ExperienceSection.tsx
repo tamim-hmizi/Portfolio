@@ -23,6 +23,7 @@ import {
 } from "react-icons/si";
 import { MdSupportAgent, MdBackup } from "react-icons/md";
 import { VscAzure } from "react-icons/vsc";
+import { FaCalendarCheck } from "react-icons/fa";
 
 const ExperienceSection: React.FC = () => {
   return (
@@ -59,9 +60,11 @@ const ExperienceSection: React.FC = () => {
                   CURRENT
                 </span>
               </h3>
-              <span className="w-10 h-10 flex items-center justify-center rounded-md border border-yellow-500/50 bg-gray-900 text-yellow-500 text-xl font-bold flex-shrink-0 ml-4">
-                A
-              </span>
+              <img
+                src="/Portfolio/axynoxia-logo.png"
+                alt="Axynoxia"
+                className="w-10 h-10 object-contain rounded-md bg-white p-1 shadow-sm flex-shrink-0 ml-4"
+              />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
               <span className="text-yellow-400 font-semibold">Jan 2026 – Present</span> | Tunis, Tunisia | <a href="mailto:tamim.hmizi@axynoxia.com" className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2">tamim.hmizi@axynoxia.com</a>
@@ -87,13 +90,25 @@ const ExperienceSection: React.FC = () => {
                 Prisma, PostgreSQL, Redis and Traefik.
               </li>
             </ul>
-            <div className="flex flex-wrap gap-3 text-yellow-500 text-xl mt-4 pt-3 border-t border-yellow-600/20">
-              <FaReact title="React" />
-              <SiNestjs title="NestJS" />
-              <FaNodeJs title="Node.js" />
-              <FaDocker title="Docker" />
-              <SiKubernetes title="Kubernetes" />
-              <SiTerraform title="Terraform" />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4 pt-3 border-t border-yellow-600/20">
+              <div className="flex flex-wrap gap-3 text-yellow-500 text-xl">
+                <FaReact title="React" />
+                <SiNestjs title="NestJS" />
+                <FaNodeJs title="Node.js" />
+                <FaDocker title="Docker" />
+                <SiKubernetes title="Kubernetes" />
+                <SiTerraform title="Terraform" />
+              </div>
+              <a
+                href="https://calendly.com/axynoxia/axynoxia-discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-500 text-gray-900 font-bold text-sm shadow-md shadow-yellow-500/20 border-2 border-yellow-400 hover:bg-yellow-400 transition-all sm:ml-auto w-fit"
+              >
+                <FaCalendarCheck className="w-4 h-4" />
+                <span>Book a discovery call</span>
+              </a>
             </div>
           </div>
 
@@ -154,7 +169,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Oct 2025 – May 2026</span> | RFC (Microsoft Gold CSP Partner) -- Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Oct 2025 – May 2026</span> | RFC (Microsoft Gold CSP Partner) – Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Consulting and engineering for large-scale hybrid cloud infrastructure, sovereign cloud environments, and enterprise security.
@@ -195,7 +210,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Feb 2025 – Aug 2025</span> | RFC -- Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Feb 2025 – Aug 2025</span> | RFC – Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Designed and implemented a <strong className="text-yellow-400">DevOps-as-a-Service platform</strong> to automate application analysis, deployment, and monitoring.
@@ -237,7 +252,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jul 2024 -- Aug 2024</span> | RFC -- Internship
+              <span className="text-yellow-400 font-semibold">Jul 2024 – Aug 2024</span> | RFC – Internship
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Developed a cloud-native web application for intern management (onboarding, tracking, and admin workflows).
@@ -276,7 +291,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jul 2023 -- Aug 2023</span> | ESPRIT -- Internship
+              <span className="text-yellow-400 font-semibold">Jul 2023 – Aug 2023</span> | ESPRIT – Internship
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Developed a web platform that scrapes official educational websites to aggregate online courses.
@@ -307,7 +322,7 @@ const ExperienceSection: React.FC = () => {
           >
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-lg md:text-xl font-semibold text-yellow-500">
-                Network Engineer Intern (C-NOC) -- Tunisie Telecom
+                Network Engineer Intern (C-NOC) – Tunisie Telecom
               </h3>
               <img
                 src="/Portfolio/tunisie-telecom-logo.png"
@@ -316,7 +331,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Aug 2021 -- Sep 2021</span>
+              <span className="text-yellow-400 font-semibold">Aug 2021 – Sep 2021</span>
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Worked in the national B2B Network Operations Center.
