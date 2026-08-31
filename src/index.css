@@ -40,3 +40,33 @@ html {
 section[id] {
   scroll-margin-top: 4rem;
 }
+
+/*
+ * Background blobs. Compositor-only properties (transform/opacity) so the
+ * animation never triggers layout or paint while the page is scrolling.
+ */
+@keyframes float-blob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 6%, 0) scale(1.15);
+  }
+}
+
+.float-blob {
+  animation: float-blob 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Respect users who have asked for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .float-blob {
+    animation: none;
+  }
+}

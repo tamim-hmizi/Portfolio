@@ -18,8 +18,13 @@ const App: React.FC = () => {
     "bottom-20 left-36 w-36 h-36 bg-amber-900",
   ];
 
+  // overflow-x-clip, not overflow-x-hidden: `overflow-x: hidden` forces the
+  // computed `overflow-y` to `auto`, turning the root div into a second scroll
+  // container nested inside the document scroller. Two competing scrollers is
+  // what made the page feel laggy. `clip` contains the same horizontal overflow
+  // without creating a scroll container.
   return (
-    <div className="font-sans text-gray-200 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-x-hidden min-h-screen relative">
+    <div className="font-sans text-gray-200 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-x-clip min-h-screen relative">
       {positions.map((position, index) => (
         <FloatingBackground key={index} position={position} index={index} />
       ))}
