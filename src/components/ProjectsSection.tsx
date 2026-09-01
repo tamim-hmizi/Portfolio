@@ -43,6 +43,7 @@ import {
   SiGrafana,
   SiLangchain,
   SiTemporal,
+  SiFirebase,
 } from "react-icons/si";
 
 interface Project {
@@ -63,15 +64,15 @@ const ProjectsSection: React.FC = () => {
     // — Live projects first —
     {
       title: "B-moovd Ticketing",
-      description: "Production event ticketing platform for the B'moovd Sportsbar Wolfsburg — currently selling tickets for FIFA World Cup 2026 public viewing events.",
-      tech: [<SiNextdotjs title="Next.js" />, <FaReact title="React" />, <FaShoppingCart title="E-commerce" />],
+      description: "Production ticketing platform for B'moovd Sportsbar Wolfsburg, selling FIFA World Cup 2026 public-viewing tickets. Next.js 14 + tRPC, three payment providers (Stripe, Mollie, PayPal), signed-JWT QR tickets with camera check-in, and emailed PDF tickets and VAT invoices.",
+      tech: [<SiNextdotjs title="Next.js 14" />, <SiTypescript title="tRPC / TypeScript" />, <SiMongodb title="MongoDB + Prisma" />, <SiStripe title="Stripe / Mollie / PayPal" />],
       url: "https://bmoovd-shop.com",
       domain: "bmoovd-shop.com",
     },
     {
       title: "B-moovd",
-      description: "High-performance cross-platform mobile app built with Flutter — featuring Provider state management, 60 FPS animations, Dio API integration, and offline-first caching.",
-      tech: [<SiFlutter title="Flutter" />, <FaMobileAlt title="Mobile" />],
+      description: "Bar reservation and discovery app, live on the App Store and Google Play. Built with Flutter across iOS, Android and web, on Firebase (Auth, Firestore, Cloud Functions, Storage) with Stripe payments.",
+      tech: [<SiFlutter title="Flutter" />, <SiFirebase title="Firebase" />, <SiStripe title="Stripe" />, <FaMobileAlt title="iOS + Android" />],
       ios: "https://apps.apple.com/de/app/bmoovd/id6736364332",
       android: "https://play.google.com/store/apps/details?id=com.bmoovd.app",
     },
@@ -118,28 +119,28 @@ const ProjectsSection: React.FC = () => {
     // — Other projects —
     {
       title: "Axynoxia Energie",
-      description: "Enterprise EMS + SCADA/HMI for a hybrid solar and battery power plant, modeled on a real utility-scale PV project — live telemetry, alarms, and plant control dashboards.",
-      tech: [<FaSolarPanel title="Energy / SCADA" />, <FaReact title="React" />, <SiPrometheus title="Monitoring" />],
+      description: "Energy Management and SCADA/HMI system for a hybrid PV + battery plant, modelled on the real ADAM Photovoltaic Project (5.5 MWp PV, 2.2 MW / 1.5 MWh BESS, 2 × 8.25 MVA gas turbines). Live telemetry, alarms and supervisory control dashboards.",
+      tech: [<FaSolarPanel title="PV + BESS / SCADA" />, <FaReact title="React" />, <SiTypescript title="TypeScript monorepo" />],
       url: "https://energie.products.axynoxia.com",
       domain: "energie.products.axynoxia.com",
     },
     {
       title: "ProInvoice",
-      description: "Enterprise SaaS invoicing platform built for the Tunisian market — 2FA authentication, PDF/Excel generation, and a fully Swagger-documented API.",
-      tech: [<FaFileInvoiceDollar title="Invoicing" />, <SiNestjs title="NestJS" />, <SiPostgresql title="PostgreSQL" />],
+      description: "SaaS invoicing platform for the Tunisian market: React 19 SPA on an Express/TypeScript API, with 2FA, PDF and Excel export, emailed invoices, and a Swagger-documented API.",
+      tech: [<FaFileInvoiceDollar title="Invoicing" />, <FaReact title="React 19" />, <SiExpress title="Express" />, <SiMongodb title="MongoDB" />],
       url: "https://invoice.products.axynoxia.com",
       domain: "invoice.products.axynoxia.com",
     },
     {
       title: "Axynoxia LeadGen",
-      description: "AI-native sales engine: real-time prospect data scraping, live context analysis, and autonomous hyper-personalized outreach orchestrated with LangGraph and Temporal.",
+      description: "Privacy-first B2B prospecting engine: waterfall enrichment where every email is provider-confirmed or verified before it is stored, full per-field provenance, outcome-based credit billing, and GDPR primitives built into the schema.",
       tech: [<FaRobot title="AI Automation" />, <SiLangchain title="LangGraph" />, <SiTemporal title="Temporal" />, <SiNextdotjs title="Next.js" />],
       url: "https://leadgen.products.axynoxia.com",
       domain: "leadgen.products.axynoxia.com",
     },
     {
       title: "Axynoxia CRM & Leasing",
-      description: "Enterprise CRM and lease-management platform for the Tunisian leasing market — BCT-compliant, IFRS 16 accounting logic, multi-tenant MERN architecture.",
+      description: "CRM and lease-management platform for the Tunisian leasing market — BCT-compliant with an IFRS 16 financial engine, 10-role RBAC, Arabic RTL support, and background job processing on a MERN stack.",
       tech: [<FaHandshake title="CRM" />, <SiMongodb title="MongoDB" />, <FaReact title="React" />, <FaNodeJs title="Node.js" />],
       url: "https://crm-leasing.products.axynoxia.com",
       domain: "crm-leasing.products.axynoxia.com",
@@ -151,15 +152,15 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: "Axynoxia ERP",
-      description: "Industrial multi-tenant SaaS ERP with modular CRM, inventory, and accounting — featuring MFA, RBAC, Argon2 security, and Traefik-based service routing.",
+      description: "ERP platform where business modules (CRM, inventory, accounting) plug into the core cleanly. Each client gets a dedicated single-tenant deployment with its own database and containers. MFA, role-based admin, module enable/disable and access requests.",
       tech: [<SiNestjs title="NestJS" />, <SiPrisma title="Prisma" />, <SiPostgresql title="PostgreSQL" />, <SiRedis title="Redis" />, <SiTraefikproxy title="Traefik" />],
       url: "https://erp.products.axynoxia.com",
       domain: "erp.products.axynoxia.com",
     },
     {
       title: "Tickety",
-      description: "High-concurrency SaaS ticketing platform supporting thousands of simultaneous bookings per second with real-time WebSocket seat sync and atomic transactions.",
-      tech: [<FaReact title="React" />, <SiNestjs title="NestJS" />, <SiPrisma title="Prisma" />, <SiPostgresql title="PostgreSQL" />],
+      description: "Event ticketing platform built as a TypeScript pnpm monorepo — Vite/React web app and a TypeScript API covering the full order lifecycle, including pending-order expiry and refund concurrency handling, with end-to-end smoke tests.",
+      tech: [<FaReact title="React + Vite" />, <SiTypescript title="TypeScript" />, <SiExpress title="Express-style API" />, <SiMongodb title="MongoDB" />],
       url: "https://tickets.products.axynoxia.com",
       domain: "tickets.products.axynoxia.com",
     },

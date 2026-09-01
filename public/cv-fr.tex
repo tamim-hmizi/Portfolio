@@ -67,7 +67,7 @@ Ariana, Tunisie \;|\;
 \section{Profil Professionnel}
 Ingénieur logiciel et \textbf{fondateur d'Axynoxia}, société d'ingénierie logicielle qui livre du développement sur mesure, du cloud et DevOps, de l'automatisation par IA, des intégrations et du e-commerce pour des clients en Europe et en Tunisie.
 Je prends en charge la livraison de bout en bout : j'architecture le produit, je le développe full-stack, je le mets en production et j'exploite l'infrastructure qui le fait tourner.
-\textbf{Plus de 6 ans d'expérience pratique} sur des plateformes enterprise, du SaaS multi-tenant, des applications mobiles et du e-commerce en production --- avec une expertise approfondie en Kubernetes, Terraform, automatisation CI/CD et architecture cloud-native sur Azure, AWS et OpenStack.
+\textbf{Plus de 6 ans d'expérience pratique} sur des plateformes enterprise, des produits SaaS, des applications mobiles et du e-commerce en production --- avec une expertise approfondie en Kubernetes, Terraform, automatisation CI/CD et architecture cloud-native sur Azure, AWS et OpenStack.
 Réalisations : plateformes enterprise utilisées par \textbf{plus d'un million d'utilisateurs} dans des secteurs réglementés, infrastructures cloud hybrides souveraines pour un Partenaire Or Microsoft CSP, et automatisation apportant \textbf{70\% de réduction du temps de déploiement} et \textbf{40\% de réduction des tâches manuelles}.
 
 % ================= SKILLS =================
@@ -93,7 +93,7 @@ Tunis, Tunisie \;|\; \href{mailto:tamim.hmizi@axynoxia.com}{tamim.hmizi@axynoxia
 \item Fondation et direction d'une \textbf{société d'ingénierie logicielle} au service de clients en Europe et en Tunisie --- développement sur mesure, cloud et DevOps, IA et automatisation intelligente, intégration de systèmes et e-commerce.
 \item \textbf{Prise en charge du cycle de livraison complet} sur chaque mission : cadrage, architecture, développement full-stack, provisionnement cloud, CI/CD, observabilité et exploitation en production.
 \item Mise en production et exploitation de systèmes réels : \textbf{plateforme de billetterie à forte concurrence}, \textbf{application mobile Flutter publiée sur l'App Store et Google Play}, \textbf{CMS immobilier} et \textbf{boutiques Shopify} pour des marques de distribution.
-\item Développement de \textbf{produits SaaS multi-tenant} en interne --- ERP modulaire et plateforme de billetterie enterprise --- sur NestJS, Prisma, PostgreSQL, Redis et Traefik.
+\item Développement de \textbf{produits SaaS} en interne --- ERP modulaire, plateforme de billetterie, plateforme de facturation, CRM de leasing et système de gestion d'énergie PV/BESS --- chacun déployé et exploité en production.
 \item Gestion directe de la relation client, du cadrage technique et de la livraison commerciale, en \textbf{arabe, français et anglais}.
 \end{highlights}
 
@@ -178,22 +178,21 @@ Ariana, Tunisie
 \item \textbf{Implémentation} de seuils d'alerting automatisés et de métriques d'observabilité avancées pour minimiser les temps d'arrêt en environnements cloud souverains.
 \end{highlights}
 
-\textbf{2. Axynoxia ERP --- Plateforme SaaS Multi-Tenant}
+\textbf{2. Axynoxia ERP --- Plateforme ERP Modulaire (\href{https://erp.products.axynoxia.com}{erp.products.axynoxia.com})}
 \begin{highlights}
-\item \textbf{Vue d'ensemble :} Suite de gestion d'entreprise centralisée avec outils CRM, inventaire et comptabilité modulaires pour organisations multi-tenant.
-\item \textbf{Architecture} d'un \textbf{monorepo SaaS ERP multi-tenant} haute performance avec \textbf{NestJS}, \textbf{Prisma}, \textbf{PostgreSQL} et \textbf{Redis}.
-\item \textbf{Implémentation} de standards de sécurité industriels : \textbf{MFA (QR-based)}, \textbf{RBAC} et chiffrement \textbf{Argon2} pour les données métier sensibles.
-\item \textbf{Orchestration} d'une infrastructure résiliente avec \textbf{Docker Compose} et \textbf{Traefik} pour la découverte automatique des services et le routage sécurisé des tenants.
-\item \textbf{Développement} d'un système de modules auto-découverts permettant aux plugins métier (CRM, Inventaire) de s'intégrer au noyau sans modification du code.
+\item \textbf{Vue d'ensemble :} Suite de gestion d'entreprise où les modules (CRM, inventaire, comptabilité) s'intègrent à un noyau commun. Chaque client dispose d'un déploiement dédié mono-tenant, avec sa propre base de données et ses propres conteneurs.
+\item \textbf{Architecture} d'un \textbf{monorepo pnpm} avec \textbf{NestJS}, \textbf{Prisma}, \textbf{PostgreSQL} et \textbf{Redis}.
+\item \textbf{Implémentation} du \textbf{MFA (QR)}, d'un contrôle d'accès par rôles (admin/membre/lecteur), du changement de mot de passe à la première connexion et du hachage \textbf{Argon2}.
+\item \textbf{Développement} d'un système de modules auto-découverts permettant aux plugins métier de s'intégrer au noyau sans modification du code, avec gestion des activations et des demandes d'accès.
+\item \textbf{Orchestration} de l'exécution avec \textbf{Docker Compose} et \textbf{Traefik} pour la découverte de services et le routage, avec stockage objet pour les fichiers utilisateurs.
 \end{highlights}
 
-\textbf{3. Tickety --- SaaS de Billetterie Haute Concurrence}
+\textbf{3. Tickety --- Plateforme de Billetterie Événementielle (\href{https://tickets.products.axynoxia.com}{tickets.products.axynoxia.com})}
 \begin{highlights}
-\item \textbf{Vue d'ensemble :} Gestion d'événements à grande échelle, réservation de billets, transactions portefeuille et validation sur site pour les organisateurs.
-\item \textbf{Architecture} d'un \textbf{monorepo SaaS distribué} (pnpm) avec \textbf{React}, \textbf{NestJS} et \textbf{Prisma}, supportant des milliers de transactions de réservation simultanées par seconde.
-\item \textbf{Conception} de schémas \textbf{PostgreSQL} hautement normalisés avec indexation optimisée et considérations \textbf{Read/Write split} pour absorber les pics de trafic massifs.
-\item \textbf{Intégration} de la synchronisation en temps réel de l'inventaire des places avec \textbf{WebSockets (Socket.io)} et transactions atomiques pour éliminer les risques de double réservation.
-\item \textbf{Déploiement} via des \textbf{pipelines CI/CD automatisés} avec portes qualité rigoureuses, scénarios de tests de charge et conteneurisation \textbf{Docker}.
+\item \textbf{Vue d'ensemble :} Gestion d'événements et réservation de billets, couvrant le cycle de vie complet de la commande, du paiement jusqu'au remboursement.
+\item \textbf{Architecture} d'un \textbf{monorepo TypeScript pnpm} --- une application web \textbf{Vite/React} et une API TypeScript avec authentification bcrypt et sessions par cookies.
+\item \textbf{Implémentation} du cycle de vie complet des commandes, incluant l'expiration des commandes en attente et la \textbf{gestion de la concurrence sur les remboursements}.
+\item \textbf{Couverture} des parcours de réservation critiques par des \textbf{tests end-to-end}, avec conteneurisation de la stack pour un déploiement reproductible.
 \end{highlights}
 
 \textbf{4. Roehrdanz Immobilien --- CMS et Plateforme Immobilière Moderne(\href{https://rimmobilien-test.de}{rimmobilien-test.de})}
@@ -205,21 +204,21 @@ Ariana, Tunisie
 \item \textbf{Optimisation} des performances frontend avec \textbf{Vite} et \textbf{Tailwind CSS v4}, atteignant des temps de chargement quasi-instantanés pour les galeries photos haute résolution.
 \end{highlights}
 
-\textbf{5. B-moovd --- Écosystème Mobile Haute Performance}
+\textbf{5. B-moovd --- Application de Réservation et Découverte de Bars (App Store et Google Play)}
 \begin{highlights}
-\item \textbf{Vue d'ensemble :} Application mobile haute performance pour la réservation fluide, l'orchestration de paiements et l'engagement utilisateur en temps réel.
-\item \textbf{Développement} d'une application mobile cross-platform réactive avec \textbf{Flutter}, implémentant une \textbf{gestion d'état par Provider} et des animations fluides à \textbf{60 FPS}.
-\item \textbf{Intégration} des appels API RESTful avec \textbf{Dio} et mise en cache persistante locale pour une expérience \textbf{offline-first} fluide.
-\item \textbf{Optimisation} de la taille du bundle et de l'allocation des ressources pour des performances élevées sur une large gamme de terminaux mobiles.
+\item \textbf{Vue d'ensemble :} Application de réservation et de découverte de bars, publiée et disponible sur l'\textbf{App Store} et \textbf{Google Play}.
+\item \textbf{Développement} du client cross-platform en \textbf{Flutter} (cibles iOS, Android et web) à partir d'une base de code Dart unique.
+\item \textbf{Implémentation} du backend sur \textbf{Firebase} --- Auth, Firestore avec règles de sécurité et index dédiés, Cloud Functions et Storage.
+\item \textbf{Intégration} de \textbf{Stripe} pour les paiements in-app, et mise en place du pipeline de publication sur les deux stores.
 \end{highlights}
 
 \textbf{6. B-moovd Ticketing --- Plateforme de Billetterie Événementielle (\href{https://bmoovd-shop.com}{bmoovd-shop.com})}
 \begin{highlights}
 \item \textbf{Vue d'ensemble :} Plateforme de billetterie événementielle en production pour le B'moovd Sportsbar Wolfsburg, permettant la vente de billets en ligne pour des événements de visionnage sportif.
-\item \textbf{Développement} d'une application web de billetterie complète en \textbf{Next.js} pour le venue B'moovd --- filiale du \textbf{Röhrdanz Unternehmensgruppe} --- vendant actuellement des billets pour les événements de visionnage public de la \textbf{Coupe du Monde FIFA 2026} à Wolfsburg.
-\item \textbf{Implémentation} des flux de listing d'événements, sélection de billets et paiement avec \textbf{orchestration de paiements complète}.
-\item \textbf{Livraison} d'un storefront mobile-optimisé avec une identité visuelle alignée sur la marque B'moovd.
-\item \textbf{Déploiement} sous la marque Axynoxia, servant des milliers de fans sur plusieurs événements de la Coupe du Monde.
+\item \textbf{Développement} de la plateforme en \textbf{Next.js 14} (App Router, TypeScript strict) avec \textbf{tRPC} pour tous les échanges client-serveur et \textbf{MongoDB} via \textbf{Prisma}, pour le venue B'moovd --- filiale du \textbf{Röhrdanz Unternehmensgruppe}.
+\item \textbf{Intégration} de trois prestataires de paiement --- \textbf{Stripe}, \textbf{Mollie} et \textbf{PayPal} --- derrière un parcours de paiement unique.
+\item \textbf{Implémentation} de \textbf{billets QR signés par JWT} avec scan par caméra pour le contrôle sur site, et génération des billets PDF et factures A4 avec TVA envoyés par e-mail.
+\item \textbf{Sécurisation} via \textbf{NextAuth} avec contrôle d'accès par rôles (admin, staff, client) sur sessions JWT.
 \end{highlights}
 
 \textbf{7. Confortex --- E-commerce Shopify (\href{https://confortex.shop}{confortex.shop})}
@@ -236,7 +235,46 @@ Ariana, Tunisie
 \item \textbf{Livraison} d'un blog SEO axé contenu, d'une intégration newsletter et d'une gestion multi-showrooms pour soutenir les canaux de vente en ligne et physiques.
 \end{highlights}
 
-\textbf{9. MERN E-commerce --- Infrastructure SaaS Industrielle}
+\textbf{9. Axynoxia Energie --- Gestion d'Énergie et SCADA PV + BESS (\href{https://energie.products.axynoxia.com}{energie.products.axynoxia.com})}
+\begin{highlights}
+\item \textbf{Vue d'ensemble :} Système de gestion d'énergie (EMS) et SCADA/IHM pour une centrale hybride solaire et stockage, modélisé sur le \textbf{projet photovoltaïque ADAM} (Eni Tunisia / METKA EGN) : 5,5 MWc PV, BESS Li-Ion 2,2 MW / 1,5 MWh, 2 x 8,25 MVA de turbines à gaz, raccordement 20/11 kV.
+\item \textbf{Développement} d'un \textbf{monorepo TypeScript} séparant le modèle de domaine, l'API, le service de contrôle, l'IHM et un simulateur de centrale en services déployables distincts.
+\item \textbf{Implémentation} de la télémétrie temps réel, de la gestion des alarmes et des écrans de conduite supervisée, avec des constantes issues du dossier de conception du projet.
+\item \textbf{Déploiement} de la stack derrière un reverse proxy mutualisé avec terminaison TLS ; périmètre explicitement limité à la supervision et à l'aide à la décision, hors systèmes instrumentés de sécurité.
+\end{highlights}
+
+\textbf{10. ProInvoice --- Plateforme SaaS de Facturation (\href{https://invoice.products.axynoxia.com}{invoice.products.axynoxia.com})}
+\begin{highlights}
+\item \textbf{Vue d'ensemble :} Plateforme de facturation pour le marché tunisien : création, gestion et envoi des factures, avec une conformité multi-pays en feuille de route.
+\item \textbf{Développement} d'une SPA \textbf{React 19 + Vite} avec \textbf{TanStack Query}, React Hook Form et Zod, adossée à une API \textbf{Express/TypeScript} sur \textbf{MongoDB}.
+\item \textbf{Implémentation} de l'authentification à deux facteurs, de la génération \textbf{PDF et Excel} et de l'envoi par e-mail.
+\item \textbf{Documentation} de l'API avec \textbf{Swagger} et génération automatisée de la documentation produit.
+\end{highlights}
+
+\textbf{11. Axynoxia LeadGen --- Moteur de Prospection B2B (\href{https://leadgen.products.axynoxia.com}{leadgen.products.axynoxia.com})}
+\begin{highlights}
+\item \textbf{Vue d'ensemble :} Plateforme de prospection B2B privacy-first, fondée sur la collecte de données en temps réel et la personnalisation des messages plutôt que sur une base de contacts statique.
+\item \textbf{Conception} d'un pipeline d'\textbf{enrichissement en cascade} avec passage obligatoire par une vérification : chaque e-mail est confirmé par le fournisseur ou vérifié indépendamment avant d'être enregistré.
+\item \textbf{Implémentation} d'une \textbf{traçabilité complète} par champ, indiquant quel fournisseur a fourni chaque valeur, avec un journal de tentatives interrogeable.
+\item \textbf{Développement} d'une facturation à l'usage (seuls les fournisseurs réellement appelés sont facturés) et des primitives \textbf{RGPD} (liste de suppression, consentements, demandes des personnes concernées) intégrées au schéma dès l'origine.
+\item \textbf{Orchestration} des workflows d'enrichissement longue durée avec \textbf{Temporal} et \textbf{LangGraph} sur une stack \textbf{NestJS} et \textbf{Next.js}.
+\end{highlights}
+
+\textbf{12. Axynoxia CRM et Leasing --- Plateforme de Gestion de Leasing (\href{https://crm-leasing.products.axynoxia.com}{crm-leasing.products.axynoxia.com})}
+\begin{highlights}
+\item \textbf{Vue d'ensemble :} Plateforme CRM et de gestion de contrats de leasing pour le marché tunisien, couvrant le cycle de vie du contrat jusqu'à la comptabilité.
+\item \textbf{Implémentation} d'un moteur financier aligné sur la norme \textbf{IFRS 16} et les exigences de la \textbf{BCT} (Banque Centrale de Tunisie).
+\item \textbf{Développement} d'un modèle \textbf{RBAC à 10 rôles} et d'un support complet de l'\textbf{arabe en RTL} en parallèle de l'interface en alphabet latin.
+\item \textbf{Construction} de la plateforme sur la stack \textbf{MERN} avec traitement de tâches en arrière-plan, et conteneurisation pour le déploiement.
+\end{highlights}
+
+\textbf{13. Habiter Mieux --- Landing Page de Génération de Leads Solaire (\href{https://habitermieux-renov.com}{habitermieux-renov.com})}
+\begin{highlights}
+\item \textbf{Livraison} d'un site de génération de leads en français pour le client Habiter Mieux, construit autour des aides gouvernementales et d'un tunnel de demande de devis.
+\item \textbf{Optimisation} de la page pour la conversion et le référencement, alimentant directement le pipeline commercial du client.
+\end{highlights}
+
+\textbf{14. MERN E-commerce --- Infrastructure SaaS Industrielle}
 \begin{highlights}
 \item \textbf{Vue d'ensemble :} Plateforme retail industrielle pour la gestion des catalogues produits, des commandes clients et des flux de paiement sécurisés.
 \item \textbf{Développement} d'un écosystème e-commerce complet avec la stack \textbf{MERN}, axé sur la sécurité industrielle via \textbf{JWT} et \textbf{Argon2}.
@@ -244,7 +282,7 @@ Ariana, Tunisie
 \item \textbf{Implémentation} d'une architecture frontend responsive avec \textbf{Redux Toolkit} pour la persistance d'état complexe dans les workflows d'achat.
 \end{highlights}
 
-\textbf{10. OMHY Entertainment --- Hub Vidéo Managé (\href{https://www.omhyfamily.com/}{omhyfamily.com})}
+\textbf{15. OMHY Entertainment --- Hub Vidéo Managé (\href{https://www.omhyfamily.com/}{omhyfamily.com})}
 \begin{highlights}
 \item \textbf{Vue d'ensemble :} Hub média digital premium pour le streaming vidéo haute fidélité, portfolios de contenu et expériences utilisateur interactives.
 \item \textbf{Développement} d'une plateforme de streaming vidéo et de portfolio avec \textbf{React (Chakra UI)} et \textbf{GSAP} pour des animations interactives haute fidélité.
@@ -252,14 +290,14 @@ Ariana, Tunisie
 \item \textbf{Gestion} d'architectures de bases de données hybrides (MongoDB et MySQL) pour équilibrer les métadonnées de contenu flexibles et l'historique strict des transactions utilisateurs.
 \end{highlights}
 
-\textbf{11. Jektis Travel --- Plateforme E-Tourisme Mondiale}
+\textbf{16. Jektis Travel --- Plateforme E-Tourisme Mondiale}
 \begin{highlights}
 \item \textbf{Vue d'ensemble :} Plateforme mondiale de découverte touristique pour la réservation de vols et hôtels avec scraping automatisé de prix en temps réel et paiements sécurisés.
 \item \textbf{Architecture} d'une plateforme touristique automatisée en \textbf{PHP}, intégrant \textbf{Stripe} pour l'orchestration des paiements et des modules de scraping pour la découverte en temps réel.
 \item \textbf{Développement} de workflows transactionnels automatisés avec \textbf{PHPMailer} et cron jobs personnalisés pour les mises à jour de statut de réservation et les notifications.
 \end{highlights}
 
-\textbf{12. New Journey --- Écosystème de Conseil Mondial}
+\textbf{17. New Journey --- Écosystème de Conseil Mondial}
 \begin{highlights}
 \item \textbf{Vue d'ensemble :} Écosystème de conseil mondial pour connecter clients et experts, gérant les interactions professionnelles et la prestation de services.
 \item \textbf{Développement} d'une plateforme de conseil complète avec \textbf{Symfony 7} et \textbf{PHP 8.2}, axée sur une architecture de contrôleurs modulaire et \textbf{Doctrine ORM}.
@@ -268,13 +306,13 @@ Ariana, Tunisie
 \item \textbf{Intégration} d'une authentification multi-utilisateurs sécurisée et d'un contrôle d'accès basé sur les rôles (RBAC) pour gérer les interactions clients et administrateurs.
 \end{highlights}
 
-\textbf{13. Hub CI/CD DevOps --- Infrastructure Industrielle (ESPRIT)}
+\textbf{18. Hub CI/CD DevOps --- Infrastructure Industrielle (ESPRIT)}
 \begin{highlights}
 \item \textbf{Construction} d'une plateforme CI/CD complète avec \textbf{Jenkins}, \textbf{SonarQube} et \textbf{Nexus} pour le versionnement des artefacts et la gouvernance de la qualité du code.
 \item \textbf{Automatisation} du déploiement de microservices \textbf{Angular} et \textbf{Spring Boot} avec audit de sécurité complet via \textbf{Trivy}.
 \end{highlights}
 
-\textbf{14. Lab Cloud Privé OpenStack --- Infrastructure Hybride (ESPRIT)}
+\textbf{19. Lab Cloud Privé OpenStack --- Infrastructure Hybride (ESPRIT)}
 \begin{highlights}
 \item \textbf{Déploiement} d'un cloud privé \textbf{OpenStack} multi-nœuds, orchestrant réseaux virtuels, sous-réseaux et nœuds \textbf{VPN-over-physical}.
 \item \textbf{Gestion} du cycle de vie complet des charges de travail virtualisées, avec mise en œuvre du scaling automatisé et du routage haute disponibilité pour les applications web invitées.
