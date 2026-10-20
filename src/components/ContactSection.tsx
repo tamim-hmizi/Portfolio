@@ -57,7 +57,7 @@ const ContactSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
               <FaMapMarkerAlt className="text-yellow-500 text-xl flex-shrink-0" />
               <span className="text-sm md:text-base font-semibold">Location:</span>
-              <span className="text-yellow-400 font-semibold">Ariana, Tunisia</span>
+              <span className="text-yellow-400 font-semibold">Ariana</span>
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-yellow-600/30">

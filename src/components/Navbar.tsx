@@ -3,8 +3,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const NAV_LINKS = [
   { id: "home", label: "Home" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
@@ -49,6 +49,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
+      aria-label="Primary"
       className={`fixed top-0 left-0 w-full z-40 transition-all border-b ${
         scrolled
           ? "bg-black/70 backdrop-blur-md border-yellow-600/20 shadow-lg shadow-black/20"
@@ -77,6 +78,8 @@ const Navbar: React.FC = () => {
           onClick={() => setIsMenuOpen((v) => !v)}
           className="md:hidden text-white text-xl z-10"
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -84,9 +87,8 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden fixed inset-0 top-14 bg-black/95 backdrop-blur-sm transition-opacity ${
-          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        id="mobile-menu"
+        className={`md:hidden fixed inset-x-0 top-14 h-[calc(100dvh-3.5rem)] bg-black/95 backdrop-blur-sm ${isMenuOpen ? "block" : "hidden"}`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-6 text-lg">
           {NAV_LINKS.map((link) => (

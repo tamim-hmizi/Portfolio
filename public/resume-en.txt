@@ -1,0 +1,133 @@
+Tamim Hmizi
+Software Engineer | Cloud, DevOps & AI
+Ariana | tamimhmizi@icloud.com | +216 54 886 068
+linkedin.com/in/tamimhmizi | github.com/tamim-hmizi
+tamim-hmizi.github.io/Portfolio/
+
+Professional Summary
+Software engineer combining full stack development, cloud infrastructure and applied artificial intelligence (AI).
+Founder of Axynoxia and Full Stack Engineer at Bassetti Group. Build web and mobile applications, automate
+deployments and operate their infrastructure. Experience includes Azure Stack Hub, AWS EKS, infrastructure
+as code, observability and large language model (LLM) integration.
+
+Technical Skills
+Software: TypeScript, JavaScript, Python, C#, Java, PHP, Bash, SQL; React, Next.js, Angular, Flutter;
+Node.js, NestJS, Express, FastAPI, Flask, .NET, Spring Boot, Symfony.
+Cloud & DevOps: Azure, Azure Stack Hub, AWS, EKS, AKS, OpenStack; Docker, Kubernetes, Helm,
+Terraform, Ansible; Jenkins, GitHub Actions, GitLab CI, CI/CD.
+AI & automation: LLM integration, repository analysis, deployment recommendations, Python automation,
+web scraping, workflow integration.
+Data & operations: PostgreSQL, MongoDB, MySQL, Redis, Prisma, Firebase; Prometheus, Grafana,
+SonarQube, Trivy, Nexus; Linux, Windows Server, Commvault, Fortinet; OAuth2, IAM, RBAC.
+
+Professional Experience
+Full Stack Engineer | Bassetti Group, TEEXMA
+Apr 2026 to Present | Tunis
+• Develop enterprise applications for technical and scientific data management using .NET, Angular and
+JavaScript on the TEEXMA platform.
+• Maintain Delphi modules and containerize application workloads with Docker; contribute to delivery automation.
+Founder & Software Engineer | Axynoxia
+Jan 2026 to Present | Tunis | www.axynoxia.com
+• Lead client delivery from requirements and architecture through implementation, CI/CD, deployment and
+production operations.
+• Build web platforms, a Flutter mobile app, ticketing systems, a real estate CMS and Shopify storefronts;
+integrate payments and transactional email.
+• Develop internal ERP, ticketing, invoicing, CRM and energy management products, with hosted demos and
+ongoing development.
+Infrastructure Consultant | RFC
+Oct 2025 to May 2026 | Ariana
+• Engineer hybrid cloud infrastructure combining Azure Stack Hub and Azure; support enterprise networking
+with Fortinet and Cisco.
+• Administer Commvault backups, restore validation and incident analysis; automate recurring Linux and
+Windows Server operations.
+• Build Python/Flask telemetry exporters and Prometheus/Grafana dashboards for infrastructure and virtual
+machine monitoring.
+
+Earlier Experience
+DevOps Platform Engineer, Final Year Project | RFC
+Feb 2025 to Aug 2025 | Ariana | QuickOps public code
+• Built QuickOps, a DevOps as a Service platform with React, Express, FastAPI and MongoDB to analyze,
+deploy and monitor applications.
+• Integrated an LLM analysis engine to inspect repository structure, dependencies and runtime needs, then
+recommend VM or Kubernetes deployment.
+• Automated VM provisioning with Terraform, Ansible and Docker Compose; implemented AKS deployment
+templates for microservices.
+• Built Jenkins pipelines with SonarQube, Nexus, Prometheus and Grafana. Validated both deployment paths
+using two MERN e-commerce applications.
+Cloud & Full Stack Engineer Intern | RFC
+Jul 2024 to Aug 2024
+• Developed an intern management application and deployed containerized workloads on AWS EKS.
+• Implemented CI/CD with Jenkins, Docker, Terraform and GitHub Actions; added IAM controls and monitoring
+with Prometheus and Grafana.
+Web Developer Intern | ESPRIT
+Jul 2023 to Aug 2023
+• Built a course discovery platform using Python scraping of official education websites, structured metadata,
+search, filtering and recommendations.
+Network Engineer Intern, C-NOC | Tunisie Telecom
+Aug 2021 to Sep 2021
+• Monitored enterprise connectivity in the B2B Network Operations Center and assisted with routing and
+service availability incidents.
+
+Cloud, DevOps & Software Projects
+Azure Stack Hub Monitoring | RFC
+Python/Flask exporters collect infrastructure and VM telemetry through OAuth2 authenticated Admin APIs;
+Docker, Prometheus and Grafana provide dashboards and alerts.
+DevOps CI/CD Hub | ESPRIT
+Jenkins pipelines for Angular and Spring Boot applications, with SonarQube quality checks, Trivy security
+scanning and Nexus artifact management.
+OpenStack Private Cloud Lab | ESPRIT
+Multi-node private cloud with virtual networks, subnets, compute, storage and VPN connectivity for application
+workloads.
+MERN E-commerce | Independent project
+React and Redux storefront with Express, MongoDB, JWT authentication, Argon2 password hashing, order
+administration and asset uploads.
+New Journey & Jektis Travel | Independent projects
+Symfony 7/PHP 8.2 consulting platform with Doctrine, Turbo, Stimulus and RBAC; PHP travel platform with
+booking workflows, price scraping and email notifications.
+
+Education & Languages
+Software Engineering Degree | ESPRIT | 2020 to 2025 | Ariana
+General software engineering; specialization in Cloud Architecture and DevOps (ArcTIC).
+Languages: Arabic (native), English (B2), French (B2).
+
+Client Projects
+B’moovd Ticketing | bmoovd-shop.com
+Next.js and tRPC ticket shop with MongoDB/Prisma, payment integrations, signed QR tickets, camera check-in
+and emailed PDFs.
+B’moovd Mobile App | App Store | Google Play
+Flutter app for venue discovery and reservations, with Firebase authentication, Firestore, Cloud Functions,
+storage and payment integration.
+Roehrdanz Immobilien | rimmobilien-test.de
+React, Express and MongoDB real estate CMS with listing administration, image uploads, role based access
+and searchable property content.
+Confortex & Vie Sublime | confortex.shop | viesublime.tn
+Shopify storefronts with custom themes, collection catalogs, editorial content, newsletter integration and
+showroom information.
+Habiter Mieux | habiter-mieux.info
+Solar installation website with service information and a quote request funnel connected to the client’s enquiry
+workflow.
+OMHY Entertainment | omhyfamily.com
+React media and portfolio website with Chakra UI, GSAP animation, MongoDB/MySQL data services and
+Jenkins delivery pipelines.
+NexGen Studios
+Next.js App Router marketing website, containerized with Docker and served through Nginx.
+
+Axynoxia Product Demos
+Axynoxia ERP | erp.products.axynoxia.com
+NestJS, Prisma, PostgreSQL and Redis modular ERP with module discovery, access management and dedicated
+client deployments. Product development is ongoing.
+Tickety | tickets.products.axynoxia.com
+React/Vite and TypeScript ticketing platform with order expiry, refund handling and end to end smoke tests in
+a pnpm monorepo.
+Axynoxia Energie | energie.products.axynoxia.com
+TypeScript energy management demo for solar and battery storage, with a plant simulator, telemetry, alarms
+and supervisory dashboards.
+ProInvoice | invoice.products.axynoxia.com
+React and Express/TypeScript invoicing application with MongoDB, two factor authentication, PDF/Excel
+export, email delivery and Swagger API documentation.
+Axynoxia CRM & Leasing | crm-leasing.products.axynoxia.com
+MERN lease management demo with financial calculations, role based access, Arabic RTL interface and
+background job processing.
+
+Code, project details and contact: tamim-hmizi.github.io/Portfolio/
+

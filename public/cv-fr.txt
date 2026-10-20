@@ -1,0 +1,133 @@
+Tamim Hmizi
+Ingénieur logiciel | Cloud, DevOps et IA
+Ariana | tamimhmizi@icloud.com | +216 54 886 068
+linkedin.com/in/tamimhmizi | github.com/tamim-hmizi
+tamim-hmizi.github.io/Portfolio/
+
+Profil professionnel
+Ingénieur logiciel associant développement full stack, infrastructure cloud et intelligence artificielle (IA) appliquée.
+Fondateur d’Axynoxia et ingénieur full stack chez Bassetti Group. Je développe des applications web et mobiles,
+automatise leur déploiement et exploite leur infrastructure. Expérience sur Azure Stack Hub, AWS EKS,
+l’infrastructure as code, l’observabilité et l’intégration de grands modèles de langage (LLM).
+
+Compétences techniques
+Développement : TypeScript, JavaScript, Python, C#, Java, PHP, Bash, SQL ; React, Next.js, Angular,
+Flutter ; Node.js, NestJS, Express, FastAPI, Flask, .NET, Spring Boot, Symfony.
+Cloud et DevOps : Azure, Azure Stack Hub, AWS, EKS, AKS, OpenStack ; Docker, Kubernetes, Helm,
+Terraform, Ansible ; Jenkins, GitHub Actions, GitLab CI, CI/CD.
+IA et automatisation : intégration de LLM, analyse de dépôts, recommandations de déploiement, automatisation
+Python, collecte web et intégration de workflows.
+Données et exploitation : PostgreSQL, MongoDB, MySQL, Redis, Prisma, Firebase ; Prometheus, Grafana,
+SonarQube, Trivy, Nexus ; Linux, Windows Server, Commvault, Fortinet ; OAuth2, IAM, RBAC.
+
+Expérience professionnelle
+Ingénieur full stack | Bassetti Group, TEEXMA
+Avril 2026 à ce jour | Tunis
+• Développement d’applications de gestion de données techniques et scientifiques avec .NET, Angular et
+JavaScript sur la plateforme TEEXMA.
+• Maintenance de modules Delphi, conteneurisation avec Docker et contribution à l’automatisation des
+livraisons.
+Fondateur et ingénieur logiciel | Axynoxia
+Janvier 2026 à ce jour | Tunis | www.axynoxia.com
+• Pilotage des projets clients : cadrage, architecture, développement, CI/CD, déploiement et exploitation en
+production.
+• Réalisation de plateformes web, d’une application Flutter, de billetteries, d’un CMS immobilier et de boutiques
+Shopify ; intégration des paiements et des emails transactionnels.
+• Développement de produits internes ERP, billetterie, facturation, CRM et gestion énergétique, avec démonstrations hébergées et développements en cours.
+Consultant infrastructure | RFC
+Octobre 2025 à mai 2026 | Ariana
+• Conception d’infrastructures hybrides Azure Stack Hub et Azure ; intervention sur les réseaux d’entreprise
+Fortinet et Cisco.
+• Administration des sauvegardes Commvault, validation des restaurations et analyse d’incidents ; automatisation
+des opérations Linux et Windows Server.
+• Développement d’exporteurs Python/Flask et de tableaux de bord Prometheus/Grafana pour la supervision
+des infrastructures et machines virtuelles.
+
+Expériences précédentes
+Ingénieur plateforme DevOps, PFE | RFC
+Février 2025 à août 2025 | Ariana | Code public QuickOps
+• Création de QuickOps, plateforme DevOps as a Service avec React, Express, FastAPI et MongoDB pour
+analyser, déployer et superviser des applications.
+• Intégration d’un moteur LLM analysant la structure des dépôts, les dépendances et les besoins d’exécution
+pour recommander un déploiement VM ou Kubernetes.
+• Automatisation des VM avec Terraform, Ansible et Docker Compose ; création de modèles de déploiement
+AKS pour les microservices.
+• Pipelines Jenkins avec SonarQube, Nexus, Prometheus et Grafana ; validation des deux parcours sur deux
+applications e-commerce MERN.
+Stagiaire cloud et full stack | RFC
+Juillet 2024 à août 2024
+• Développement d’une application de gestion des stagiaires et déploiement de services conteneurisés sur AWS
+EKS.
+• CI/CD avec Jenkins, Docker, Terraform et GitHub Actions ; contrôles IAM et supervision Prometheus/Grafana.
+Stagiaire développeur web | ESPRIT
+Juillet 2023 à août 2023
+• Plateforme de recherche de cours : collecte Python sur des sites éducatifs officiels, normalisation des
+métadonnées, filtres et recommandations.
+Stagiaire ingénieur réseau, C-NOC | Tunisie Telecom
+Août 2021 à septembre 2021
+• Supervision des liaisons d’entreprise au centre d’exploitation réseau B2B ; assistance au diagnostic d’incidents
+de routage et de disponibilité.
+
+Projets cloud, DevOps et logiciels
+Supervision Azure Stack Hub | RFC
+Exporteurs Python/Flask exploitant les API Admin avec OAuth2 pour collecter la télémétrie infrastructure et
+VM ; Docker, Prometheus et Grafana pour les alertes et tableaux de bord.
+DevOps CI/CD Hub | ESPRIT
+Pipelines Jenkins pour Angular et Spring Boot, contrôles qualité SonarQube, analyse de sécurité Trivy et gestion
+des artefacts Nexus.
+Laboratoire cloud privé OpenStack | ESPRIT
+Cloud multi-nœuds : réseaux virtuels, sous-réseaux, calcul, stockage et connectivité VPN pour l’hébergement
+d’applications.
+E-commerce MERN | Projet personnel
+Boutique React/Redux, API Express et MongoDB, authentification JWT, hachage Argon2, administration des
+commandes et gestion des médias.
+New Journey et Jektis Travel | Projets personnels
+Plateforme de conseil Symfony 7/PHP 8.2 avec Doctrine, Turbo, Stimulus et RBAC ; plateforme de voyage
+PHP avec réservations, collecte de prix et notifications email.
+
+Formation et langues
+Diplôme d’ingénieur en informatique | ESPRIT | 2020 à 2025 | Ariana
+Formation générale en génie logiciel ; spécialisation Architecture Cloud et DevOps (ArcTIC).
+Langues : arabe (langue maternelle), anglais (B2), français (B2).
+
+Projets clients
+B’moovd Ticketing | bmoovd-shop.com
+Billetterie Next.js et tRPC avec MongoDB/Prisma, paiements intégrés, billets QR signés, contrôle d’accès par
+caméra et envoi de PDF par email.
+Application B’moovd | App Store | Google Play
+Application Flutter de découverte de lieux et de réservation : Firebase Auth, Firestore, Cloud Functions, stockage
+et intégration des paiements.
+Roehrdanz Immobilien | rimmobilien-test.de
+CMS immobilier React, Express et MongoDB avec administration des annonces, gestion des images, droits
+d’accès et recherche de biens.
+Confortex et Vie Sublime | confortex.shop | viesublime.tn
+Boutiques Shopify avec thèmes personnalisés, catalogues par collections, contenu éditorial, inscription newsletter
+et informations sur les showrooms.
+Habiter Mieux | habiter-mieux.info
+Site d’installation solaire avec présentation des services et parcours de demande de devis relié au traitement des
+demandes client.
+OMHY Entertainment | omhyfamily.com
+Site média et portfolio React, interfaces Chakra UI, animations GSAP, services de données MongoDB/MySQL
+et pipelines de livraison Jenkins.
+NexGen Studios
+Site vitrine Next.js App Router, conteneurisé avec Docker et servi par Nginx.
+
+Démonstrations de produits Axynoxia
+Axynoxia ERP | erp.products.axynoxia.com
+ERP modulaire NestJS, Prisma, PostgreSQL et Redis : découverte des modules, gestion des accès et déploiements
+dédiés par client. Développement en cours.
+Tickety | tickets.products.axynoxia.com
+Billetterie React/Vite et TypeScript en monorepo pnpm, avec expiration des commandes, traitement des
+remboursements et tests de bout en bout.
+Axynoxia Energie | energie.products.axynoxia.com
+Démonstration de gestion énergétique solaire et stockage batterie en TypeScript : simulateur de centrale,
+télémétrie, alarmes et tableaux de supervision.
+ProInvoice | invoice.products.axynoxia.com
+Application de facturation React et Express/TypeScript sur MongoDB : double authentification, exports
+PDF/Excel, emails et documentation API Swagger.
+Axynoxia CRM et Leasing | crm-leasing.products.axynoxia.com
+Démonstration MERN de gestion des contrats de leasing, calculs financiers, droits par rôle, interface arabe RTL
+et traitements asynchrones.
+
+Code, projets et contact : tamim-hmizi.github.io/Portfolio/
+
