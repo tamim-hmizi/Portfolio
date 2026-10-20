@@ -31,3 +31,5 @@ Build, ESLint, app TypeScript checks and source design lint pass. Browser checks
 The visual review checked desktop, tablet and phone screenshots. Internal design assessment: design 8/10, usability 8/10, creativity 7.5/10, content 8/10; weighted score 7.9/10. This is a self-review, not an external award or measured user preference. The principal limit is that several private projects have no approved public product screenshots; those previews use honest typographic summaries rather than invented interfaces. No sample content needs replacement.
 
 GitHub Markdown is rendered through GitHub's API before publication and checked visually. Publication and final live checks are performed separately; a successful local build alone does not establish deployment.
+
+Final production design gate: 0 failures at 1440, 768 and 390 pixels. The single no-footage warning is intentional for the reason above. All displayed headings stay within two lines, fonts load locally and no horizontal overflow or broken image was reported.
