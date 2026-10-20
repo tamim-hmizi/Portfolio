@@ -4,7 +4,7 @@ Personal portfolio for **Software Engineer | Cloud, DevOps & AI**, built with Re
 
 [Live portfolio](https://tamim-hmizi.github.io/Portfolio/) · [English resume](https://tamim-hmizi.github.io/Portfolio/resume-en.pdf) · [French CV](https://tamim-hmizi.github.io/Portfolio/cv-fr.pdf)
 
-The portfolio presents engineering projects in one portfolio. Visitors can filter by software, cloud and DevOps, or applied AI, review experience and download either three-page PDF.
+The portfolio presents engineering projects in one portfolio. Visitors can filter by software, cloud and DevOps, or applied AI, review experience and download either PDF.
 
 ## Local development
 
@@ -26,7 +26,7 @@ npm run build
 python3 scripts/build-resumes.py
 ```
 
-The document build requires pdfLaTeX and Poppler. It validates the page limit, contact and career text, embedded fonts and Unicode maps before replacing either PDF. Render and inspect all pages after editing. See [content reconciliation](docs/cv-content-audit.md) and [profile maintenance and research](docs/profile-editorial.md) for sources, content decisions and application guidance.
+The document build requires pdfLaTeX and Poppler. It validates the three-page maximum, selected project inventory, contact and career text, embedded fonts and Unicode maps before replacing either PDF. Render and inspect all pages after editing. See [content reconciliation](docs/cv-content-audit.md) and [profile maintenance and research](docs/profile-editorial.md) for sources, content decisions and application guidance.
 
 The code-native social card is `public/og-image.svg`. To regenerate `public/og-image.png`, run `node scripts/build-share-image.mjs` with the `sharp` package available to Node.
 
@@ -43,7 +43,7 @@ The existing `gh-pages` deployment publishes `dist` to the `gh-pages` branch. Gi
 
 * `src/components`: profile, project filters, career, skills, education and contact.
 * `public/resume-en.tex`, `public/cv-fr.tex`: editable document sources.
-* `public/resume-en.pdf`, `public/cv-fr.pdf`: published three-page documents.
+* `public/resume-en.pdf`, `public/cv-fr.pdf`: published application documents.
 * `scripts/build-resumes.py`: reproducible document build and extraction checks.
 * `docs/profile-editorial.md`: positioning, verified source references and maintenance guidance.
 

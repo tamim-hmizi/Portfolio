@@ -11,11 +11,11 @@ The AI evidence is QuickOps, the RFC final year project. Its public AI service u
 
 ## Content decisions
 
-The English resume and French CV are each three A4 pages at 11pt, with one column, clear section names, contact information in the document body, Unicode mapped text and embedded fonts. Preserve every project as its own entry in one Projects section, alongside Axynoxia work. Shorten repeated wording rather than omitting projects or technical scope. See `cv-content-audit.md` for the reconciliation. The original seven-page files remain recoverable through Git history.
+The English resume and French CV use one column, readable 11pt text, contact information in the document body, Unicode mapped text and embedded fonts. The owner now requests only meaningful projects, superseding the earlier exhaustive inventory. Feature eight distinct examples with strong relevance to software, cloud, DevOps and applied AI. Keep one Projects section, with Axynoxia work alongside other projects. Let the documents be shorter than three pages when the selected content fits. See `cv-content-audit.md` for the selection rationale. Earlier full inventories remain recoverable through Git history.
 
 Do not repeat the old 6+ years, 1M+ users, 70% faster deployment or 40% overhead claims without evidence of the individual's contribution and how the number was measured. Product reach is not personal user impact. The retained experience, education and language levels originate in the existing CV; this edit does not independently certify them.
 
-Keep projects together; describe their actual context when relevant. A hosted demo does not establish production readiness, statutory compliance, capacity or customer acceptance. The owner specifically requested restoration of all original projects, including LeadGen. Describe it as in development and omit its old, undeployed URL. Habiter Mieux's current URL is https://habiter-mieux.info/.
+Keep projects together; describe their actual context when relevant. A hosted demo does not establish production readiness, statutory compliance, capacity or customer acceptance. Leave repetitive demos, introductory coursework and weaker or unfinished examples out of the featured selection. Habiter Mieux's current URL is https://habiter-mieux.info/.
 
 ## Evidence based guidance
 
@@ -27,10 +27,10 @@ Reviewed 20 October 2026:
 * [GitHub's hiring profile guidance](https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume): concise bio, relevant experience and skills, and a small selection of accessible projects with useful descriptions and public code.
 * [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance): semantic headings, visible keyboard focus, accurate toggle states, readable content and reduced motion support.
 
-Three pages follow the owner's requested limit; this is not a claim that three pages are ideal for every vacancy. No format guarantees an ATS score, correct parsing in every system or an interview. Do not keyword stuff. For each application, select relevant examples and use the vacancy's terminology only where accurate. Follow the employer's requested file format.
+Three pages is a maximum, not a length to pad to. Hide page counts in public download labels. No format guarantees an ATS score, correct parsing in every system or an interview. Do not keyword stuff. For each application, select relevant examples and use the vacancy's terminology only where accurate. Follow the employer's requested file format.
 
 ## Rebuild and verify
 
-Edit `public/resume-en.tex` and `public/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. Requires pdfLaTeX and Poppler (`pdfinfo`, `pdftotext`, `pdffonts`). The script requires exactly three pages, extracts core contact and career text, and checks font embedding and Unicode maps before replacing either published PDF.
+Edit `public/resume-en.tex` and `public/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. Requires pdfLaTeX and Poppler (`pdfinfo`, `pdftotext`, `pdffonts`). The script enforces the three-page maximum and eight selected project entries, extracts core contact and career text, and checks font embedding and Unicode maps before replacing either published PDF.
 
 Render every final page with `pdftoppm` and inspect legibility, clipping and section boundaries. Text extraction checks help assess parsing readability, but are not a test in a commercial ATS. Keep both PDF downloads, portfolio copy, metadata, share card and GitHub bio/README consistent. Run lint, TypeScript and build checks, then verify the deployed page, filtering and downloads.

@@ -15,7 +15,7 @@
 \titlespacing{\section}{0pt}{8pt}{4pt}
 \setlist[itemize]{leftmargin=13pt,itemsep=1pt,topsep=2pt,parsep=0pt}
 \newcommand{\role}[3]{\Needspace{5\baselineskip}\textbf{#1 | #2}\\#3\par}
-\newcommand{\project}[2]{\Needspace{3\baselineskip}\textbf{#1}\\#2\par}
+\newcommand{\project}[2]{\Needspace{3\baselineskip}\textbf{#1}. #2\par}
 \hypersetup{pdftitle={Tamim Hmizi | Software Engineer | Cloud, DevOps and AI},pdfauthor={Tamim Hmizi},pdfsubject={Professional resume},pdflang={en}}
 \begin{document}
 {\fontsize{25}{28}\selectfont\textbf{Tamim Hmizi}}\par
@@ -84,24 +84,12 @@ Software engineer combining full stack development, cloud infrastructure and app
 Three years of general software engineering; two years specializing in Cloud Architecture and DevOps (ArcTIC). Arabic (native), English (B2), French (B2).
 
 \section{Projects}
-\project{Enterprise Monitoring Platform | Azure Stack Hub}{Dockerized Python/Flask exporters query Admin APIs through service principal OAuth2; Prometheus and Grafana expose region health, storage fabric, tenant VM compute and disk IOPS, with dashboards and alerts.}
-\project{\href{https://erp.products.axynoxia.com}{Axynoxia ERP | Modular business management}}{NestJS, Prisma, PostgreSQL and Redis pnpm monorepo with single tenant deployments, module auto-discovery, access requests, MFA, RBAC, first-login rotation and Argon2 hashing; Docker Compose, Traefik and object storage.}
-\project{\href{https://tickets.products.axynoxia.com}{Tickety | Event ticketing}}{React/Vite and TypeScript pnpm monorepo with bcrypt authentication, cookie sessions, checkout, pending-order expiry and concurrent refund handling; end to end smoke tests and Docker deployment.}
-\project{\href{https://rimmobilien-test.de/}{Roehrdanz Immobilien | Real estate CMS}}{React 19, Express 5 and MongoDB CMS for listings and enquiries; employee sessions, bcrypt and RBAC, asynchronous Base64 images, dynamic SEO content, Vite and Tailwind property galleries.}
-\project{\href{https://apps.apple.com/de/app/bmoovd/id6736364332}{B'moovd | Mobile reservations and discovery} | \href{https://play.google.com/store/apps/details?id=com.bmoovd.app}{Google Play}}{Flutter/Dart application for iOS, Android and web, published on the App Store and Google Play; Firebase Auth, Firestore rules/indexes, Cloud Functions, Storage, Stripe integration and store release pipelines.}
-\project{\href{https://bmoovd-shop.com}{B'moovd Ticketing | Event ticket shop}}{Next.js 14 App Router, strict TypeScript, tRPC and MongoDB/Prisma; Stripe, Mollie and PayPal checkout, signed JWT QR tickets, camera check-in, emailed ticket PDFs and VAT invoices; NextAuth roles and JWT sessions.}
-\project{\href{https://confortex.shop/}{Confortex | Shopify storefront}}{Custom bedding storefront with product collections, SEO blog, newsletter integration, delivery promotions and contact information for three showrooms.}
-\project{\href{https://www.viesublime.tn/}{Vie Sublime | Shopify storefront}}{Custom furniture storefront with indoor, office, school and garden collections, editorial content, newsletter integration and showroom information.}
-\project{\href{https://energie.products.axynoxia.com}{Axynoxia Energie | PV/BESS management and SCADA}}{TypeScript services for domain model, API, control, HMI and simulation, modeled on ADAM plant design: 5.5 MWp PV, 2.2 MW/1.5 MWh BESS, two 8.25 MVA turbines and 20/11 kV interconnection. Telemetry, alarms and supervisory control behind a TLS proxy; excludes safety instrumentation.}
-\project{\href{https://invoice.products.axynoxia.com}{ProInvoice | Invoicing platform}}{React 19/Vite, TanStack Query, React Hook Form and Zod with Express/TypeScript and MongoDB; two factor authentication, PDF/Excel invoice generation, transactional email and Swagger API documentation.}
-\project{Axynoxia LeadGen | B2B prospecting}{NestJS/Next.js project in development with Temporal and LangGraph workflows, waterfall enrichment, email verification gates, field provenance, provider attempt logs, outcome based credit billing, suppression, consent records and GDPR data subject requests.}
-\project{\href{https://crm-leasing.products.axynoxia.com}{Axynoxia CRM and Leasing | Lease management}}{MERN platform for lease origination through accounting, with IFRS 16/BCT oriented financial calculations, 10-role RBAC, Arabic RTL, background jobs and containerized deployment.}
-\project{\href{https://habiter-mieux.info/}{Habiter Mieux | Solar enquiry website}}{French solar installation site with service and subsidy information, search optimization and a quote request funnel connected to the client sales workflow.}
-\project{MERN E-commerce | Retail application}{React and Redux Toolkit storefront, Express and MongoDB API, JWT authentication, Argon2 password hashing, order/inventory administration and Multer uploads.}
-\project{\href{https://omhyfamily.com/}{OMHY Entertainment | Media platform}}{React/Chakra UI and GSAP media and portfolio experience; MongoDB/MySQL data services and Jenkins delivery pipelines with quality and security checks.}
-\project{Jektis Travel | Travel booking}{PHP platform for flight and hotel booking, price scraping and Stripe payment integration; PHPMailer and cron jobs automate booking updates and notifications.}
-\project{New Journey | Consulting platform}{Symfony 7/PHP 8.2 with modular controllers, Doctrine ORM, UX Turbo, Stimulus, multi-user authentication and RBAC; Docker Compose for reproducible environments.}
-\project{DevOps CI/CD Hub | ESPRIT}{Jenkins delivery pipelines for Angular and Spring Boot microservices, integrating SonarQube quality gates, Trivy security scanning and Nexus artifact versioning.}
-\project{OpenStack Private Cloud Lab | ESPRIT}{Multi-node cloud with virtual networks, subnets, compute, storage and VPN-over-physical connectivity; workload lifecycle, automated scaling and high availability routing.}
-\project{NexGen Studios | Marketing website}{Next.js App Router website, containerized with Docker and served by Nginx.}
+\project{\href{https://github.com/tamim-hmizi/QuickOps-AI}{QuickOps | Applied AI and deployment automation}}{React, Express and FastAPI platform combining LLM repository analysis, Terraform/Ansible provisioning, VM/AKS deployment and Jenkins pipelines. RFC final year project.}
+\project{Enterprise Monitoring Platform | Azure Stack Hub}{Dockerized Python/Flask exporters, service principal OAuth2, Prometheus/Grafana dashboards and alerts for infrastructure, storage fabric and tenant VM compute/IOPS.}
+\project{\href{https://bmoovd-shop.com/}{B'moovd Ticketing | Event ticket shop}}{Next.js/tRPC and MongoDB/Prisma; Stripe, Mollie and PayPal checkout, signed QR tickets, camera check-in, emailed PDFs and NextAuth roles.}
+\project{\href{https://apps.apple.com/de/app/bmoovd/id6736364332}{B'moovd | Mobile reservations and discovery}}{Flutter/Dart app published on App Store and Google Play, with Firebase Auth, Firestore, Cloud Functions, Storage, Stripe and release pipelines.}
+\project{\href{https://erp.products.axynoxia.com/}{Axynoxia ERP | Modular business management}}{NestJS, Prisma, PostgreSQL and Redis; module discovery, dedicated client deployments, MFA, RBAC, Argon2, Docker Compose and Traefik.}
+\project{\href{https://energie.products.axynoxia.com/}{Axynoxia Energie | PV/BESS management and SCADA}}{TypeScript services and plant simulator for solar/battery telemetry, alarms and HMI supervisory control, modeled on ADAM plant design.}
+\project{\href{https://rimmobilien-test.de/}{Roehrdanz Immobilien | Real estate CMS}}{React, Express and MongoDB platform with property listings, enquiries, employee sessions, RBAC, image processing and dynamic SEO content.}
+\project{\href{https://confortex.shop/}{Confortex | Shopify storefront}}{Custom bedding storefront with collection architecture, SEO editorial content, newsletter integration, delivery promotions and showroom information.}
 \end{document}

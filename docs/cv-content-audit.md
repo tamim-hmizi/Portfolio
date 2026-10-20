@@ -1,44 +1,36 @@
-# CV content reconciliation
+# Project selection
 
-Compared with the seven-page English CV at portfolio revision `82c903b`.
+The owner's latest request is to keep only meaningful projects. This supersedes the earlier request for an exhaustive project inventory. The portfolio, English resume, French CV and GitHub overview feature the same eight projects. Axynoxia work stays alongside other projects.
 
-The current English resume and French CV each have 20 individual project entries in one Projects section. All 19 original entries are present; NexGen Studios was retained from the portfolio. QuickOps remains described in RFC final year experience and is a separate portfolio entry, giving the portfolio 21 projects.
-
-| Original project | Current treatment |
+| Kept | Why it earns space |
 | --- | --- |
-| Enterprise Monitoring Platform | Individual entry with technology and implementation scope. |
-| Axynoxia ERP | Individual entry with technology and implementation scope. |
-| Tickety | Individual entry with technology and implementation scope. |
-| Roehrdanz Immobilien | Individual entry with technology and implementation scope. |
-| B'moovd | Individual entry with technology and implementation scope. |
-| B'moovd Ticketing | Individual entry with technology and implementation scope. |
-| Confortex | Individual entry with technology and implementation scope. |
-| Vie Sublime | Individual entry with technology and implementation scope. |
-| Axynoxia Energie | Individual entry with technology and implementation scope. |
-| ProInvoice | Individual entry with technology and implementation scope. |
-| Axynoxia LeadGen | Individual entry with technology and implementation scope. |
-| Axynoxia CRM and Leasing | Individual entry with technology and implementation scope. |
-| Habiter Mieux | Individual entry with technology and implementation scope. |
-| MERN E-commerce | Individual entry with technology and implementation scope. |
-| OMHY Entertainment | Individual entry with technology and implementation scope. |
-| Jektis Travel | Individual entry with technology and implementation scope. |
-| New Journey | Individual entry with technology and implementation scope. |
-| DevOps CI/CD Hub | Individual entry with technology and implementation scope. |
-| OpenStack Private Cloud Lab | Individual entry with technology and implementation scope. |
-| NexGen Studios | Individual entry with technology and implementation scope. |
+| QuickOps | Public source code demonstrates applied AI, full stack engineering and automated infrastructure delivery. |
+| Enterprise Monitoring Platform / Azure Stack Hub Monitoring | Distinct employer infrastructure work: authenticated telemetry exporters, observability and cloud operations. |
+| B'moovd Ticketing | Client delivery with checkout integrations, QR ticket validation, authentication and document generation. |
+| B'moovd mobile app | Published mobile work with Flutter, Firebase and store delivery. |
+| Axynoxia ERP | Substantial modular application architecture, data modeling, access control and deployment isolation. |
+| Axynoxia Energie | Distinct domain engineering: simulated solar/battery telemetry, alarms, supervisory control and HMI. |
+| Roehrdanz Immobilien | A concrete client CMS with property management, image handling and access control. |
+| Confortex | One representative Shopify delivery adds commerce experience without repeating similar storefronts. |
 
-## Information restored after the first edit
+## Removed from the featured selection
 
-The first edit omitted LeadGen, grouped Confortex with Vie Sublime, grouped New Journey with Jektis Travel, and compressed many skill and implementation details. This revision restores every original project separately, including LeadGen as a project in development without an invented live URL.
+| Project | Editorial reason |
+| --- | --- |
+| DevOps CI/CD Hub | Introductory pipeline work overlaps the stronger QuickOps example. |
+| OpenStack Private Cloud Lab | Educational lab; cloud experience is better demonstrated by QuickOps and RFC monitoring. |
+| MERN E-commerce | Generic application overlaps stronger client software. |
+| Tickety | Ticketing is already demonstrated through the client B'moovd delivery. |
+| ProInvoice | Another business application adds less distinct evidence than ERP. |
+| CRM and Leasing | Additional business application overlaps ERP in this concise selection. |
+| LeadGen | Unfinished project with weaker public evidence than QuickOps. |
+| Vie Sublime | Similar Shopify scope is represented by Confortex. |
+| Habiter Mieux | Smaller lead capture website adds less engineering depth to this profile. |
+| NexGen Studios | Smaller marketing website is less distinctive than the selected client systems. |
+| OMHY Entertainment | Additional frontend/media work is less central to the selected software, cloud and AI profile. |
+| Jektis Travel | Earlier booking application overlaps more substantial transaction workflows. |
+| New Journey | Earlier application overlaps the selected CMS and modular ERP. |
 
-Restored scope includes the full original language/tool inventory; RFC sovereign cloud, networking, workshops and Microsoft 365 work; AKS Engine/kubectl/YAML; ERP security and module discovery; ticketing authentication and payment providers; mobile Firebase rules and store delivery; energy system design values and safety boundary; invoicing form/query tools; LeadGen provenance, verification and billing workflows; leasing role count and financial standards context; storefront scope; and the independent software and infrastructure projects.
+These are relevance judgments for the public profile, not assertions that the omitted projects lack value. Project repositories and Git history remain intact. All employers, dates, degree and language levels remain in the CVs. Detailed descriptions are retained for the eight featured projects; previous full inventories remain recoverable at revision `46a7025`.
 
-## Deliberate wording changes retained
-
-The unsupported 6+ professional years, personal 1M+ users, 70% faster deployments and 40% overhead claims remain excluded. Employer-wide user/client reach is not presented as the candidate's own impact. Remove promotional adjectives and absolute performance promises rather than invent evidence. IFRS 16/BCT describes the financial engine's design context, not independently certified compliance. The Energie model is supervisory and simulated, not a claim of operating a real power plant. The outdated Habiter Mieux domain is corrected.
-
-Individual descriptive bullets are consolidated to meet the three-page limit. This is a preservation of project identity and substantive engineering scope, not a promise that every sentence of the original seven pages is reproduced verbatim. Dates, employers, degree and language levels are retained.
-
-## User preferences
-
-Keep the portrait on the portfolio. Offer the two PDF downloads only; do not publish separate plain text CV files or links. Keep Axynoxia work alongside all other projects in the CV, without a separate product/demo section. Preserve accurate context in the descriptions when relevant.
+The PDFs are two pages after selection, below the original three-page maximum. Keep the portrait on the portfolio, PDF downloads only, and no page-count indicators in public labels. Unsupported personal impact metrics and compliance guarantees remain excluded.
