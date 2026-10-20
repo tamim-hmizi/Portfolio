@@ -65,8 +65,8 @@ const ContactSection: React.FC = () => {
               <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
                 AR
               </span>
-              <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
-                EN
+              <span aria-label="English: C1" title="English: C1" className="min-w-10 px-2 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
+                EN C1
               </span>
               <span className="w-10 h-10 rounded bg-gray-700 border border-yellow-600/30 flex items-center justify-center text-xs font-semibold text-yellow-500">
                 FR

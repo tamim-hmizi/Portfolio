@@ -47,6 +47,9 @@ def main():
                              "Habiter", "MERN", "OMHY", "New Journey", "OpenStack", "Vie Sublime"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
+            language = "English (C1)" if name == "resume-en" else "anglais (C1)"
+            if language not in re.sub(r"\s+", " ", text):
+                raise SystemExit(f"{name}: English proficiency must be C1")
             for removed in ("Jektis", "NexGen", "Safe-Wash", "Jerbi", "learn.net", "car-washing"):
                 if removed.casefold() in text.casefold():
                     raise SystemExit(f"{name}: removed project reappeared: {removed}")

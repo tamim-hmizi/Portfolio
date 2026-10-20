@@ -4,7 +4,7 @@ The original portfolio and GitHub presentation are the current design baseline. 
 
 Targeted improvements: QuickOps and five source links, all 19 project entries, accurate development/demo descriptions, a skip link, keyboard focus, reduced motion and menu toggle state/Escape behavior. No project filters or architecture diagram replace the original experience.
 
-Existing portrait: `public/me.jpg`. Original employer logos: `public/axynoxia-logo.png`, `BASSETTI-GROUP.webp`, `rfclogo.png`, `espritlogo.jpg`, `tunisie-telecom-logo.png`. The profile uses copies in `assets/employers/`. Never generate replacements for these logos.
+Existing portrait: `public/me.jpg`. Original employer logos: `public/axynoxia-logo.png`, `BASSETTI-GROUP.webp`, `rfclogo.png`, `espritlogo.jpg`, `tunisie-telecom-logo.png`. Keep these logos on the portfolio. The GitHub profile has no employer logo row. Never generate replacements for the portfolio logos.
 
 Project cards use text, technology icons and direct links. Project screenshots and their assets have been removed at the owner’s request. The dark and gold share card is code-native SVG with the original Axynoxia logo and factual text; its PNG is rendered by `scripts/build-share-image.mjs` using sharp.
 

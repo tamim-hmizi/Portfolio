@@ -1,6 +1,6 @@
 # Personal profile editorial guide
 
-Improve the original identity in place. Keep the dark and gold portfolio, portrait, employer logos, technology icons, gradients, cards and direct links. Preserve the original GitHub README structure and skill badges. Do not replace these with a new visual direction without a request.
+Improve the original identity in place. Keep the dark and gold portfolio, portrait, employer logos, technology icons, gradients, cards and direct links. Preserve the original GitHub README structure and skill badges; omit employer logos. English proficiency is C1, as supplied by the owner, across the portfolio, profile and both CVs. Do not replace these with a new visual direction without a request.
 
 Title: Software Engineer | Cloud, DevOps & AI. French: Ingénieur logiciel | Cloud, DevOps et IA. Retain all seven career entries, education, languages and 19 projects in one Projects section. Axynoxia projects belong alongside other work. QuickOps links to all five public component repositories. Product demos and ongoing development are described accurately.
 
