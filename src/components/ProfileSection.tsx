@@ -23,11 +23,11 @@ const ProfileSection: React.FC = () => (
         <div className="flex flex-col sm:flex-row flex-wrap gap-3 mt-8">
           <a href="/Portfolio/resume-en.pdf" download="Tamim-Hmizi-Resume-EN.pdf"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-yellow-400 text-gray-950 font-semibold rounded-lg">
-            <FaFileAlt aria-hidden="true" /> Resume (EN, 3 pages)
+            <FaFileAlt aria-hidden="true" /> Resume (EN)
           </a>
           <a href="/Portfolio/cv-fr.pdf" download="Tamim-Hmizi-CV-FR.pdf" lang="fr"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-yellow-400 text-yellow-400 font-semibold rounded-lg">
-            <FaFileAlt aria-hidden="true" /> CV (FR, 3 pages)
+            <FaFileAlt aria-hidden="true" /> CV (FR)
           </a>
           <a href="#projects" className="inline-flex items-center justify-center gap-2 px-5 py-3 text-white underline underline-offset-4">
             Explore my work <FaArrowDown aria-hidden="true" />
