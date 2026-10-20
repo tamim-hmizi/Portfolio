@@ -29,8 +29,8 @@ def main():
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
             source = (ROOT / "documents" / f"{name}.tex").read_text()
-            if source.count("\\project{") != 21:
-                raise SystemExit(f"{name}: expected all 21 project entries")
+            if source.count("\\project{") != 19:
+                raise SystemExit(f"{name}: expected all 19 project entries")
             if source.count("\\section{Projects}" if name == "resume-en" else "\\section{Projets}") != 1:
                 raise SystemExit(f"{name}: expected one unified projects section")
             pdf = Path(directory) / f"{name}.pdf"
@@ -44,9 +44,12 @@ def main():
                              "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes",
                              "Confortex", "B2", "Energie", "Roehrdanz",
                              "Enterprise Monitoring Platform", "Tickety", "ProInvoice", "LeadGen", "Leasing",
-                             "Habiter", "MERN", "OMHY", "Jektis", "New Journey", "NexGen", "OpenStack", "Vie Sublime"):
+                             "Habiter", "MERN", "OMHY", "New Journey", "OpenStack", "Vie Sublime"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
+            for removed in ("Jektis", "NexGen", "Safe-Wash", "Jerbi", "learn.net", "car-washing"):
+                if removed.casefold() in text.casefold():
+                    raise SystemExit(f"{name}: removed project reappeared: {removed}")
             if "\ufffd" in text or "\x00" in text:
                 raise SystemExit(f"{name}: text extraction contains invalid characters")
             fonts = run("pdffonts", str(pdf))

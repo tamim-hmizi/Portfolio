@@ -4,7 +4,7 @@ Personal portfolio for **Software Engineer | Cloud, DevOps & AI**, built with Re
 
 [Live portfolio](https://tamim-hmizi.github.io/Portfolio/) · [English resume](https://tamim-hmizi.github.io/Portfolio/resume-en.pdf) · [French CV](https://tamim-hmizi.github.io/Portfolio/cv-fr.pdf)
 
-Client deliveries, internship work and independent projects share one Projects section. Visitors can expand the full list of 21 projects, review seven career entries and download either PDF.
+Client deliveries, internship work and independent projects share one Projects section. Visitors can expand the full list of 19 projects, review seven career entries and download either PDF.
 
 ## Local development
 

@@ -1,31 +1,27 @@
-# Coverage and restoration
+# Project coverage
 
-The owner requests improvements to the original material, preserving content and identity. The earlier eight-project selection is superseded. All seven roles, original dates, degree, language levels, contact links and all original 20 projects remain, with QuickOps added explicitly as project 21. The PDFs are three pages each.
+The portfolio, English résumé, French CV and GitHub README share 19 projects after reconciliation with the owner’s repository cleanup. Seven career entries, dates, degree, language levels and contacts remain. Axynoxia work stays alongside other projects. Preserve the original visual identity, logos, technology icons and links, without project screenshots.
 
 1. QuickOps
-2. Enterprise Monitoring Platform
-3. Axynoxia ERP
-4. Tickety
-5. Roehrdanz Immobilien
-6. B’moovd mobile
-7. B’moovd Ticketing
-8. Confortex
-9. Vie Sublime
-10. Axynoxia Energie
-11. ProInvoice
-12. Axynoxia LeadGen
-13. Axynoxia CRM and Leasing
-14. Habiter Mieux
-15. MERN E-commerce
-16. OMHY Entertainment
-17. Jektis Travel
-18. New Journey
-19. DevOps CI/CD Hub
-20. OpenStack Private Cloud Lab
-21. NexGen Studios
+2. B-moovd Ticketing
+3. B-moovd
+4. Roehrdanz Immobilien
+5. Confortex
+6. Vie Sublime
+7. OMHY Entertainment
+8. Habiter Mieux
+9. Axynoxia Energie
+10. ProInvoice
+11. Axynoxia LeadGen
+12. Axynoxia CRM & Leasing
+13. Enterprise Monitoring Platform
+14. Axynoxia ERP
+15. Tickety
+16. MERN E-commerce
+17. New Journey
+18. DevOps CI/CD Hub
+19. OpenStack Private Cloud Lab
 
-Source history: portfolio `82c903b`, full project summary `46a7025`; original GitHub README `1423093` in its own repository. Original documents remain recoverable in Git history and private comparison storage.
+Reconcile both personal and Axynoxia organization repositories before removing an entry. A deleted personal duplicate does not mean an existing organization client project was deleted. Keep QuickOps and internship work. Educational DevOps and OpenStack lab entries do not have dedicated repository matches and remain as coursework, rather than being presented as public code projects. An unavailable repository by itself does not prove deletion; use cleanup records and the owner’s instructions. Keep detailed inventories and removal evidence in private task storage.
 
-Repeated descriptions were consolidated. Unsupported performance metrics and compliance assurances were removed. Jektis is described as the PHP booking application found in source, OMHY as React/Express/MongoDB media administration, and MERN as the actual storefront and administration examples. Tickety and ERP descriptions follow their inspected implementations. Historical Jektis experience remains even though its repository was explicitly deleted. Deleting code does not erase past work.
-
-The build guard checks 21 project entries, all employer names, core contacts and extracted project text, the three-page maximum and font embedding. Visual inspection covers every final PDF page. This is a text readability check, not certification by a commercial ATS.
+The documents summarize the retained scope within three pages, with one Projects section, readable 11pt text, embedded fonts and Unicode mapping. Unsupported metrics, capacity guarantees and compliance assurances remain excluded. The build guard verifies the 19-entry inventory, removed-project exclusions, career/contact extraction and the page limit. Render and inspect every PDF page after changing the source.

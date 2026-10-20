@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
-  FaDatabase,
   FaServer,
   FaMobileAlt,
   FaShoppingCart,
@@ -125,11 +124,6 @@ const ProjectsSection: React.FC = () => {
       url: "https://habiter-mieux.info/",
       domain: "habiter-mieux.info",
     },
-    {
-      title: "NexGen Studios",
-      description: "Next.js App Router marketing website, containerized with Docker and served by Nginx.",
-      tech: [<SiNextdotjs title="Next.js" />, <FaDocker title="Docker" />],
-    },
     // Other projects
     {
       title: "Axynoxia Energie",
@@ -191,11 +185,6 @@ const ProjectsSection: React.FC = () => {
       title: "New Journey",
       description: "Symfony/PHP consulting application with consultation booking and date lookup, administration, Doctrine persistence, authentication and Docker Compose configuration.",
       tech: [<SiSymfony title="Symfony" />, <SiPhp title="PHP" />, <FaServer title="Turbo/Stimulus" />],
-    },
-    {
-      title: "Jektis Travel",
-      description: "PHP travel application with city and offer management, reservations, feedback, registration, authentication and administration views. Historical project.",
-      tech: [<SiPhp title="PHP" />, <FaDatabase title="MySQL" />],
     },
     {
       title: "DevOps CI/CD Hub",

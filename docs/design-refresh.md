@@ -2,7 +2,7 @@
 
 The original portfolio and GitHub presentation are the current design baseline. The superseded cobalt redesign is recoverable in Git history. Preserve the dark and gold palette, portrait, original employer logos, icon badges, card layout, gradients, project links and contact/download buttons. The résumé retains its gold and serif appearance with summarized content.
 
-Targeted improvements: QuickOps and five source links, all 21 project entries, accurate development/demo descriptions, a skip link, keyboard focus, reduced motion and menu toggle state/Escape behavior. No project filters or architecture diagram replace the original experience.
+Targeted improvements: QuickOps and five source links, all 19 project entries, accurate development/demo descriptions, a skip link, keyboard focus, reduced motion and menu toggle state/Escape behavior. No project filters or architecture diagram replace the original experience.
 
 Existing portrait: `public/me.jpg`. Original employer logos: `public/axynoxia-logo.png`, `BASSETTI-GROUP.webp`, `rfclogo.png`, `espritlogo.jpg`, `tunisie-telecom-logo.png`. The profile uses copies in `assets/employers/`. Never generate replacements for these logos.
 
