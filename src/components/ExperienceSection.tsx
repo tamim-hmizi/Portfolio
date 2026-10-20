@@ -36,7 +36,7 @@ const ExperienceSection: React.FC = () => {
           <span className="text-yellow-500">Professional</span> Experience
         </h2>
         <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 md:mb-12 text-center">
-          Leveraging expertise in cloud computing, DevOps, and full-stack development to deliver innovative solutions.
+          Experience building applications, automating delivery and operating cloud infrastructure.
         </p>
 
         {/* Experience Cards in Grid */}
@@ -164,7 +164,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Oct 2025 to May 2026</span> | RFC (Microsoft Gold CSP Partner) to Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Oct 2025 to May 2026</span> | RFC (Microsoft Gold CSP Partner) | Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Consulting and engineering for large-scale hybrid cloud infrastructure, sovereign cloud environments, and enterprise security.
@@ -205,7 +205,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Feb 2025 to Aug 2025</span> | RFC to Ariana, Tunisia
+              <span className="text-yellow-400 font-semibold">Feb 2025 to Aug 2025</span> | RFC | Ariana, Tunisia
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Designed and implemented a <strong className="text-yellow-400">DevOps-as-a-Service platform</strong> to automate application analysis, deployment, and monitoring.
@@ -246,7 +246,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jul 2024 to Aug 2024</span> | RFC to Internship
+              <span className="text-yellow-400 font-semibold">Jul 2024 to Aug 2024</span> | RFC | Internship
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Developed a cloud-native web application for intern management (onboarding, tracking, and admin workflows).
@@ -285,7 +285,7 @@ const ExperienceSection: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-              <span className="text-yellow-400 font-semibold">Jul 2023 to Aug 2023</span> | ESPRIT to Internship
+              <span className="text-yellow-400 font-semibold">Jul 2023 to Aug 2023</span> | ESPRIT | Internship
             </p>
             <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">
               Developed a web platform that scrapes official educational websites to aggregate online courses.
@@ -316,7 +316,7 @@ const ExperienceSection: React.FC = () => {
           >
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-lg md:text-xl font-semibold text-yellow-500">
-                Network Engineer Intern (C-NOC) to Tunisie Telecom
+                Network Engineer Intern (C-NOC) | Tunisie Telecom
               </h3>
               <img
                 src="/Portfolio/tunisie-telecom-logo.png"

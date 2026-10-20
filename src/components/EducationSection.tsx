@@ -30,10 +30,10 @@ const EducationSection: React.FC = () => {
             />
             <div className="flex-1">
               <h3 className="text-xl md:text-2xl font-semibold text-yellow-500 mb-1">
-                Software Engineering Degree to ESPRIT
+                Software Engineering Degree | ESPRIT
               </h3>
               <p className="text-gray-300 text-base md:text-lg mb-1">
-                Specialty: <strong className="text-yellow-400">Cloud Computing to Cloud Architecture and DevOps</strong>
+                Specialty: <strong className="text-yellow-400">Cloud Computing | Cloud Architecture and DevOps</strong>
               </p>
               <p className="text-gray-300 text-base md:text-lg mb-2">
                 Ariana, Tunisia

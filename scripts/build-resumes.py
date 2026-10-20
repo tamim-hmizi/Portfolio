@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build and validate the application documents within a three-page limit."""
+import argparse
 from pathlib import Path
 import re
 import shutil
@@ -14,6 +15,9 @@ def run(*args):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="Validate documents without replacing published PDFs")
+    args = parser.parse_args()
     for executable in ("pdflatex", "pdfinfo", "pdftotext", "pdffonts"):
         if not shutil.which(executable):
             raise SystemExit(f"Missing required executable: {executable}")
@@ -21,10 +25,10 @@ def main():
         outputs = []
         for name, heading in (("resume-en", "Professional Experience"), ("cv-fr", "Expérience professionnelle")):
             log = run("pdflatex", "-interaction=nonstopmode", "-halt-on-error",
-                      f"-output-directory={directory}", str(ROOT / "public" / f"{name}.tex"))
+                      f"-output-directory={directory}", str(ROOT / "documents" / f"{name}.tex"))
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
-            source = (ROOT / "public" / f"{name}.tex").read_text()
+            source = (ROOT / "documents" / f"{name}.tex").read_text()
             if source.count("\\project{") != 21:
                 raise SystemExit(f"{name}: expected all 21 project entries")
             if source.count("\\section{Projects}" if name == "resume-en" else "\\section{Projets}") != 1:
@@ -52,8 +56,9 @@ def main():
             outputs.append(pdf)
             print(f"{name}: {pages} pages; contact, career and project text extracted; fonts embedded and Unicode mapped")
         # Publish only when both documents pass.
-        for output in outputs:
-            shutil.copyfile(output, ROOT / "public" / output.name)
+        if not args.check:
+            for output in outputs:
+                shutil.copyfile(output, ROOT / "public" / output.name)
 
 
 if __name__ == "__main__":

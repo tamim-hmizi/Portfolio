@@ -24,3 +24,7 @@ tmp/
 *.njsproj
 *.sln
 *.sw?
+
+# Generated TypeScript build metadata
+*.tsbuildinfo
+vite.config.d.ts

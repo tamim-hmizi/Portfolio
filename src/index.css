@@ -70,10 +70,33 @@ section[id] {
     animation: none;
   }
 }
-:where(a,button):focus-visible { outline:3px solid #facc15;outline-offset:4px; }
-.skip-link { position:fixed;top:8px;left:8px;z-index:60;padding:12px 18px;background:#facc15;color:#111827;transform:translateY(-160%); }
-.skip-link:focus { transform:none; }
-@media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} .animate-pulse { animation:none; } }
+:where(a, button):focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 60;
+  padding: 12px 18px;
+  background: #facc15;
+  color: #111827;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse {
+    animation: none;
+  }
+}
 
 /* Keep original compact labels legible on smaller screens. */
-.text-xs { font-size: 0.8125rem; }
+.text-xs {
+  font-size: 0.8125rem;
+}

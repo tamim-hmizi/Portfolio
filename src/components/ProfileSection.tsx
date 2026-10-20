@@ -13,6 +13,9 @@ const ProfileSection: React.FC = () => {
       <motion.img
         src="/Portfolio/me.jpg"
         alt="Tamim Hmizi"
+        width={192}
+        height={192}
+        fetchPriority="high"
         className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full border-4 border-yellow-500 mb-4 object-cover shadow-xl z-10 select-none shadow-yellow-500/50"
         style={{ objectPosition: 'center 90%' }}
         initial={{ opacity: 0, scale: 0.8 }}

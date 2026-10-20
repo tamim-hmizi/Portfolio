@@ -32,15 +32,15 @@ const App: React.FC = () => {
 
       <a href="#content" className="skip-link">Skip to content</a>
       <MotionConfig reducedMotion="user">
-      <Navbar />
-      <main id="content" tabIndex={-1}>
-        <ProfileSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <EducationSection />
-        <ContactSection />
-      </main>
+        <Navbar />
+        <main id="content" tabIndex={-1}>
+          <ProfileSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <EducationSection />
+          <ContactSection />
+        </main>
       </MotionConfig>
     </div>
   );

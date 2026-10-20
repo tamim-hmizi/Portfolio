@@ -4,7 +4,7 @@ Personal portfolio for **Software Engineer | Cloud, DevOps & AI**, built with Re
 
 [Live portfolio](https://tamim-hmizi.github.io/Portfolio/) · [English resume](https://tamim-hmizi.github.io/Portfolio/resume-en.pdf) · [French CV](https://tamim-hmizi.github.io/Portfolio/cv-fr.pdf)
 
-The portfolio presents engineering projects in one portfolio. Visitors can filter by software, cloud and DevOps, or applied AI, review experience and download either PDF.
+Client deliveries, internship work and independent projects share one Projects section. Visitors can expand the full list of 21 projects, review seven career entries and download either PDF.
 
 ## Local development
 
@@ -21,12 +21,12 @@ Vite serves the site at `http://localhost:5173/Portfolio/`. The `/Portfolio/` ba
 
 ```sh
 npm run lint
-npx tsc --noEmit -p tsconfig.app.json
+npm run typecheck
 npm run build
-python3 scripts/build-resumes.py
+python3 scripts/build-resumes.py --check
 ```
 
-The document build requires pdfLaTeX and Poppler. It validates the three-page maximum, selected project inventory, contact and career text, embedded fonts and Unicode maps before replacing either PDF. Render and inspect all pages after editing. See [content reconciliation](docs/cv-content-audit.md) and [profile maintenance and research](docs/profile-editorial.md) for sources, content decisions and application guidance.
+Run `python3 scripts/build-resumes.py` to regenerate the PDFs after editing their sources in `documents/`. The document build requires pdfLaTeX and Poppler. It validates the three-page maximum, full project inventory, contact and career text, embedded fonts and Unicode maps before replacing either PDF. Render and inspect all pages after editing. See [content reconciliation](docs/cv-content-audit.md) and [profile maintenance and research](docs/profile-editorial.md) for sources, content decisions and application guidance.
 
 The code-native social card is `public/og-image.svg`. To regenerate `public/og-image.png`, run `node scripts/build-share-image.mjs` with the `sharp` package available to Node.
 
@@ -37,12 +37,12 @@ npm run build
 npm run deploy
 ```
 
-The existing `gh-pages` deployment publishes `dist` to the `gh-pages` branch. GitHub Pages then builds and serves that branch. Read the exact deployment result and verify the live page, filters, mobile navigation and both PDF downloads before calling a release complete.
+The existing `gh-pages` deployment publishes `dist` to the `gh-pages` branch. GitHub Pages then builds and serves that branch. Read the exact deployment result and verify the live page, expanded projects, mobile navigation and both PDF downloads before calling a release complete.
 
 ## Structure
 
-* `src/components`: profile, project filters, career, skills, education and contact.
-* `public/resume-en.tex`, `public/cv-fr.tex`: editable document sources.
+* `src/components`: profile, projects, career, skills, education and contact.
+* `documents/resume-en.tex`, `documents/cv-fr.tex`: editable document sources.
 * `public/resume-en.pdf`, `public/cv-fr.pdf`: published application documents.
 * `scripts/build-resumes.py`: reproducible document build and extraction checks.
 * `docs/profile-editorial.md`: positioning, verified source references and maintenance guidance.

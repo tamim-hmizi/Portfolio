@@ -55,7 +55,6 @@ interface Project {
   ios?: string;
   android?: string;
   status?: string;
-  image?: string;
   sources?: {label:string; url:string}[];
 }
 
@@ -76,10 +75,9 @@ const ProjectsSection: React.FC = () => {
         {label:"Configuration",url:"https://github.com/tamim-hmizi/QuickOps-CAC"}
       ],
     },
-    // | Live projects first —
+    // Linked projects
     {
       title: "B-moovd Ticketing",
-      image: "/Portfolio/work/ticketing.jpg",
       description: "Next.js/tRPC ticket shop with MongoDB/Prisma, Stripe, Mollie and PayPal checkout, signed QR tickets, camera check-in, emailed PDFs and role based authentication.",
       tech: [<SiNextdotjs title="Next.js 14" />, <SiTypescript title="tRPC / TypeScript" />, <SiMongodb title="MongoDB + Prisma" />, <SiStripe title="Stripe / Mollie / PayPal" />],
       url: "https://bmoovd-shop.com",
@@ -94,7 +92,6 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: "Roehrdanz Immobilien",
-      image: "/Portfolio/work/real-estate.jpg",
       description: "React, Express and MongoDB property CMS with listings, enquiries, employee sessions, RBAC, asynchronous image processing and dynamic SEO content.",
       tech: [<SiMongodb title="MongoDB" />, <FaNodeJs title="Node.js" />, <FaReact title="React" />, <SiTypescript title="TypeScript" />],
       url: "https://rimmobilien-test.de/",
@@ -102,7 +99,6 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: "Confortex",
-      image: "/Portfolio/work/confortex.jpg",
       description: "Custom Shopify bedding storefront with product collections, SEO editorial content, newsletter integration, delivery promotions and showroom information.",
       tech: [<SiShopify title="Shopify" />, <FaShoppingCart title="E-commerce" />],
       url: "https://confortex.shop",
@@ -134,7 +130,7 @@ const ProjectsSection: React.FC = () => {
       description: "Next.js App Router marketing website, containerized with Docker and served by Nginx.",
       tech: [<SiNextdotjs title="Next.js" />, <FaDocker title="Docker" />],
     },
-    // | Other projects —
+    // Other projects
     {
       title: "Axynoxia Energie",
       status: "Product demo",
@@ -241,9 +237,9 @@ const ProjectsSection: React.FC = () => {
         </p>
 
         <div id="project-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleProjects.map((project, index) => (
+          {visibleProjects.map((project) => (
             <motion.div
-              key={index}
+              key={project.title}
               className={`bg-gray-800 border-2 p-6 rounded-xl shadow-lg transition-all text-left flex flex-col justify-between ${
                 project.url || project.ios || project.android
                   ? "border-green-500/40 hover:border-green-400"
@@ -252,8 +248,7 @@ const ProjectsSection: React.FC = () => {
               whileHover={{ y: -5 }}
             >
               <div>
-                {project.image && <img src={project.image} alt={`${project.title} website preview`} loading="lazy" width="1440" height="1000" className="w-full aspect-[1.44] object-cover object-top rounded-lg mb-5" />}
-                {/* Header row: title + LIVE badge */}
+                {/* Project title and status */}
                 <div className="flex items-start justify-between flex-wrap gap-2 mb-3">
                   <h3 className="text-xl font-semibold text-yellow-500 leading-snug">{project.title}</h3>
                   {(project.status || project.url || project.ios || project.android) && (
@@ -268,13 +263,12 @@ const ProjectsSection: React.FC = () => {
               </div>
 
               <div className="flex flex-col gap-3 mt-2">
-                {/* Live domain button */}
+                {/* Project link */}
                 {project.url && (
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
                     className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/40 text-green-400 text-xs font-semibold hover:bg-green-500/20 hover:border-green-400 transition-all w-fit"
                   >
                     <FaExternalLinkAlt size={10} />
@@ -291,7 +285,6 @@ const ProjectsSection: React.FC = () => {
                         href={project.ios}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/40 text-green-400 text-xs font-semibold hover:bg-green-500/20 hover:border-green-400 transition-all"
                       >
                         <FaApple size={12} />
@@ -303,7 +296,6 @@ const ProjectsSection: React.FC = () => {
                         href={project.android}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/40 text-green-400 text-xs font-semibold hover:bg-green-500/20 hover:border-green-400 transition-all"
                       >
                         <FaGooglePlay size={11} />
