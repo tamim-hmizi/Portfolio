@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate the application documents within a three-page limit."""
+"""Build and validate the application documents within a two-page limit."""
 import argparse
 from pathlib import Path
 import re
@@ -29,22 +29,20 @@ def main():
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
             source = (ROOT / "documents" / f"{name}.tex").read_text()
-            if source.count("\\project{") != 19:
-                raise SystemExit(f"{name}: expected all 19 project entries")
-            if source.count("\\section{Projects}" if name == "resume-en" else "\\section{Projets}") != 1:
+            if source.count("\\project{") != 6:
+                raise SystemExit(f"{name}: expected 6 selected project entries")
+            if source.count("\\section{Selected Projects}" if name == "resume-en" else "\\section{Projets choisis}") != 1:
                 raise SystemExit(f"{name}: expected one unified projects section")
             pdf = Path(directory) / f"{name}.pdf"
             metadata = run("pdfinfo", str(pdf))
             pages = int(re.search(r"^Pages:\s+(\d+)", metadata, re.M).group(1))
-            if not 1 <= pages <= 3:
-                raise SystemExit(f"{name}: expected at most 3 pages, found {pages}")
+            if not 1 <= pages <= 2:
+                raise SystemExit(f"{name}: expected at most 2 pages, found {pages}")
             text = run("pdftotext", "-enc", "UTF-8", "-nopgbrk", str(pdf), "-")
             for required in ("Tamim Hmizi", "tamimhmizi@icloud.com", "+216 54 886 068",
                              heading, "Bassetti Group", "Axynoxia", "RFC", "ESPRIT",
                              "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes",
-                             "Confortex", "B2", "Energie", "Roehrdanz",
-                             "Enterprise Monitoring Platform", "Tickety", "ProInvoice", "LeadGen", "Leasing",
-                             "Habiter", "MERN", "OMHY", "New Journey", "OpenStack", "Vie Sublime"):
+                             "B2", "Enterprise Monitoring Platform", "LeadGen", "bmoovd", "ERP"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
             language = "English (C1)" if name == "resume-en" else "anglais (C1)"
