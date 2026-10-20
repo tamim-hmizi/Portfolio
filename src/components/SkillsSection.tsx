@@ -1,12 +1,12 @@
 import React from "react";
 
 const CATEGORIES = [
-  { title: "Software development", skills: "TypeScript, JavaScript, Python, C#, Java, PHP, Bash, SQL. React, Next.js, Angular, Flutter, .NET, Node.js, NestJS, Express, FastAPI, Flask, Spring Boot and Symfony." },
-  { title: "Cloud engineering", skills: "Azure, Azure Stack Hub, AWS, EKS, AKS and OpenStack. Hybrid infrastructure, virtual networking, IAM, Terraform and Ansible." },
-  { title: "DevOps & delivery", skills: "Docker, Docker Compose, Kubernetes, Helm, Jenkins, GitHub Actions, GitLab CI, CI/CD, SonarQube, Trivy and Nexus." },
-  { title: "Applied AI & automation", skills: "LLM integration, repository analysis, deployment recommendations, Python automation, web scraping and workflow integration. Demonstrated in my RFC final year platform." },
-  { title: "Data & integrations", skills: "PostgreSQL, MongoDB, MySQL, Redis, Prisma, Firebase, REST APIs, WebSockets, Shopify, payment integrations and transactional email." },
-  { title: "Operations & reliability", skills: "Linux, Windows Server, Prometheus, Grafana, Commvault backups, restore validation, Fortinet, OAuth2 and role based access control." },
+  { title: "Software development", skills: "TypeScript, JavaScript, Python, C#, Java, PHP, Bash, SQL, C++ and Assembly. React, Next.js, Angular, Flutter, .NET, Node.js, NestJS, Express, FastAPI, Django, Flask, Spring Boot, Symfony, Vue.js/Vuex, Tailwind CSS, Chakra UI and shadcn/ui." },
+  { title: "Cloud engineering", skills: "Azure, Azure Stack Hub, AWS, EKS, AKS, GCP, DigitalOcean and OpenStack. Hybrid infrastructure, virtual networking, IAM, Terraform and Ansible." },
+  { title: "DevOps & delivery", skills: "Docker, Docker Compose, Kubernetes, Helm, Jenkins, GitHub Actions, GitLab CI, CI/CD, SonarQube, Trivy, Nexus, Traefik and Portainer." },
+  { title: "Applied AI & automation", skills: "LLM integration, repository analysis, deployment recommendations, Python automation, web scraping, Temporal, LangGraph and workflow integration. Demonstrated in my RFC final year platform." },
+  { title: "Data & integrations", skills: "PostgreSQL, MongoDB, MySQL, Redis, Prisma, Mongoose, Sequelize, BullMQ, Firebase, MinIO, REST APIs, WebSockets, Shopify, payment integrations and transactional email." },
+  { title: "Operations & reliability", skills: "Linux (Ubuntu, CentOS), Windows Server, Active Directory, Microsoft 365, WSL, Prometheus, Grafana, ELK, CloudWatch, Commvault backups, restore validation, Fortinet, IAM, MFA, OAuth2, role based access control and encryption." },
 ];
 
 const SkillsSection: React.FC = () => (

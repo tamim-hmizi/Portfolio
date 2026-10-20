@@ -24,6 +24,11 @@ def main():
                       f"-output-directory={directory}", str(ROOT / "public" / f"{name}.tex"))
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
+            source = (ROOT / "public" / f"{name}.tex").read_text()
+            if source.count("\\project{") != 20:
+                raise SystemExit(f"{name}: expected 20 individual project entries")
+            if source.count("\\section{Projects}" if name == "resume-en" else "\\section{Projets}") != 1:
+                raise SystemExit(f"{name}: expected one unified projects section")
             pdf = Path(directory) / f"{name}.pdf"
             metadata = run("pdfinfo", str(pdf))
             pages = int(re.search(r"^Pages:\s+(\d+)", metadata, re.M).group(1))
@@ -33,7 +38,10 @@ def main():
             for required in ("Tamim Hmizi", "tamimhmizi@icloud.com", "+216 54 886 068",
                              heading, "Bassetti Group", "Axynoxia", "RFC", "ESPRIT",
                              "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes",
-                             "Confortex", "Vie Sublime", "Habiter Mieux", "NexGen", "B2"):
+                             "Confortex", "Vie Sublime", "Habiter Mieux", "NexGen", "B2",
+                             "LeadGen", "Energie", "ProInvoice", "Tickety", "Roehrdanz",
+                             "Jektis Travel", "New Journey", "OpenStack Private Cloud Lab",
+                             "DevOps CI/CD Hub", "MERN E-commerce", "Enterprise Monitoring Platform"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
             if "\ufffd" in text or "\x00" in text:
@@ -42,9 +50,7 @@ def main():
             font_lines = fonts.splitlines()[2:]
             if not font_lines or any(not re.search(r"\byes\s+yes\s+yes\b", line) for line in font_lines):
                 raise SystemExit(f"{name}: fonts must be embedded, subset and Unicode mapped\n{fonts}")
-            txt = Path(directory) / f"{name}.txt"
-            txt.write_text(text, encoding="utf-8")
-            outputs.extend((pdf, txt))
+            outputs.append(pdf)
             print(f"{name}: 3 pages; contact, career and project text extracted; fonts embedded and Unicode mapped")
         # Publish only when both documents pass.
         for output in outputs:

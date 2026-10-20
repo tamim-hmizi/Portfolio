@@ -34,10 +34,6 @@ const ProfileSection: React.FC = () => (
           </a>
         </div>
         <p className="text-sm text-gray-300 mt-4">Ariana · Arabic, English and French</p>
-        <p className="text-sm text-gray-300 mt-2">
-          Plain text: <a href="/Portfolio/resume-en.txt" download className="text-yellow-400 underline underline-offset-4">English resume</a>
-          {" · "}<a href="/Portfolio/cv-fr.txt" download lang="fr" className="text-yellow-400 underline underline-offset-4">CV français</a>
-        </p>
       </div>
       <motion.img src="/Portfolio/me.jpg" alt="Tamim Hmizi" width="240" height="300"
         className="w-40 md:w-60 aspect-[4/5] object-cover rounded-lg"
