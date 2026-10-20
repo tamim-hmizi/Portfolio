@@ -29,8 +29,8 @@ def main():
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
             source = (ROOT / "documents" / f"{name}.tex").read_text()
-            if source.count("\\project{") != 6:
-                raise SystemExit(f"{name}: expected 6 selected project entries")
+            if source.count("\\project{") != 8:
+                raise SystemExit(f"{name}: expected 8 selected project entries")
             if source.count("\\section{Selected Projects}" if name == "resume-en" else "\\section{Projets choisis}") != 1:
                 raise SystemExit(f"{name}: expected one unified projects section")
             pdf = Path(directory) / f"{name}.pdf"
@@ -42,7 +42,8 @@ def main():
             for required in ("Tamim Hmizi", "tamimhmizi@icloud.com", "+216 54 886 068",
                              heading, "Bassetti Group", "Axynoxia", "RFC", "ESPRIT",
                              "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes",
-                             "B2", "Enterprise Monitoring Platform", "LeadGen", "bmoovd", "ERP"):
+                             "B2", "Enterprise Monitoring Platform", "bmoovd", "Roehrdanz",
+                             "Habiter Mieux", "Confortex", "Vie Sublime", "Digiqora"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
             language = "English (C1)" if name == "resume-en" else "anglais (C1)"
