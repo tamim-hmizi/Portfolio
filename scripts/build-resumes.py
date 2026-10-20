@@ -25,8 +25,8 @@ def main():
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
             source = (ROOT / "public" / f"{name}.tex").read_text()
-            if source.count("\\project{") != 8:
-                raise SystemExit(f"{name}: expected 8 selected project entries")
+            if source.count("\\project{") != 21:
+                raise SystemExit(f"{name}: expected all 21 project entries")
             if source.count("\\section{Projects}" if name == "resume-en" else "\\section{Projets}") != 1:
                 raise SystemExit(f"{name}: expected one unified projects section")
             pdf = Path(directory) / f"{name}.pdf"
@@ -39,7 +39,8 @@ def main():
                              heading, "Bassetti Group", "Axynoxia", "RFC", "ESPRIT",
                              "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes",
                              "Confortex", "B2", "Energie", "Roehrdanz",
-                             "Enterprise Monitoring Platform"):
+                             "Enterprise Monitoring Platform", "Tickety", "ProInvoice", "LeadGen", "Leasing",
+                             "Habiter", "MERN", "OMHY", "Jektis", "New Journey", "NexGen", "OpenStack", "Vie Sublime"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
             if "\ufffd" in text or "\x00" in text:
