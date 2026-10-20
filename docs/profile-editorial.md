@@ -34,3 +34,7 @@ Three pages is a maximum, not a length to pad to. Hide page counts in public dow
 Edit `public/resume-en.tex` and `public/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. Requires pdfLaTeX and Poppler (`pdfinfo`, `pdftotext`, `pdffonts`). The script enforces the three-page maximum and eight selected project entries, extracts core contact and career text, and checks font embedding and Unicode maps before replacing either published PDF.
 
 Render every final page with `pdftoppm` and inspect legibility, clipping and section boundaries. Text extraction checks help assess parsing readability, but are not a test in a commercial ATS. Keep both PDF downloads, portfolio copy, metadata, share card and GitHub bio/README consistent. Run lint, TypeScript and build checks, then verify the deployed page, filtering and downloads.
+
+## Visual presentation
+
+The website and GitHub profile use a visual project showcase rather than the document layout. Keep the PDFs ATS oriented. Typography, interactions, imagery sources and verification are documented in `design-refresh.md`.
