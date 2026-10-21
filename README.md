@@ -35,12 +35,7 @@ python3 scripts/build-resumes.py --check
 
 ## Publish
 
-```sh
-npm run build
-npm run deploy
-```
-
-`npm run deploy` pushes `dist` to the `gh-pages` branch, which GitHub Pages serves. Check the live page, the expanded project list, mobile navigation and both PDF downloads after each release.
+Push to `main`. The [Deploy workflow](.github/workflows/deploy.yml) installs dependencies, fails on any `npm audit` finding, runs lint, typecheck and build, then publishes `dist` to GitHub Pages. Pull requests run the same checks without deploying. Check the live page, the project filters, mobile navigation and both PDF downloads after each release.
 
 ## Structure
 
