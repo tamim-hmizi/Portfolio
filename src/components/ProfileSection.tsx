@@ -36,7 +36,7 @@ const ProfileSection: React.FC = () => (
           >
             Axynoxia
           </a>
-          . I design, ship and operate web and mobile products, with infrastructure as code, CI/CD and LLM integration where they add value.
+          , where I have delivered 8 client projects and 7 products. I build web and mobile apps, run them on Azure, AWS and Kubernetes, and automate their delivery with Terraform, Ansible and CI/CD.
         </m.p>
 
         <m.div {...fadeUp(0.24)} className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
