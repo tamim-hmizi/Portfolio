@@ -27,7 +27,8 @@ export interface Experience {
   tagline?: string;
   bullets: ReactNode[];
   tech: Tech[];
-  logo: { file: string; alt: string };
+  /** `dark` puts light logos on a dark tile instead of white. */
+  logo: { file: string; alt: string; dark?: boolean };
   /** Employer site, linked from the card. */
   href?: string;
   current?: boolean;
@@ -38,23 +39,6 @@ export interface Experience {
 const t = (icon: IconType, label: string): Tech => ({ icon, label });
 
 export const experiences: Experience[] = [
-  {
-    title: "Founder & Software Engineer | Axynoxia",
-    period: "Jan 2026 to Present",
-    details: ["Tunis, Tunisia"],
-    email: "tamim.hmizi@axynoxia.com",
-    tagline: "Elevating Enterprise Standards.",
-    current: true,
-    logo: { file: "axynoxia-logo.png", alt: "Axynoxia" },
-    cta: { label: "Book a discovery call", url: "https://calendly.com/axynoxia/axynoxia-discovery-call" },
-    bullets: [
-      <>Lead a software engineering team delivering fixed-scope client projects: custom software, cloud &amp; DevOps, AI and intelligent automation, integrations and e-commerce.</>,
-      <>Own the full delivery lifecycle on every engagement: scoping, architecture, full-stack build, cloud provisioning, CI/CD, observability and production operations.</>,
-      <>Deliver client work such as a <Hl>Flutter app on the App Store and Google Play</Hl>, an event ticketing platform, Shopify storefronts, a lead generation site, an agency website and a real estate platform.</>,
-      <>Build and run Axynoxia products (ERP, Energie, GymOS, Tickets, CRM Leasing and Invoice) on <Hl>NestJS, Next.js, PostgreSQL, Redis</Hl> behind a shared <Hl>Caddy</Hl> edge proxy.</>,
-    ],
-    tech: [t(FaReact, "React"), t(SiNestjs, "NestJS"), t(FaNodeJs, "Node.js"), t(FaDocker, "Docker"), t(SiKubernetes, "Kubernetes"), t(SiTerraform, "Terraform")],
-  },
   {
     title: "Full Stack Engineer | Bassetti Group (TEEXMA)",
     period: "Apr 2026 to Present",
@@ -73,6 +57,23 @@ export const experiences: Experience[] = [
       <>Containerizing workloads with <Hl>Docker</Hl> and contributing to delivery automation, including <Hl>Jenkins and Terraform CI</Hl> across the platform&apos;s services.</>,
     ],
     tech: [t(SiDotnet, ".NET"), t(SiAngular, "Angular"), t(FaDocker, "Docker"), t(FaGitAlt, "Git")],
+  },
+  {
+    title: "Founder & Software Engineer | Axynoxia",
+    period: "Jan 2026 to Present",
+    details: ["Tunis, Tunisia"],
+    email: "tamim.hmizi@axynoxia.com",
+    tagline: "Elevating Enterprise Standards.",
+    current: true,
+    logo: { file: "axynoxia-logo.png", alt: "Axynoxia", dark: true },
+    cta: { label: "Book a discovery call", url: "https://calendly.com/axynoxia/axynoxia-discovery-call" },
+    bullets: [
+      <>Lead a software engineering team delivering fixed-scope client projects: custom software, cloud &amp; DevOps, AI and intelligent automation, integrations and e-commerce.</>,
+      <>Own the full delivery lifecycle on every engagement: scoping, architecture, full-stack build, cloud provisioning, CI/CD, observability and production operations.</>,
+      <>Deliver client work such as a <Hl>Flutter app on the App Store and Google Play</Hl>, an event ticketing platform, Shopify storefronts, a lead generation site, an agency website and a real estate platform.</>,
+      <>Build and run Axynoxia products (ERP, Energie, GymOS, Tickets, CRM Leasing and Invoice) on <Hl>NestJS, Next.js, PostgreSQL, Redis</Hl> behind a shared <Hl>Caddy</Hl> edge proxy.</>,
+    ],
+    tech: [t(FaReact, "React"), t(SiNestjs, "NestJS"), t(FaNodeJs, "Node.js"), t(FaDocker, "Docker"), t(SiKubernetes, "Kubernetes"), t(SiTerraform, "Terraform")],
   },
   {
     title: "Infrastructure Consultant",

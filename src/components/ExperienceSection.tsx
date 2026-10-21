@@ -29,7 +29,9 @@ const TimelineItem: React.FC<{ experience: Experience }> = ({ experience: e }) =
               loading="lazy"
               src={asset(e.logo.file)}
               alt={e.logo.alt}
-              className="w-11 h-11 object-contain rounded-md bg-white p-1 shrink-0"
+              className={`w-11 h-11 object-contain rounded-md p-1 shrink-0 ${
+                e.logo.dark ? "bg-gray-900 border border-gray-700" : "bg-white"
+              }`}
             />
             <div className="min-w-0 flex-1">
               <h3 className="text-lg md:text-xl font-semibold text-white flex flex-wrap items-center gap-2">

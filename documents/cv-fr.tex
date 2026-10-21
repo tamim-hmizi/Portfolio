@@ -7,6 +7,8 @@
 \usepackage[hidelinks]{hyperref}
 \input{glyphtounicode}
 \pdfgentounicode=1
+% Write real space characters into the PDF so ATS text extraction never guesses word breaks from glyph gaps.
+\pdfinterwordspaceon
 \definecolor{accent}{HTML}{9A6A00}
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
@@ -32,10 +34,10 @@ Ingénieur logiciel qui construit des produits et le cloud qui les fait tourner.
 
 \section{Compétences techniques}
 \textbf{Cloud :} Azure, Azure Stack Hub, AKS, AWS (EKS, IAM), GCP, OpenStack, Cloudflare ; cloud hybride.\\
-\textbf{DevOps :} Docker, Kubernetes, Helm, Terraform, Ansible, Jenkins, GitHub Actions, GitLab CI, SonarQube, Trivy, Nexus, Traefik, Caddy.\\
+\textbf{DevOps :} Docker, Kubernetes, Helm, Terraform, Ansible, Jenkins, GitHub Actions, GitLab CI, SonarQube, Trivy{}, Nexus, Traefik, Caddy{}.\\
 \textbf{Observabilité et exploitation :} Prometheus, Grafana, ELK ; Linux, Windows Server, Commvault, Fortinet.\\
 \textbf{IA :} intégration LLM, analyse de dépôts, automatisation Python.\\
-\textbf{Full stack :} TypeScript, JavaScript, Python, C\#, Java, PHP ; React, Next.js, Angular, Astro, Flutter, Node.js, NestJS, Express, FastAPI, .NET, Spring Boot, Symfony ; PostgreSQL, MongoDB, Redis, Prisma, Firebase ; Shopify, Stripe.
+\textbf{Full stack :} TypeScript, JavaScript, Python, C\#, Java, PHP ; React, Next.js, Angular, Astro, Flutter, Node.js, NestJS, Express, FastAPI, .NET, Spring Boot, Symfony ; PostgreSQL, MongoDB, Redis, Prisma, Firebase ; Shopify{}, Stripe.
 
 \section{Expérience professionnelle}
 \role{Ingénieur full stack}{Bassetti Group, TEEXMA}{Avril 2026 à ce jour | Tunis}
@@ -47,7 +49,7 @@ Ingénieur logiciel qui construit des produits et le cloud qui les fait tourner.
 \role{Fondateur et ingénieur logiciel}{Axynoxia}{Janvier 2026 à ce jour | Tunis | \href{https://www.axynoxia.com}{axynoxia.com}}
 \begin{itemize}
 \item Direction d'une équipe d'ingénierie livrant des projets clients à périmètre fixe, du cadrage et de l'architecture au développement, au cloud, au CI/CD et à l'exploitation.
-\item Réalisations clients : application Flutter sur les deux stores, billetterie, deux boutiques Shopify, site de génération de prospects, site d'agence et plateforme immobilière (préversion).
+\item Réalisations clients : application Flutter sur les deux stores, billetterie, deux boutiques Shopify{}, site de génération de prospects, site d'agence et plateforme immobilière (préversion).
 \item Développement et exploitation des produits Axynoxia (ERP, Energie, GymOS, Tickets, CRM Leasing, Invoice) sur un VPS derrière un proxy Caddy partagé, pour que chaque nouveau produit soit en ligne avec TLS et routage dès le premier jour.
 \end{itemize}
 
