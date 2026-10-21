@@ -3,12 +3,11 @@ import { m } from "framer-motion";
 import { FaArrowRight, FaCalendarCheck, FaFileAlt } from "react-icons/fa";
 import { asset } from "../lib/asset";
 
-// Every figure is backed by a public source: axynoxia.com, GitHub or the RFC monitoring repository.
-const stats = [
-  { value: "7", label: "client projects delivered" },
-  { value: "6", label: "Axynoxia products in production" },
-  { value: "45", label: "merged pull requests at Bassetti" },
-  { value: "2", label: "Azure Stack Hub datacenters monitored" },
+const focusAreas = [
+  { title: "Full stack engineering", text: "Web and mobile apps with React, Next.js, Angular, Flutter, Node.js, NestJS and .NET." },
+  { title: "Cloud and DevOps", text: "Azure, AWS and Kubernetes, with Terraform, Ansible and CI/CD pipelines." },
+  { title: "AI and automation", text: "LLM features and workflow automation where they save real time." },
+  { title: "Delivery end to end", text: "From scoping and architecture to production, monitoring and support." },
 ];
 
 const fadeUp = (delay: number) => ({
@@ -72,15 +71,14 @@ const ProfileSection: React.FC = () => (
           <FaCalendarCheck aria-hidden="true" /> Book a discovery call
         </m.a>
 
-        <m.dl {...fadeUp(0.36)} className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {stats.map(({ value, label }) => (
-            <div key={label} className="rounded-xl bg-gray-800/60 border border-gray-700 px-4 py-3 text-left">
-              <dt className="sr-only">{label}</dt>
-              <dd className="text-3xl font-bold text-yellow-500 leading-none">{value}</dd>
-              <dd className="mt-1.5 text-xs text-gray-300 leading-snug">{label}</dd>
-            </div>
+        <m.ul {...fadeUp(0.36)} aria-label="What I do" className="mt-10 grid sm:grid-cols-2 gap-3 text-left">
+          {focusAreas.map(({ title, text }) => (
+            <li key={title} className="rounded-xl bg-gray-800/60 border border-gray-700 px-4 py-3">
+              <p className="font-semibold text-yellow-400">{title}</p>
+              <p className="mt-1 text-sm text-gray-300 leading-snug">{text}</p>
+            </li>
           ))}
-        </m.dl>
+        </m.ul>
       </div>
 
       <m.div

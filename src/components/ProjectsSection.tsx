@@ -19,10 +19,10 @@ const ProjectCard: React.FC<{ project: Project; large?: boolean }> = ({ project,
         large ? "border-yellow-500/40" : "border-gray-700"
       }`}
     >
-      <div className="flex items-start justify-between gap-3 mb-3">
-        <h3 className={`${large ? "text-2xl" : "text-xl"} font-semibold text-white leading-snug`}>{project.title}</h3>
+      <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1 mb-3">
+        <h3 className="min-w-0 text-xl font-semibold text-white leading-snug">{project.title}</h3>
         {(project.status || live) && (
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-200 whitespace-nowrap mt-1">
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-200 mt-1.5">
             {live && <span className="w-2 h-2 rounded-full bg-green-400" aria-hidden="true" />}
             {project.status ?? "Live"}
           </span>
@@ -79,9 +79,12 @@ const ProjectsSection: React.FC = () => {
   const [filter, setFilter] = useState<ProjectCategory | "all">("all");
   const [showAll, setShowAll] = useState(false);
 
-  const featured = useMemo(() => projects.filter((p) => p.featured), []);
+  // Featured first, then live projects, so the first row is the strongest work in every filter.
   const list = useMemo(
-    () => projects.filter((p) => (filter === "all" ? !p.featured : p.category === filter)).sort(byLiveFirst),
+    () =>
+      projects
+        .filter((p) => filter === "all" || p.category === filter)
+        .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || byLiveFirst(a, b)),
     [filter],
   );
   // Only the long "All" list is collapsed; a single category is short enough to show whole.
@@ -96,21 +99,10 @@ const ProjectsSection: React.FC = () => {
             <span className="text-yellow-500">Key</span> Projects
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            {projects.length} projects: client deliveries through{" "}
-            <span className="text-yellow-400 font-semibold">Axynoxia</span>, our own products, and cloud and DevOps work
-            from RFC and ESPRIT.
+            Client work delivered through <span className="text-yellow-400 font-semibold">Axynoxia</span>, the products we
+            build and run, and cloud and DevOps engineering from RFC and ESPRIT.
           </p>
         </Reveal>
-
-        {filter === "all" && (
-          <div className="grid gap-6 lg:grid-cols-3 mb-12">
-            {featured.map((project, i) => (
-              <Reveal key={project.title} delay={i * 0.08}>
-                <ProjectCard project={project} large />
-              </Reveal>
-            ))}
-          </div>
-        )}
 
         <div role="group" aria-label="Filter projects" className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map(({ id, label }) => {
@@ -139,8 +131,8 @@ const ProjectsSection: React.FC = () => {
 
         <div id="project-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visible.map((project) => (
-            <Reveal key={project.title}>
-              <ProjectCard project={project} />
+            <Reveal key={project.title} className="min-w-0">
+              <ProjectCard project={project} large={project.featured} />
             </Reveal>
           ))}
         </div>
