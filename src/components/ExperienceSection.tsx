@@ -1,110 +1,132 @@
-import React from "react";
-import { m } from "framer-motion";
-import { FaCalendarCheck } from "react-icons/fa";
+import React, { useId, useState } from "react";
+import { FaCalendarCheck, FaChevronDown } from "react-icons/fa";
 import { experiences, type Experience } from "../data/experience";
 import { asset } from "../lib/asset";
+import Reveal from "./Reveal";
 
-// Full class names so Tailwind can see them at build time.
-const spanClass: Record<Experience["span"], string> = {
-  4: "xl:col-span-4",
-  6: "xl:col-span-6",
-  12: "xl:col-span-12",
-};
+/** Bullets shown before "Show more". */
+const PREVIEW_BULLETS = 2;
 
-const ExperienceCard: React.FC<{ experience: Experience }> = ({ experience: e }) => {
-  const border = e.current
-    ? "border-yellow-500 shadow-yellow-500/10 hover:shadow-yellow-500/20"
-    : "border-yellow-600/30 hover:shadow-yellow-500/20 hover:border-yellow-500";
-  const className = `relative bg-gray-800 border-2 p-5 md:p-6 rounded-xl shadow-lg flex flex-col text-left transition-all duration-300 ${border} ${spanClass[e.span]}`;
+const TimelineItem: React.FC<{ experience: Experience }> = ({ experience: e }) => {
+  const [open, setOpen] = useState(false);
+  const detailsId = useId();
+  const hasMore = e.bullets.length > PREVIEW_BULLETS;
+  const bullets = open ? e.bullets : e.bullets.slice(0, PREVIEW_BULLETS);
 
-  const body = (
-    <>
-      <div className="flex items-start justify-between mb-4">
-        <h3 className="text-lg md:text-xl font-semibold text-yellow-500 flex flex-wrap items-center gap-2">
-          {e.title}
-          {e.current && <span className="bg-yellow-500 text-black text-xs font-bold px-2 py-0.5 rounded-full">CURRENT</span>}
-        </h3>
-        <img
-          loading="lazy"
-          src={asset(e.logo.file)}
-          alt={e.logo.alt}
-          className="w-10 h-10 object-contain rounded-md bg-white p-1 shadow-xs shrink-0 ml-4"
-        />
-      </div>
-      <p className="text-gray-300 mt-1 text-sm md:text-base mb-2">
-        <span className="text-yellow-400 font-semibold">{e.period}</span>
-        {e.details?.map((d) => ` | ${d}`)}
-        {e.email && (
-          <>
-            {" | "}
-            <a href={`mailto:${e.email}`} className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2">
-              {e.email}
-            </a>
-          </>
-        )}
-      </p>
-      {e.tagline && <p className="text-gray-400 text-sm mb-3 italic">{e.tagline}</p>}
-      {e.summary && <p className="text-gray-300 mt-1 text-sm md:text-base mb-3">{e.summary}</p>}
-      <ul className="mt-2 text-base text-gray-200 space-y-1.5 list-disc pl-5 marker:text-yellow-500">
-        {e.bullets.map((bullet, i) => (
-          <li key={i}>{bullet}</li>
-        ))}
-      </ul>
-      <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4 pt-3 border-t border-yellow-600/30">
-        <div className="flex flex-wrap gap-2 text-yellow-500">
-          {e.tech.map(({ icon: Icon, label }) => (
-            <span key={label} className="p-1 rounded-sm bg-gray-700 border border-yellow-600/30" title={label}>
-              <Icon size={16} aria-label={label} />
-            </span>
-          ))}
-        </div>
-        {e.cta && (
-          <a
-            href={e.cta.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-500 text-gray-900 font-bold text-sm shadow-md shadow-yellow-500/20 border-2 border-yellow-400 hover:bg-yellow-400 transition-all sm:ml-auto w-fit"
-          >
-            <FaCalendarCheck className="w-4 h-4" />
-            <span>{e.cta.label}</span>
-          </a>
-        )}
-      </div>
-    </>
-  );
+  return (
+    <li className="relative pl-10 md:pl-14 pb-10 last:pb-0">
+      {/* Timeline dot; the line itself is drawn by the parent list. */}
+      <span
+        className={`absolute left-[9px] md:left-[17px] top-2 w-4 h-4 rounded-full border-4 border-gray-900 ${
+          e.current ? "bg-yellow-500" : "bg-gray-500"
+        }`}
+        aria-hidden="true"
+      />
+      <Reveal>
+        <article className="rounded-xl border border-gray-700 bg-gray-800/70 p-5 md:p-6 text-left">
+          <header className="flex items-start gap-4">
+            <img
+              loading="lazy"
+              src={asset(e.logo.file)}
+              alt={e.logo.alt}
+              className="w-11 h-11 object-contain rounded-md bg-white p-1 shrink-0"
+            />
+            <div className="min-w-0 flex-1">
+              <h3 className="text-lg md:text-xl font-semibold text-white flex flex-wrap items-center gap-2">
+                {e.title}
+                {e.current && (
+                  <span className="bg-yellow-500 text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full">Current</span>
+                )}
+              </h3>
+              <p className="text-sm text-gray-300 mt-1">
+                <span className="text-yellow-400 font-semibold">{e.period}</span>
+                {e.details?.map((d) => ` · ${d}`)}
+              </p>
+              {e.tagline && <p className="text-sm text-gray-400 italic mt-1">{e.tagline}</p>}
+            </div>
+          </header>
 
-  // A card with its own call to action cannot itself be a link (no nested anchors).
-  return e.href && !e.cta ? (
-    <a href={e.href} target="_blank" rel="noopener noreferrer" className={className}>
-      {body}
-    </a>
-  ) : (
-    <div className={className}>{body}</div>
+          {e.summary && <p className="text-gray-300 mt-4">{e.summary}</p>}
+
+          <ul id={detailsId} className="mt-3 text-gray-200 space-y-1.5 list-disc pl-5 marker:text-yellow-500">
+            {bullets.map((bullet, i) => (
+              <li key={i}>{bullet}</li>
+            ))}
+          </ul>
+
+          <ul className="mt-4 flex flex-wrap gap-2" aria-label="Technologies">
+            {e.tech.map(({ icon: Icon, label }) => (
+              <li
+                key={label}
+                className="inline-flex items-center gap-1.5 rounded-md bg-gray-900/70 border border-gray-700 px-2 py-1 text-xs text-gray-200"
+              >
+                <Icon className="text-yellow-500" aria-hidden="true" />
+                {label}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+            {hasMore && (
+              <button
+                type="button"
+                aria-expanded={open}
+                aria-controls={detailsId}
+                onClick={() => setOpen((v) => !v)}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-yellow-400 hover:text-yellow-300"
+              >
+                {open ? "Show less" : `Show ${e.bullets.length - PREVIEW_BULLETS} more`}
+                <FaChevronDown className={`transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+              </button>
+            )}
+            {e.href && (
+              <a
+                href={e.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-300 underline underline-offset-4 hover:text-yellow-400"
+              >
+                {new URL(e.href).hostname.replace(/^www\./, "")}
+              </a>
+            )}
+            {e.email && (
+              <a href={`mailto:${e.email}`} className="text-sm text-gray-300 underline underline-offset-4 hover:text-yellow-400">
+                {e.email}
+              </a>
+            )}
+            {e.cta && (
+              <a
+                href={e.cta.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sm:ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-500 text-gray-900 font-bold text-sm hover:bg-yellow-400 transition-colors"
+              >
+                <FaCalendarCheck aria-hidden="true" /> {e.cta.label}
+              </a>
+            )}
+          </div>
+        </article>
+      </Reveal>
+    </li>
   );
 };
 
 const ExperienceSection: React.FC = () => (
-  <section
-    id="experience"
-    className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
-  >
-    <div className="w-full max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white text-center">
-        <span className="text-yellow-500">Professional</span> Experience
-      </h2>
-      <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 md:mb-12 text-center">
-        Experience building applications, automating delivery and operating cloud infrastructure.
-      </p>
-      <m.div
-        className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-5 md:gap-6 items-start"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
+  <section id="experience" className="px-4 sm:px-6 md:px-10 py-20 md:py-28">
+    <div className="w-full max-w-4xl mx-auto">
+      <Reveal className="text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+          <span className="text-yellow-500">Professional</span> Experience
+        </h2>
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          Building applications, automating delivery and operating cloud infrastructure.
+        </p>
+      </Reveal>
+      <ol className="relative before:absolute before:left-4 md:before:left-6 before:top-2 before:bottom-2 before:w-0.5 before:bg-gray-700">
         {experiences.map((experience) => (
-          <ExperienceCard key={experience.title} experience={experience} />
+          <TimelineItem key={experience.title} experience={experience} />
         ))}
-      </m.div>
+      </ol>
     </div>
   </section>
 );

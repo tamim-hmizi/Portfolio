@@ -28,11 +28,9 @@ export interface Experience {
   bullets: ReactNode[];
   tech: Tech[];
   logo: { file: string; alt: string };
-  /** Employer site; the whole card links there unless `cta` is set. */
+  /** Employer site, linked from the card. */
   href?: string;
   current?: boolean;
-  /** Width on the 12-column xl grid. */
-  span: 4 | 6 | 12;
   email?: string;
   cta?: { label: string; url: string };
 }
@@ -47,7 +45,6 @@ export const experiences: Experience[] = [
     email: "tamim.hmizi@axynoxia.com",
     tagline: "Elevating Enterprise Standards.",
     current: true,
-    span: 12,
     logo: { file: "axynoxia-logo.png", alt: "Axynoxia" },
     cta: { label: "Book a discovery call", url: "https://calendly.com/axynoxia/axynoxia-discovery-call" },
     bullets: [
@@ -64,7 +61,6 @@ export const experiences: Experience[] = [
     details: ["Tunis, Tunisia"],
     href: "https://www.bassetti-group.com/",
     current: true,
-    span: 12,
     logo: { file: "BASSETTI-GROUP.webp", alt: "Bassetti Group" },
     summary: (
       <>
@@ -83,7 +79,6 @@ export const experiences: Experience[] = [
     period: "Oct 2025 to May 2026",
     details: ["RFC (Microsoft Gold CSP Partner)", "Ariana, Tunisia"],
     href: "https://rfc.com.tn",
-    span: 6,
     logo: { file: "rfclogo.png", alt: "RFC" },
     summary: "Consulting and engineering for large-scale hybrid cloud infrastructure, sovereign cloud environments and enterprise security.",
     bullets: [
@@ -101,7 +96,6 @@ export const experiences: Experience[] = [
     period: "Feb 2025 to Aug 2025",
     details: ["RFC", "Ariana, Tunisia"],
     href: "https://rfc.com.tn",
-    span: 6,
     logo: { file: "rfclogo.png", alt: "RFC" },
     summary: (
       <>
@@ -122,7 +116,6 @@ export const experiences: Experience[] = [
     period: "Jul 2024 to Aug 2024",
     details: ["RFC", "Internship"],
     href: "https://rfc.com.tn",
-    span: 4,
     logo: { file: "rfclogo.png", alt: "RFC" },
     summary: "Developed a cloud-native web application for intern management (onboarding, tracking and admin workflows).",
     bullets: [
@@ -137,7 +130,6 @@ export const experiences: Experience[] = [
     period: "Jul 2023 to Aug 2023",
     details: ["ESPRIT", "Internship"],
     href: "https://esprit.tn",
-    span: 4,
     logo: { file: "espritlogo.jpg", alt: "ESPRIT" },
     summary: "Developed a web platform that scrapes official educational websites to aggregate online courses.",
     bullets: [
@@ -152,7 +144,6 @@ export const experiences: Experience[] = [
     title: "Network Engineer Intern (C-NOC) | Tunisie Telecom",
     period: "Aug 2021 to Sep 2021",
     href: "https://www.tunisietelecom.tn/particulier/",
-    span: 4,
     logo: { file: "tunisie-telecom-logo.png", alt: "Tunisie Telecom" },
     summary: "Worked in the national B2B Network Operations Center.",
     bullets: [

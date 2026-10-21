@@ -1,138 +1,109 @@
 import React from "react";
 import { m } from "framer-motion";
+import { FaArrowRight, FaCalendarCheck, FaFileAlt } from "react-icons/fa";
 import { asset } from "../lib/asset";
-import { FaFileAlt } from "react-icons/fa";
 
-const ProfileSection: React.FC = () => {
-  return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden select-none p-6 md:p-10 pt-16 md:pt-20"
-    >
-      <div className="absolute inset-0 bg-black opacity-30 pointer-events-none" />
+// Every figure is backed by a public source: axynoxia.com, GitHub or the RFC monitoring repository.
+const stats = [
+  { value: "7", label: "client projects delivered" },
+  { value: "6", label: "Axynoxia products in production" },
+  { value: "45", label: "merged pull requests at Bassetti" },
+  { value: "2", label: "Azure Stack Hub datacenters monitored" },
+];
 
-      <m.img
-        src={asset("me.jpg")}
-        alt="Tamim Hmizi"
-        width={192}
-        height={192}
-        fetchPriority="high"
-        className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full border-4 border-yellow-500 mb-4 object-cover shadow-xl z-10 select-none shadow-yellow-500/50"
-        style={{ objectPosition: 'center 90%' }}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-      />
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, ease: "easeOut" as const, delay },
+});
 
-      <m.h1
-        className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-white z-10 select-none leading-tight"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.3 }}
-      >
-        Tamim Hmizi
-      </m.h1>
+const ProfileSection: React.FC = () => (
+  <section id="home" className="relative min-h-screen flex items-center px-4 sm:px-6 md:px-10 pt-24 pb-16">
+    <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-center">
+      <div className="text-center lg:text-left order-2 lg:order-1">
+        <m.p {...fadeUp(0)} className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-500 mb-4">
+          Software Engineer · Cloud, DevOps &amp; AI
+        </m.p>
+        <m.h1 {...fadeUp(0.08)} className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-5">
+          I build software <span className="text-yellow-500">and the cloud it runs on.</span>
+        </m.h1>
+        <m.p {...fadeUp(0.16)} className="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
+          I&apos;m Tamim Hmizi, Full Stack Engineer at Bassetti Group and founder of{" "}
+          <a
+            href="https://www.axynoxia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 font-semibold underline-offset-4 hover:underline"
+          >
+            Axynoxia
+          </a>
+          . I design, ship and operate web and mobile products, with infrastructure as code, CI/CD and LLM integration where they add value.
+        </m.p>
 
-      <m.div
-        className="flex flex-wrap items-center gap-2 mb-4 z-10 justify-center max-w-xl"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.45 }}
-      >
-        <span className="inline-block bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Founder of Axynoxia
-        </span>
-        <span className="inline-block bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Software Engineer
-        </span>
-        <span className="inline-block bg-yellow-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Cloud & DevOps
-        </span>
-        <span className="inline-block bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Applied AI & Automation
-        </span>
-      </m.div>
+        <m.div {...fadeUp(0.24)} className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+          <a
+            href="#projects"
+            className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg bg-yellow-500 text-gray-900 font-bold hover:bg-yellow-400 transition-colors"
+          >
+            View projects <FaArrowRight aria-hidden="true" />
+          </a>
+          <a
+            href={asset("resume-en.pdf")}
+            download
+            className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg border-2 border-yellow-500/60 text-yellow-400 font-semibold hover:border-yellow-400 hover:bg-yellow-500/10 transition-colors"
+          >
+            <FaFileAlt aria-hidden="true" /> Resume (EN)
+          </a>
+          <a
+            href={asset("cv-fr.pdf")}
+            download
+            className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg border-2 border-gray-600 text-gray-200 font-semibold hover:border-gray-400 hover:bg-white/5 transition-colors"
+          >
+            <FaFileAlt aria-hidden="true" /> CV (FR)
+          </a>
+        </m.div>
+        <m.a
+          {...fadeUp(0.3)}
+          href="https://calendly.com/axynoxia/axynoxia-discovery-call"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-2 text-sm text-gray-300 hover:text-yellow-400 transition-colors"
+        >
+          <FaCalendarCheck aria-hidden="true" /> Book a discovery call
+        </m.a>
 
-      <m.p
-        className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto mt-2 px-4 sm:px-6 z-10 leading-relaxed"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.6 }}
-      >
-        I design, build and run software end to end: products and the cloud
-        infrastructure underneath them.{" "}
-        <span className="italic text-gray-300">I build it, I ship it, and I keep it running.</span>
-      </m.p>
-
-      {/* What I do */}
-      <m.div
-        className="mt-5 z-10 flex flex-col items-center gap-2"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.75 }}
-      >
-        <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">
-          What I do
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-3">
-          {[
-            "Custom software",
-            "Cloud & DevOps",
-            "AI & automation",
-            "E-commerce",
-            "Integrations",
-          ].map((item) => (
-            <div
-              key={item}
-              className="bg-gray-800/70 border border-yellow-600/20 rounded-lg px-3 py-1.5"
-            >
-              <span className="text-sm text-gray-300 font-medium">{item}</span>
+        <m.dl {...fadeUp(0.36)} className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="rounded-xl bg-gray-800/60 border border-gray-700 px-4 py-3 text-left">
+              <dt className="sr-only">{label}</dt>
+              <dd className="text-3xl font-bold text-yellow-500 leading-none">{value}</dd>
+              <dd className="mt-1.5 text-xs text-gray-300 leading-snug">{label}</dd>
             </div>
           ))}
-        </div>
-        <p className="text-sm text-gray-400 mt-3 max-w-xl">
-          Client work is delivered through{" "}
-          <a href="https://www.axynoxia.com" target="_blank" rel="noopener noreferrer" className="text-yellow-500 font-semibold">Axynoxia</a>, my
-          software engineering company.{" "}
-          <span className="italic">Elevating Enterprise Standards.</span>
-        </p>
-      </m.div>
-
-      {/* Resume Downloads */}
-      <div className="mt-6 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <m.a
-          href={asset("resume-en.pdf")}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          aria-label="Download Resume (English)"
-          className="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold shadow-md hover:bg-yellow-700 active:scale-95 transform transition-all border-2 border-yellow-500"
-          initial={{ scale: 0.98, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          <FaFileAlt className="w-5 h-5" />
-          <span>Resume (EN)</span>
-        </m.a>
-        <m.a
-          href={asset("cv-fr.pdf")}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          aria-label="Download Resume (French)"
-          className="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-6 py-3 rounded-lg bg-amber-700 text-white font-semibold shadow-md hover:bg-amber-800 active:scale-95 transform transition-all border-2 border-amber-600"
-          initial={{ scale: 0.98, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          <FaFileAlt className="w-5 h-5" />
-          <span>CV (FR)</span>
-        </m.a>
+        </m.dl>
       </div>
-    </section>
-  );
-};
+
+      <m.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="order-1 lg:order-2 flex justify-center"
+      >
+        <div className="relative">
+          <div className="absolute -inset-3 rounded-full bg-yellow-500/20 blur-2xl" aria-hidden="true" />
+          <img
+            src={asset("me.jpg")}
+            alt="Tamim Hmizi"
+            width={320}
+            height={320}
+            fetchPriority="high"
+            className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-80 lg:h-80 rounded-full border-4 border-yellow-500 object-cover shadow-2xl"
+            style={{ objectPosition: "center 90%" }}
+          />
+        </div>
+      </m.div>
+    </div>
+  </section>
+);
 
 export default ProfileSection;

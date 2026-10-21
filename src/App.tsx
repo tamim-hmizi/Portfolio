@@ -7,46 +7,31 @@ import SkillsSection from "./components/SkillsSection";
 import EducationSection from "./components/EducationSection";
 import ContactSection from "./components/ContactSection";
 import Navbar from "./components/Navbar";
-import FloatingBackground from "./components/FloatingBackground";
 
-const App: React.FC = () => {
-  const positions = [
-    "top-5 right-5 w-24 h-24 bg-yellow-600",
-    "top-20 right-20 w-32 h-32 bg-amber-700",
-    "bottom-5 left-5 w-28 h-28 bg-yellow-700",
-    "bottom-16 left-28 w-20 h-20 bg-amber-800",
-    "bottom-10 right-10 w-40 h-40 bg-yellow-800",
-    "bottom-20 left-36 w-36 h-36 bg-amber-900",
-  ];
-
-  // overflow-x-clip, not overflow-x-hidden: `overflow-x: hidden` forces the
-  // computed `overflow-y` to `auto`, turning the root div into a second scroll
-  // container nested inside the document scroller. Two competing scrollers is
-  // what made the page feel laggy. `clip` contains the same horizontal overflow
-  // without creating a scroll container.
-  return (
-    <div className="font-sans text-gray-200 bg-linear-to-br from-gray-900 via-gray-800 to-black overflow-x-clip min-h-screen relative">
-      {positions.map((position, index) => (
-        <FloatingBackground key={index} position={position} index={index} />
-      ))}
-
-      <a href="#content" className="skip-link">Skip to content</a>
-      {/* LazyMotion with `m` components loads only the DOM animation features this site uses. */}
-      <LazyMotion features={domAnimation} strict>
-        <MotionConfig reducedMotion="user">
-          <Navbar />
-          <main id="content" tabIndex={-1}>
-            <ProfileSection />
-            <ExperienceSection />
-            <ProjectsSection />
-            <SkillsSection />
-            <EducationSection />
-            <ContactSection />
-          </main>
-        </MotionConfig>
-      </LazyMotion>
-    </div>
-  );
-};
+// overflow-x-clip, not overflow-x-hidden: `overflow-x: hidden` forces the
+// computed `overflow-y` to `auto`, turning the root div into a second scroll
+// container nested inside the document scroller. `clip` contains the same
+// horizontal overflow without creating a scroll container.
+const App: React.FC = () => (
+  <div className="page-bg font-sans text-gray-200 overflow-x-clip min-h-screen">
+    <a href="#content" className="skip-link">
+      Skip to content
+    </a>
+    {/* LazyMotion with `m` components loads only the DOM animation features this site uses. */}
+    <LazyMotion features={domAnimation} strict>
+      <MotionConfig reducedMotion="user">
+        <Navbar />
+        <main id="content" tabIndex={-1}>
+          <ProfileSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <EducationSection />
+          <ContactSection />
+        </main>
+      </MotionConfig>
+    </LazyMotion>
+  </div>
+);
 
 export default App;

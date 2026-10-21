@@ -1,5 +1,6 @@
 import React from "react";
 import { m } from "framer-motion";
+import Reveal from "./Reveal";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const languages = [
@@ -12,17 +13,12 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      className="flex flex-col items-center justify-center text-center relative p-6 md:p-12 py-16 md:py-24"
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
         <span className="text-yellow-500">Let's</span> talk
       </h2>
-      <m.div
-        className="w-full max-w-3xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
+      <Reveal className="w-full max-w-3xl">
         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10">
           Got something to build, scale, or fix? Tell me what you're working on
           and I'll tell you straight whether I'm the right person for it.
@@ -112,7 +108,7 @@ const ContactSection: React.FC = () => {
         >
           <FaEnvelope className="text-xl" /> Send Email
         </m.a>
-      </m.div>
+      </Reveal>
     </section>
   );
 };

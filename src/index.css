@@ -57,23 +57,12 @@ section[id] {
   scroll-margin-top: 4rem;
 }
 
-/*
- * Background blobs. Compositor-only properties (transform/opacity) so the
- * animation never triggers layout or paint while the page is scrolling.
- */
-@keyframes float-blob {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(6%, 6%, 0) scale(1.15);
-  }
-}
-
-.float-blob {
-  animation: float-blob 14s ease-in-out infinite;
-  will-change: transform;
+/* Static background: a soft gold glow behind the hero over a dark gradient. No animation, no repaint on scroll. */
+.page-bg {
+  background:
+    radial-gradient(60rem 40rem at 80% -10%, rgb(234 179 8 / 0.12), transparent 60%),
+    radial-gradient(40rem 30rem at -10% 30%, rgb(180 83 9 / 0.10), transparent 60%),
+    linear-gradient(180deg, #0b0f17 0%, #111827 50%, #0b0f17 100%);
 }
 
 /* Respect users who have asked for less motion. */
@@ -81,11 +70,8 @@ section[id] {
   html {
     scroll-behavior: auto;
   }
-
-  .float-blob {
-    animation: none;
-  }
 }
+
 :where(a, button):focus-visible {
   outline: 3px solid #facc15;
   outline-offset: 4px;
@@ -104,12 +90,6 @@ section[id] {
 
 .skip-link:focus {
   transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-pulse {
-    animation: none;
-  }
 }
 
 /* Keep original compact labels legible on smaller screens. */

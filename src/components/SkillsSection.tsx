@@ -1,4 +1,5 @@
 import React from "react";
+import Reveal from "./Reveal";
 import {
   FaAws,
   FaDocker,
@@ -168,16 +169,16 @@ const SkillsSection: React.FC = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center text-center relative select-none p-6 md:p-12 py-16 md:py-24"
+      className="flex flex-col items-center justify-center text-center relative p-6 md:p-12 py-16 md:py-24"
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-2 text-white">
         <span className="text-yellow-500">Technical</span> Skills
       </h2>
-      <p className="text-gray-400 text-sm md:text-base mb-8 md:mb-10 max-w-2xl">
-        The stack behind everything above | cloud, DevOps, full-stack, and the tools I run a business on.
+      <p className="text-gray-300 text-sm md:text-base mb-8 md:mb-10 max-w-2xl">
+        The stack behind everything above: cloud, DevOps, full stack, and the tools I run a business on.
       </p>
 
-      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <Reveal className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CATEGORIES.map((cat) => (
           <div
             key={cat.title}
@@ -199,7 +200,7 @@ const SkillsSection: React.FC = () => {
             </div>
           </div>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 };

@@ -65,13 +65,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 md:h-16">
         <a
           href="#home"
-          className="text-base md:text-lg font-bold text-white hover:text-yellow-500 select-none transition-colors tracking-tight"
+          className="text-base md:text-lg font-bold text-white hover:text-yellow-500 transition-colors tracking-tight"
         >
           Tamim Hmizi
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium select-none">
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium">
           {NAV_LINKS.map((link) => (
             <a key={link.id} href={`#${link.id}`} className={linkClass(link.id)}>
               {link.label}
