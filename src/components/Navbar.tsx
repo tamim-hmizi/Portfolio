@@ -16,10 +16,6 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = NAV_LINKS.map((l) => document.getElementById(l.id)).filter(
-      (el): el is HTMLElement => el !== null
-    );
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,13 +24,26 @@ const Navbar: React.FC = () => {
       },
       { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
     );
-    sections.forEach((s) => observer.observe(s));
+
+    const observeSections = () => {
+      observer.disconnect();
+      NAV_LINKS.forEach((l) => {
+        const el = document.getElementById(l.id);
+        if (el) observer.observe(el);
+      });
+    };
+    observeSections();
+
+    const mainEl = document.getElementById("content");
+    const mutationObserver = new MutationObserver(observeSections);
+    if (mainEl) mutationObserver.observe(mainEl, { childList: true });
 
     const onScroll = () => setScrolled(window.scrollY > 8);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     return () => {
+      mutationObserver.disconnect();
       observer.disconnect();
       window.removeEventListener("scroll", onScroll);
     };
