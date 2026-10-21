@@ -28,3 +28,8 @@ tmp/
 # Generated TypeScript build metadata
 *.tsbuildinfo
 vite.config.d.ts
+
+# Python and local tooling
+__pycache__/
+*.pyc
+.claude/

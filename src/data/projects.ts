@@ -240,7 +240,7 @@ export const projects: Project[] = [
     featured: true,
     status: "Axynoxia product",
     description:
-      "Modular ERP for operations, finance, inventory and reporting. NestJS, Prisma, PostgreSQL and Redis with dedicated client deployments, module discovery, MFA, RBAC, Docker Compose and Traefik.",
+      "Modular ERP for operations, finance, inventory and reporting. NestJS, Prisma, PostgreSQL and Redis with dedicated client deployments, module discovery, MFA and RBAC. Each deployment runs on Docker Compose with Traefik, behind the shared Caddy edge.",
     tech: [t(SiNestjs, "NestJS"), t(SiPrisma, "Prisma"), t(SiPostgresql, "PostgreSQL"), t(SiRedis, "Redis"), t(SiTraefikproxy, "Traefik")],
     url: "https://erp.products.axynoxia.com",
     domain: "erp.products.axynoxia.com",
