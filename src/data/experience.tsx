@@ -78,7 +78,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Infrastructure Consultant",
-    period: "Oct 2025 to May 2026",
+    period: "Oct 2025 to Apr 2026",
     details: ["RFC (Microsoft Gold CSP Partner)", "Ariana, Tunisia"],
     href: "https://rfc.com.tn",
     logo: { file: "rfclogo.png", alt: "RFC" },
