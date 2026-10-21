@@ -29,13 +29,16 @@ The social card is `public/og-image.svg`. To regenerate `public/og-image.png`, r
 ```sh
 npm run lint
 npm run typecheck
+npm test
 npm run build
 python3 scripts/build-resumes.py --check
 ```
 
+The tests in `src/data/__tests__` check the content itself: career periods are well formed, newest first and never show two employers at once; project titles are unique, links use HTTPS, and every screenshot, logo and resume PDF exists.
+
 ## Publish
 
-Push to `main`. The [Deploy workflow](.github/workflows/deploy.yml) installs dependencies, fails on any `npm audit` finding, runs lint, typecheck and build, then publishes `dist` to GitHub Pages. Pull requests run the same checks without deploying. Check the live page, the project filters, mobile navigation and both PDF downloads after each release.
+Push to `main`. The [Deploy workflow](.github/workflows/deploy.yml) installs dependencies, fails on any `npm audit` finding, runs lint, typecheck, tests and build, then publishes `dist` to GitHub Pages. Pull requests run the same checks without deploying. Check the live page, the project filters, mobile navigation and both PDF downloads after each release.
 
 ## Structure
 
