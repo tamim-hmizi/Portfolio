@@ -1,5 +1,5 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=1.5cm]{geometry}
+\usepackage[margin=1.7cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
@@ -11,41 +11,45 @@
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1pt}
+\setlength{\parskip}{2pt}
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\color{accent}\titlerule]
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
 \setlist[itemize]{label=\textbullet,leftmargin=13pt,itemsep=1pt,topsep=2pt,parsep=0pt}
 \newcommand{\role}[3]{\Needspace{5\baselineskip}\textbf{#1 | #2}\\#3\par}
+\newcommand{\group}[1]{\Needspace{4\baselineskip}\vspace{4pt}{\bfseries\color{accent}#1}\par}
 \newcommand{\project}[2]{\Needspace{3\baselineskip}\textbf{#1}. #2\par}
 \hypersetup{pdftitle={Tamim Hmizi | Ingénieur logiciel | Cloud, DevOps et IA},pdfauthor={Tamim Hmizi},pdfsubject={Curriculum vitae professionnel},pdflang={fr}}
 \begin{document}
 {\fontsize{25}{28}\selectfont\textbf{\color{accent}Tamim Hmizi}}\par
 {\large\textbf{Ingénieur logiciel | Cloud, DevOps et IA}}\par
-Ariana | \href{mailto:tamimhmizi@icloud.com}{tamimhmizi@icloud.com} | +216 54 886 068\\
-\href{https://www.linkedin.com/in/tamimhmizi/}{linkedin.com/in/tamimhmizi} | \href{https://github.com/tamim-hmizi}{github.com/tamim-hmizi}\\
-\href{https://tamim-hmizi.github.io/Portfolio/}{tamim-hmizi.github.io/Portfolio/}
+Ariana, Tunisie | \href{mailto:tamimhmizi@icloud.com}{tamimhmizi@icloud.com} | +216 54 886 068\\
+\href{https://www.linkedin.com/in/tamimhmizi/}{linkedin.com/in/tamimhmizi} | \href{https://github.com/tamim-hmizi}{github.com/tamim-hmizi} | \href{https://tamim-hmizi.github.io/Portfolio/}{tamim-hmizi.github.io/Portfolio}
 
 \section{Profil professionnel}
-Ingénieur logiciel en développement full stack, infrastructure cloud et IA appliquée. Ingénieur full stack chez Bassetti Group et fondateur d'Axynoxia, équipe d'ingénierie logicielle qui livre des plateformes sur mesure, de l'automatisation et des installations cloud. Je développe des applications web et mobiles, automatise leur livraison avec l'infrastructure as code et le CI/CD, et les exploite en production sur Azure, AWS et Kubernetes, avec intégration de LLM lorsque c'est pertinent.
+Ingénieur logiciel qui construit des produits et le cloud qui les fait tourner. Ingénieur full stack chez Bassetti Group et fondateur d'Axynoxia, équipe d'ingénierie logicielle qui livre des plateformes sur mesure, de l'automatisation et des installations cloud. Je conçois, livre et exploite des applications web et mobiles sur Azure, AWS et Kubernetes, j'automatise leur livraison avec l'infrastructure as code et le CI/CD, et j'intègre des LLM lorsque c'est utile.
+
+\textbf{Points forts :} 7 projets clients livrés (6 en production) $\cdot$ 6 produits Axynoxia en ligne $\cdot$ 45 pull requests fusionnées chez Bassetti sur 11 dépôts $\cdot$ supervision de 2 datacenters Azure Stack Hub $\cdot$ une application Flutter sur App Store et Google Play.
 
 \section{Compétences techniques}
-\textbf{Cloud :} Azure, Azure Stack Hub, AKS, AWS (EKS, IAM), GCP, OpenStack ; cloud hybride.\\
-\textbf{DevOps :} Docker, Kubernetes, Helm, Terraform, Ansible, Jenkins, GitHub Actions, GitLab CI, SonarQube, Trivy, Nexus, Traefik.\\
+\textbf{Cloud :} Azure, Azure Stack Hub, AKS, AWS (EKS, IAM), GCP, OpenStack, Cloudflare ; cloud hybride.\\
+\textbf{DevOps :} Docker, Kubernetes, Helm, Terraform, Ansible, Jenkins, GitHub Actions, GitLab CI, SonarQube, Trivy, Nexus, Traefik, Caddy.\\
 \textbf{Observabilité et exploitation :} Prometheus, Grafana, ELK ; Linux, Windows Server, Commvault, Fortinet.\\
-\textbf{IA :} intégration LLM, LangGraph, Temporal, automatisation Python.\\
-\textbf{Full stack :} TypeScript, JavaScript, Python, C\#, Java ; React, Next.js, Angular, Flutter, Node.js, NestJS, FastAPI, .NET ; PostgreSQL, MongoDB, Redis, Prisma.
+\textbf{IA :} intégration LLM, analyse de dépôts, automatisation Python.\\
+\textbf{Full stack :} TypeScript, JavaScript, Python, C\#, Java, PHP ; React, Next.js, Angular, Astro, Flutter, Node.js, NestJS, Express, FastAPI, .NET, Spring Boot, Symfony ; PostgreSQL, MongoDB, Redis, Prisma, Firebase ; Shopify, Stripe.
 
 \section{Expérience professionnelle}
 \role{Ingénieur full stack}{Bassetti Group, TEEXMA}{Avril 2026 à ce jour | Tunis}
 \begin{itemize}
 \item Développement d'applications de gestion de données techniques et scientifiques avec .NET, Angular et JavaScript sur TEEXMA, utilisée dans l'aéronautique, l'énergie, l'automobile, la chimie et la pharmacie.
-\item Maintenance des modules Delphi, conteneurisation Docker et automatisation des livraisons ; 45 pull requests fusionnées sur 11 dépôts, dont le CI Jenkins et Terraform.
+\item Maintenance des modules Delphi, conteneurisation Docker et automatisation des livraisons : 45 pull requests fusionnées sur 11 dépôts, dont le CI Jenkins et Terraform.
 \end{itemize}
 
 \role{Fondateur et ingénieur logiciel}{Axynoxia}{Janvier 2026 à ce jour | Tunis | \href{https://www.axynoxia.com}{axynoxia.com}}
 \begin{itemize}
-\item Direction d'une équipe d'ingénierie livrant des projets clients à périmètre fixe : cadrage, architecture, développement, cloud, CI/CD et exploitation.
-\item 7 projets clients livrés, dont 6 en production : application Flutter sur App Store et Google Play, billetterie, boutiques Shopify, site de génération de prospects, site d'agence et plateforme immobilière (préversion).\end{itemize}
+\item Direction d'une équipe d'ingénierie livrant des projets clients à périmètre fixe, du cadrage et de l'architecture au développement, au cloud, au CI/CD et à l'exploitation.
+\item 7 projets clients livrés, dont 6 en production : application Flutter sur les deux stores, billetterie, deux boutiques Shopify, site de génération de prospects, site d'agence et plateforme immobilière (préversion).
+\item Développement et exploitation de 6 produits Axynoxia (ERP, Energie, GymOS, Tickets, CRM Leasing, Invoice) sur un VPS derrière un proxy Caddy partagé.
+\end{itemize}
 
 \role{Consultant infrastructure}{RFC (Microsoft Gold CSP Partner)}{Octobre 2025 à mai 2026 | Ariana}
 \begin{itemize}
@@ -58,7 +62,7 @@ Ingénieur logiciel en développement full stack, infrastructure cloud et IA app
 \begin{itemize}
 \item Création de QuickOps, plateforme DevOps as a Service (React, Express, FastAPI, MongoDB) pour analyser, déployer et superviser des applications.
 \item Intégration d'un moteur LLM analysant la structure et les dépendances des dépôts pour recommander un déploiement VM ou Kubernetes.
-\item Provisioning des VM avec Terraform et Ansible, déploiement des microservices sur AKS ; pipelines Jenkins avec SonarQube, Nexus, Prometheus et Grafana ; validation des parcours VM et Kubernetes sur 2 applications MERN.
+\item Provisioning des VM avec Terraform et Ansible, déploiement des microservices sur AKS ; pipelines Jenkins avec SonarQube, Nexus, Prometheus et Grafana ; validation des deux parcours sur 2 applications MERN.
 \end{itemize}
 
 \role{Stagiaire cloud et full stack}{RFC}{Juillet 2024 à août 2024}
@@ -72,25 +76,38 @@ Ingénieur logiciel en développement full stack, infrastructure cloud et IA app
 \item Stagiaire ingénieur réseau, Tunisie Telecom C-NOC (2021) : supervision des liaisons B2B et incidents de routage.
 \end{itemize}
 
-\section{Projets choisis}
-\project{\href{https://github.com/tamim-hmizi/QuickOps-AI}{QuickOps}}{Analyse LLM des dépôts, livraison automatisée Terraform, Ansible, AKS et Jenkins, supervision Prometheus et Grafana.}
-\project{Enterprise Monitoring Platform | Azure Stack Hub}{Exporteurs Python sous Docker interrogeant les API Admin via OAuth2 ; tableaux de bord et alertes Grafana pour régions, stockage, VM et IOPS.}
-\project{\href{https://bmoovd-shop.com}{bmoovd Ticketing}}{Billetterie Next.js 14, tRPC et Prisma avec Stripe, Mollie et PayPal, billets QR signés et contrôle caméra pour les retransmissions de la Coupe du Monde 2026.}
-\project{\href{https://apps.apple.com/de/app/bmoovd/id6736364332}{bmoovd application mobile}}{Application Flutter sur App Store et Google Play avec Firebase Auth, Firestore, Cloud Functions et Stripe.}
-\project{\href{https://rimmobilien-test.de/}{Roehrdanz Immobilien (préversion)}}{Plateforme immobilière bilingue React, Express et MongoDB : annonces, filtres de recherche, demandes vers l'agent, RBAC et SEO dynamique.}
-\project{\href{https://habiter-mieux.info/}{Habiter Mieux}}{Site de génération de prospects solaires pour le marché français, avec tunnel de qualification et emails de confirmation automatisés.}
-\project{\href{https://confortex.shop/}{Confortex} et \href{https://www.viesublime.tn/}{Vie Sublime}}{Boutiques Shopify sur mesure pour des marques de literie et de mobilier : catalogues, collections, contenu SEO et newsletter.}
-\project{Digiqora Media}{Site portfolio d'agence de contenu, rapide sur mobile, avec vidéos chargées au clic.}
-\project{\href{https://omhyfamily.com/}{OMHY Entertainment}}{Plateforme média React et Express/MongoDB pour artistes, albums, casting et actualités, livrée avec Jenkins.}
-\project{\href{https://erp.products.axynoxia.com}{Axynoxia ERP}}{ERP modulaire NestJS, Prisma, PostgreSQL et Redis avec MFA, RBAC et Argon2 ; Docker Compose et Traefik.}
-\project{\href{https://crm-leasing.products.axynoxia.com}{Axynoxia CRM Leasing}}{Gestion du leasing MERN de l'origination à la comptabilité, calculs IFRS 16, RBAC à 10 rôles et arabe RTL.}
-\project{\href{https://energie.products.axynoxia.com}{Axynoxia Energie}}{Supervision PV/BESS et SCADA en TypeScript, modélisée sur une centrale de 5,5 MWp PV et BESS 2,2 MW/1,5 MWh.}
-\project{\href{https://gymos.products.axynoxia.com}{Axynoxia GymOS}}{SaaS multi-tenant de gestion de salles de sport sur Next.js : abonnements, facturation, réservations, espace membre et borne d'accueil.}
-\project{\href{https://tickets.products.axynoxia.com}{Axynoxia Tickets}}{Billetterie React/TypeScript : paiement, expiration des commandes, remboursements concurrents et tests de bout en bout.}
-\project{\href{https://invoice.products.axynoxia.com}{Axynoxia Invoice}}{Facturation React et Express/TypeScript avec double authentification, export PDF/Excel et documentation Swagger.}
-\project{DevOps CI/CD Hub | ESPRIT}{Pipelines Jenkins pour microservices Angular et Spring Boot avec SonarQube, Trivy et Nexus.}
-\project{OpenStack Private Cloud Lab | ESPRIT}{Cloud OpenStack multi-nœuds : réseaux virtuels, stockage, autoscaling et routage haute disponibilité.}
-Autres projets : \href{https://tamim-hmizi.github.io/Portfolio/}{tamim-hmizi.github.io/Portfolio}
+\section{Projets}
+\group{Cloud et DevOps}
+\project{\href{https://github.com/tamim-hmizi/QuickOps-AI}{QuickOps} | RFC}{Analyse LLM des dépôts qui recommande un déploiement VM ou Kubernetes, puis le provisionne avec Terraform, Ansible, AKS et Jenkins et le supervise avec Prometheus et Grafana.}
+\project{Enterprise Monitoring Platform | RFC}{Supervision Azure Stack Hub pour 2 datacenters : exporteurs Python sous Docker sur les API Admin avec OAuth2, tableaux de bord et alertes Grafana pour régions, stockage, VM et IOPS.}
+\project{Axynoxia Edge Proxy}{Proxy inverse Caddy partagé par tous les projets Axynoxia sur un VPS : terminaison TLS, certificats automatiques et routage par site sur un réseau Docker interne.}
+\project{DevOps CI/CD Hub | ESPRIT}{Pipelines Jenkins pour microservices Angular et Spring Boot avec quality gates SonarQube, analyse Trivy et versions d'artefacts Nexus.}
+\project{OpenStack Private Cloud Lab | ESPRIT}{Cloud OpenStack multi-nœuds : réseaux virtuels, stockage, VPN, autoscaling et routage haute disponibilité.}
+
+\group{Projets clients (Axynoxia)}
+\project{\href{https://bmoovd-shop.com}{bmoovd Ticketing}}{Billetterie des retransmissions de la Coupe du Monde 2026 à Wolfsburg. Next.js 14, tRPC et Prisma avec Stripe, Mollie et PayPal, billets QR signés, contrôle caméra et billets PDF par email.}
+\project{\href{https://apps.apple.com/de/app/bmoovd/id6736364332}{bmoovd application mobile}}{Application de bar sportif sur iOS et Android : programme, réservation de tables et scores en direct. Flutter avec Firebase Auth, Firestore, Cloud Functions et Stripe.}
+\project{\href{https://rimmobilien-test.de/}{Roehrdanz Immobilien} (préversion)}{Plateforme immobilière bilingue React, Express et MongoDB : annonces, filtres, demandes vers l'agent, espace employés, RBAC et SEO dynamique.}
+\project{\href{https://habiter-mieux.info/}{Habiter Mieux}}{Site de génération de prospects solaires pour le marché français : tunnel de qualification et emails de confirmation automatisés, de la visite au prospect qualifié en moins d'une minute.}
+\project{\href{https://confortex.shop/}{Confortex}}{Thème Shopify sur mesure pour une marque de literie : catalogue, panier et paiement, blog SEO, newsletter et showrooms.}
+\project{\href{https://www.viesublime.tn/}{Vie Sublime}}{Thème Shopify sur mesure pour une marque de mobilier, pensé pour un grand catalogue : collections maison, bureau, école et jardin.}
+\project{\href{https://digiqoramedia.com}{Digiqora Media}}{Site Astro statique pour une agence de contenu : rapide sur mobile, vidéos chargées au clic, animations GSAP, hébergé sur Cloudflare Pages.}
+\project{\href{https://omhyfamily.com/}{OMHY Entertainment}}{Plateforme média pour artistes, albums, casting et actualités. Front React, API Express/MongoDB et livraison Jenkins.}
+
+\group{Produits Axynoxia}
+\project{\href{https://erp.products.axynoxia.com}{Axynoxia ERP}}{ERP modulaire : opérations, finance, stocks et reporting. NestJS, Prisma, PostgreSQL et Redis avec MFA, RBAC et Argon2 ; Docker Compose et Traefik.}
+\project{\href{https://energie.products.axynoxia.com}{Axynoxia Energie}}{EMS et SCADA/IHM pour centrales hybrides solaire et batteries, modélisé sur un site de 5,5 MWp PV et BESS 2,2 MW/1,5 MWh : supervision, pilotage et reporting temps réel en TypeScript.}
+\project{\href{https://gymos.products.axynoxia.com}{Axynoxia GymOS}}{SaaS multi-tenant de gestion de salles de sport sur Next.js : abonnements et facturation, réservations, espace membre, borne d'accueil et site public par club.}
+\project{\href{https://tickets.products.axynoxia.com}{Axynoxia Tickets}}{Billetterie avec contrôle des entrées par QR et paiement hébergé Konnect ; expiration des commandes, remboursements concurrents et tests de bout en bout.}
+\project{\href{https://crm-leasing.products.axynoxia.com}{Axynoxia CRM Leasing}}{CRM et gestion de contrats de leasing : pipeline multi-tenant, calculs IFRS 16, RBAC à 10 rôles et arabe RTL.}
+\project{\href{https://invoice.products.axynoxia.com}{Axynoxia Invoice}}{Facturation multi-devises avec double authentification, export PDF/Excel, emails transactionnels et documentation Swagger.}
+\project{\href{https://www.axynoxia.com}{Site Axynoxia}}{Site de l'entreprise en Astro, React et Three.js, animations GSAP et blog, déployé sur Cloudflare Workers.}
+
+\group{Autres applications}
+\project{MERN E-commerce}{Boutique React/Redux et API Express/MongoDB : paniers, commandes, stocks et métriques, en versions monolithe et microservices utilisées pour valider QuickOps.}
+\project{New Journey}{Application Symfony 7/PHP de conseil en immigration : réservations, administration, Doctrine ORM, RBAC et Docker Compose.}
+\project{Espro | ESPRIT}{Système de gestion des enseignants avec un front Angular et un back Spring Boot.}
+\project{Bon Livraison}{Gestion des bons de livraison avec un front React/Vite et une API Express.js.}
 
 \section{Formation et langues}
 \textbf{Diplôme d'ingénieur en informatique | ESPRIT} | 2020 à 2025 | Ariana. Spécialisation Architecture Cloud et DevOps (ArcTIC).\\

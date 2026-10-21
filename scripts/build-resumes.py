@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate the application documents within a two-page limit."""
+"""Build and validate the application documents within a four-page limit."""
 import argparse
 from pathlib import Path
 import re
@@ -29,22 +29,23 @@ def main():
             if "Overfull" in log:
                 raise SystemExit(f"{name}: text overflows the page.\n{log}")
             source = (ROOT / "documents" / f"{name}.tex").read_text()
-            if source.count("\\project{") != 17:
-                raise SystemExit(f"{name}: expected 17 selected project entries")
-            if source.count("\\section{Selected Projects}" if name == "resume-en" else "\\section{Projets choisis}") != 1:
+            if source.count("\\project{") != 24:
+                raise SystemExit(f"{name}: expected all 24 project entries")
+            if source.count("\\section{Projects}" if name == "resume-en" else "\\section{Projets}") != 1:
                 raise SystemExit(f"{name}: expected one unified projects section")
             pdf = Path(directory) / f"{name}.pdf"
             metadata = run("pdfinfo", str(pdf))
             pages = int(re.search(r"^Pages:\s+(\d+)", metadata, re.M).group(1))
-            if not 1 <= pages <= 2:
-                raise SystemExit(f"{name}: expected at most 2 pages, found {pages}")
+            if not 1 <= pages <= 4:
+                raise SystemExit(f"{name}: expected at most 4 pages, found {pages}")
             text = run("pdftotext", "-enc", "UTF-8", "-nopgbrk", str(pdf), "-")
             for required in ("Tamim Hmizi", "tamimhmizi@icloud.com", "+216 54 886 068",
                              heading, "Bassetti Group", "Axynoxia", "RFC", "ESPRIT",
                              "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes",
                              "B2", "Enterprise Monitoring Platform", "bmoovd", "Roehrdanz",
                              "Habiter Mieux", "Confortex", "Vie Sublime", "Digiqora", "OMHY",
-                             "Axynoxia ERP", "Leasing", "Energie", "GymOS", "Axynoxia Tickets", "Axynoxia Invoice", "OpenStack"):
+                             "Axynoxia ERP", "Leasing", "Energie", "GymOS", "Axynoxia Tickets", "Axynoxia Invoice", "OpenStack",
+                             "Edge Proxy", "MERN", "New Journey", "Espro", "Bon Livraison"):
                 if required not in text:
                     raise SystemExit(f"{name}: text extraction lost {required!r}")
             language = "English (C1)" if name == "resume-en" else "anglais (C1)"

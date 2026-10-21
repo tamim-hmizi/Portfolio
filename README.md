@@ -20,7 +20,7 @@ Vite serves the site at `http://localhost:5173/Portfolio/`. The `/Portfolio/` ba
 * Projects: `src/data/projects.ts`. Live projects (with a URL or store link) are sorted first.
 * Career entries: `src/data/experience.tsx`.
 * Languages: `src/components/ContactSection.tsx`.
-* Resumes: `documents/resume-en.tex` and `documents/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. It requires pdfLaTeX and Poppler and checks the two-page limit, project entries, contact and career text, embedded fonts and Unicode maps before replacing either PDF in `public/`.
+* Resumes: `documents/resume-en.tex` and `documents/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. It requires pdfLaTeX and Poppler and checks the page limit, all project entries, contact and career text, embedded fonts and Unicode maps before replacing either PDF in `public/`.
 
 The social card is `public/og-image.svg`. To regenerate `public/og-image.png`, run `node scripts/build-share-image.mjs` with the `sharp` package available to Node.
 
