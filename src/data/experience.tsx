@@ -12,6 +12,7 @@ import {
   SiAngular,
   SiDotnet,
   SiNestjs,
+  SiPostgresql,
 } from "react-icons/si";
 import { MdSupportAgent, MdBackup } from "react-icons/md";
 import { VscAzure } from "react-icons/vsc";
@@ -71,9 +72,9 @@ export const experiences: Experience[] = [
       <>Lead a software engineering team delivering fixed-scope client projects: custom software, cloud &amp; DevOps, AI and intelligent automation, integrations and e-commerce.</>,
       <>Own the full delivery lifecycle on every engagement: scoping, architecture, full-stack build, cloud provisioning, CI/CD, observability and production operations.</>,
       <>Deliver client work such as a <Hl>Flutter app on the App Store and Google Play</Hl>, an event ticketing platform, Shopify storefronts, a lead generation site, an agency website and a real estate platform.</>,
-      <>Build and run Axynoxia products (ERP, Energie, GymOS, Tickets, CRM Leasing and Invoice) on <Hl>NestJS, Next.js, PostgreSQL, Redis</Hl> behind a shared <Hl>Caddy</Hl> edge proxy.</>,
+      <>Build and run Axynoxia products (ERP, Energie, GymOS, Tickets, CRM Leasing and Invoice) on <Hl>NestJS, Next.js, PostgreSQL and Redis</Hl> on one VPS, with a shared <Hl>Caddy</Hl> edge proxy in front.</>,
     ],
-    tech: [t(FaReact, "React"), t(SiNestjs, "NestJS"), t(FaNodeJs, "Node.js"), t(FaDocker, "Docker"), t(SiKubernetes, "Kubernetes"), t(SiTerraform, "Terraform")],
+    tech: [t(FaReact, "React"), t(SiNestjs, "NestJS"), t(FaNodeJs, "Node.js"), t(FaDocker, "Docker Compose"), t(SiPostgresql, "PostgreSQL")],
   },
   {
     title: "Infrastructure Consultant",
