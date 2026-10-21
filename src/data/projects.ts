@@ -195,12 +195,13 @@ export const projects: Project[] = [
   },
   {
     title: "Digiqora Media",
+    image: "projects/digiqora.webp",
     category: "client",
     description:
       "Static Astro site for a content agency producing reels, brand video and photography. Fast on mobile, with click-to-load video, GSAP motion and Cloudflare Pages hosting.",
     tech: [t(SiAstro, "Astro"), t(SiTailwindcss, "Tailwind CSS"), t(SiGreensock, "GSAP"), t(SiCloudflare, "Cloudflare Pages")],
-    url: "https://digiqoramedia.com",
-    domain: "digiqoramedia.com",
+    url: "https://digiqora-media.pages.dev",
+    domain: "digiqora-media.pages.dev",
   },
   {
     title: "Habiter Mieux",
