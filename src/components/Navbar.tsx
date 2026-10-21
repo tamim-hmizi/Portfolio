@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 w-full z-40 transition-all border-b ${
         scrolled
           ? "bg-black/70 backdrop-blur-md border-yellow-600/20 shadow-lg shadow-black/20"
-          : "bg-black/20 backdrop-blur-sm border-transparent"
+          : "bg-black/20 backdrop-blur-xs border-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 md:h-16">
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       <div id="mobile-menu"
-        className={`md:hidden fixed inset-x-0 top-14 h-[calc(100dvh-3.5rem)] bg-black/95 backdrop-blur-sm transition-opacity ${
+        className={`md:hidden fixed inset-x-0 top-14 h-[calc(100dvh-3.5rem)] bg-black/95 backdrop-blur-xs transition-opacity ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >

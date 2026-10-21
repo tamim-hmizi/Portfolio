@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+import { asset } from "../lib/asset";
 
 const EducationSection: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const EducationSection: React.FC = () => {
       <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
         <span className="text-yellow-500">Education</span>
       </h2>
-      <motion.div
+      <m.div
         className="w-full max-w-4xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -24,9 +25,9 @@ const EducationSection: React.FC = () => {
         >
           <div className="flex items-start gap-4 mb-4">
             <img
-              src="/Portfolio/espritlogo.jpg"
+              src={asset("espritlogo.jpg")}
               alt="ESPRIT logo"
-              className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-md shadow-sm bg-white p-2 flex-shrink-0"
+              className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-md shadow-xs bg-white p-2 shrink-0"
             />
             <div className="flex-1">
               <h3 className="text-xl md:text-2xl font-semibold text-yellow-500 mb-1">
@@ -83,7 +84,7 @@ const EducationSection: React.FC = () => {
             </div>
           </div>
         </a>
-      </motion.div>
+      </m.div>
     </section>
   );
 };

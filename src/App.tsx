@@ -1,5 +1,5 @@
 import React from "react";
-import { MotionConfig } from "framer-motion";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 import ProfileSection from "./components/ProfileSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -25,23 +25,26 @@ const App: React.FC = () => {
   // what made the page feel laggy. `clip` contains the same horizontal overflow
   // without creating a scroll container.
   return (
-    <div className="font-sans text-gray-200 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-x-clip min-h-screen relative">
+    <div className="font-sans text-gray-200 bg-linear-to-br from-gray-900 via-gray-800 to-black overflow-x-clip min-h-screen relative">
       {positions.map((position, index) => (
         <FloatingBackground key={index} position={position} index={index} />
       ))}
 
       <a href="#content" className="skip-link">Skip to content</a>
-      <MotionConfig reducedMotion="user">
-        <Navbar />
-        <main id="content" tabIndex={-1}>
-          <ProfileSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <SkillsSection />
-          <EducationSection />
-          <ContactSection />
-        </main>
-      </MotionConfig>
+      {/* LazyMotion with `m` components loads only the DOM animation features this site uses. */}
+      <LazyMotion features={domAnimation} strict>
+        <MotionConfig reducedMotion="user">
+          <Navbar />
+          <main id="content" tabIndex={-1}>
+            <ProfileSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <SkillsSection />
+            <EducationSection />
+            <ContactSection />
+          </main>
+        </MotionConfig>
+      </LazyMotion>
     </div>
   );
 };

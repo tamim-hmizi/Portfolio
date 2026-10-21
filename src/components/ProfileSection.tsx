@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+import { asset } from "../lib/asset";
 import { FaFileAlt } from "react-icons/fa";
 
 const ProfileSection: React.FC = () => {
@@ -10,8 +11,8 @@ const ProfileSection: React.FC = () => {
     >
       <div className="absolute inset-0 bg-black opacity-30 pointer-events-none" />
 
-      <motion.img
-        src="/Portfolio/me.jpg"
+      <m.img
+        src={asset("me.jpg")}
         alt="Tamim Hmizi"
         width={192}
         height={192}
@@ -23,16 +24,16 @@ const ProfileSection: React.FC = () => {
         transition={{ duration: 0.8 }}
       />
 
-      <motion.h1
+      <m.h1
         className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-white z-10 select-none leading-tight"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
         Tamim Hmizi
-      </motion.h1>
+      </m.h1>
 
-      <motion.div
+      <m.div
         className="flex flex-wrap items-center gap-2 mb-4 z-10 justify-center max-w-xl"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -50,9 +51,9 @@ const ProfileSection: React.FC = () => {
         <span className="inline-block bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
           Applied AI & Automation
         </span>
-      </motion.div>
+      </m.div>
 
-      <motion.p
+      <m.p
         className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto mt-2 px-4 sm:px-6 z-10 leading-relaxed"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -61,10 +62,10 @@ const ProfileSection: React.FC = () => {
         I design, build and run software end to end: products and the cloud
         infrastructure underneath them.{" "}
         <span className="italic text-gray-300">I build it, I ship it, and I keep it running.</span>
-      </motion.p>
+      </m.p>
 
       {/* What I do */}
-      <motion.div
+      <m.div
         className="mt-5 z-10 flex flex-col items-center gap-2"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -95,12 +96,12 @@ const ProfileSection: React.FC = () => {
           software engineering company.{" "}
           <span className="italic">Elevating Enterprise Standards.</span>
         </p>
-      </motion.div>
+      </m.div>
 
       {/* Resume Downloads */}
       <div className="mt-6 z-10 w-full max-w-md flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <motion.a
-          href="/Portfolio/resume-en.pdf"
+        <m.a
+          href={asset("resume-en.pdf")}
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -113,9 +114,9 @@ const ProfileSection: React.FC = () => {
         >
           <FaFileAlt className="w-5 h-5" />
           <span>Resume (EN)</span>
-        </motion.a>
-        <motion.a
-          href="/Portfolio/cv-fr.pdf"
+        </m.a>
+        <m.a
+          href={asset("cv-fr.pdf")}
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -128,7 +129,7 @@ const ProfileSection: React.FC = () => {
         >
           <FaFileAlt className="w-5 h-5" />
           <span>CV (FR)</span>
-        </motion.a>
+        </m.a>
       </div>
     </section>
   );

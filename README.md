@@ -1,10 +1,8 @@
 # Tamim Hmizi | Portfolio
 
-Personal portfolio for **Software Engineer | Cloud, DevOps & AI**, built with React, TypeScript, Vite and Tailwind CSS.
+Personal portfolio for **Software Engineer | Cloud, DevOps & AI**, built with React 19, TypeScript, Vite 8, Tailwind CSS 4 and Framer Motion.
 
 [Live portfolio](https://tamim-hmizi.github.io/Portfolio/) · [English resume](https://tamim-hmizi.github.io/Portfolio/resume-en.pdf) · [French CV](https://tamim-hmizi.github.io/Portfolio/cv-fr.pdf)
-
-Client deliveries, internship work and independent projects share one Projects section. Visitors can expand the full list of 19 projects, review seven career entries and download either PDF.
 
 ## Local development
 
@@ -15,7 +13,16 @@ npm ci
 npm run dev
 ```
 
-Vite serves the site at `http://localhost:5173/Portfolio/`. The `/Portfolio/` base matches GitHub Pages hosting.
+Vite serves the site at `http://localhost:5173/Portfolio/`. The `/Portfolio/` base matches GitHub Pages hosting; reference files in `public/` through `asset()` from `src/lib/asset.ts` so they follow that base.
+
+## Editing content
+
+* Projects: `src/data/projects.ts`. Live projects (with a URL or store link) are sorted first.
+* Career entries: `src/data/experience.tsx`.
+* Languages: `src/components/ContactSection.tsx`.
+* Resumes: `documents/resume-en.tex` and `documents/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. It requires pdfLaTeX and Poppler and checks the two-page limit, project entries, contact and career text, embedded fonts and Unicode maps before replacing either PDF in `public/`.
+
+The social card is `public/og-image.svg`. To regenerate `public/og-image.png`, run `node scripts/build-share-image.mjs` with the `sharp` package available to Node.
 
 ## Checks
 
@@ -26,10 +33,6 @@ npm run build
 python3 scripts/build-resumes.py --check
 ```
 
-Run `python3 scripts/build-resumes.py` to regenerate the PDFs after editing their sources in `documents/`. The document build requires pdfLaTeX and Poppler. It validates the three-page maximum, full project inventory, contact and career text, embedded fonts and Unicode maps before replacing either PDF. Render and inspect all pages after editing. See [content reconciliation](docs/cv-content-audit.md) and [profile maintenance and research](docs/profile-editorial.md) for sources, content decisions and application guidance.
-
-The code-native social card is `public/og-image.svg`. To regenerate `public/og-image.png`, run `node scripts/build-share-image.mjs` with the `sharp` package available to Node.
-
 ## Publish
 
 ```sh
@@ -37,14 +40,15 @@ npm run build
 npm run deploy
 ```
 
-The existing `gh-pages` deployment publishes `dist` to the `gh-pages` branch. GitHub Pages then builds and serves that branch. Read the exact deployment result and verify the live page, expanded projects, mobile navigation and both PDF downloads before calling a release complete.
+`npm run deploy` pushes `dist` to the `gh-pages` branch, which GitHub Pages serves. Check the live page, the expanded project list, mobile navigation and both PDF downloads after each release.
 
 ## Structure
 
-* `src/components`: profile, projects, career, skills, education and contact.
-* `documents/resume-en.tex`, `documents/cv-fr.tex`: editable document sources.
-* `public/resume-en.pdf`, `public/cv-fr.pdf`: published application documents.
-* `scripts/build-resumes.py`: reproducible document build and extraction checks.
-* `docs/profile-editorial.md`: positioning, verified source references and maintenance guidance.
+* `src/components`: page sections and shared UI.
+* `src/data`: project and career content.
+* `src/lib`: small helpers.
+* `documents`: LaTeX sources for the resumes.
+* `public`: static files, published PDFs and images.
+* `scripts`: resume and social card builds.
 
 Contact: [tamimhmizi@icloud.com](mailto:tamimhmizi@icloud.com).
