@@ -67,11 +67,22 @@ export const categories: { id: ProjectCategory | "all"; label: string }[] = [
   { id: "other", label: "Other" },
 ];
 
+export interface CaseStudy {
+  problem: string;
+  role: string;
+  approach: string[];
+  result: string;
+}
+
 export interface Project {
   title: string;
   category: ProjectCategory;
-  /** Shown in the large row at the top of the section. */
+  /** Shown first, with a gold border. */
   featured?: boolean;
+  /** Screenshot in public/, e.g. "projects/confortex.webp". */
+  image?: string;
+  /** Short case study shown on featured cards. */
+  caseStudy?: CaseStudy;
   description: string;
   tech: Tech[];
   /** Main live link, shown with its domain. */
@@ -89,6 +100,19 @@ const t = (icon: IconType, label: string): Tech => ({ icon, label });
 export const projects: Project[] = [
   {
     title: "QuickOps",
+    image: "projects/quickops.svg",
+    caseStudy: {
+      problem:
+        "Teams without DevOps specialists struggle to choose where an application should run and to set up the pipelines, infrastructure and monitoring around it.",
+      role: "Sole engineer on my RFC final year project: architecture, all five repositories and the demo environments.",
+      approach: [
+        "An LLM service reads a repository's structure, dependencies and runtime needs and recommends VM or Kubernetes.",
+        "Terraform and Ansible provision VMs; Kubernetes manifests deploy microservices to AKS.",
+        "Jenkins pipelines build, test, scan with SonarQube and publish to Nexus; Prometheus and Grafana watch the result.",
+      ],
+      result:
+        "A single platform that takes a Git repository to a running, monitored deployment, validated on a monolithic and a microservice MERN application.",
+    },
     category: "cloud",
     featured: true,
     status: "RFC final year project",
@@ -108,6 +132,18 @@ export const projects: Project[] = [
   // Client work delivered through Axynoxia
   {
     title: "bmoovd Ticketing",
+    caseStudy: {
+      problem:
+        "A sports bar in Wolfsburg needed to sell premium seats for FIFA World Cup 2026 public viewings, with high traffic at release time and fast entry on match day.",
+      role: "Lead engineer through Axynoxia: architecture, full stack build, payments and deployment.",
+      approach: [
+        "Next.js 14 App Router with tRPC and strict TypeScript, MongoDB through Prisma.",
+        "Stripe, Mollie and PayPal checkout, with VAT invoices and PDF tickets sent by email.",
+        "Signed JWT QR codes checked by a camera scanner at the door, and role-based staff access.",
+      ],
+      result: "Fans buy seats online and staff check tickets in seconds at the entrance; the shop is live at bmoovd-shop.com.",
+    },
+    image: "projects/bmoovd-ticketing.webp",
     category: "client",
     featured: true,
     description:
@@ -118,6 +154,7 @@ export const projects: Project[] = [
   },
   {
     title: "bmoovd",
+    image: "projects/bmoovd.webp",
     category: "client",
     description:
       "Sports bar app on iOS and Android: programme, table reservations and live scores. Flutter with Firebase Auth, Firestore, Cloud Functions, Storage, Stripe and store release pipelines.",
@@ -127,6 +164,7 @@ export const projects: Project[] = [
   },
   {
     title: "Roehrdanz Immobilien",
+    image: "projects/roehrdanz.webp",
     category: "client",
     status: "Preview",
     description:
@@ -137,6 +175,7 @@ export const projects: Project[] = [
   },
   {
     title: "Confortex",
+    image: "projects/confortex.webp",
     category: "client",
     description:
       "Custom Shopify theme for a bedding brand: product collections, cart and payments, SEO editorial content, newsletter, delivery promotions and showroom information.",
@@ -146,6 +185,7 @@ export const projects: Project[] = [
   },
   {
     title: "Vie Sublime",
+    image: "projects/vie-sublime.webp",
     category: "client",
     description:
       "Custom Shopify theme for a furniture and home decor brand, built for a large catalog with collections for home, office, school and garden.",
@@ -177,13 +217,24 @@ export const projects: Project[] = [
     description:
       "Media and administration platform for artists, groups, albums, songs, casting submissions, news and newsletters. React front end, Express/MongoDB API and Jenkins delivery.",
     tech: [t(FaReact, "React"), t(SiChakraui, "Chakra UI"), t(SiGreensock, "GSAP"), t(SiJenkins, "Jenkins"), t(SiMongodb, "MongoDB")],
-    url: "https://omhyfamily.com",
-    domain: "omhyfamily.com",
+    status: "Client project",
   },
 
   // Axynoxia products, as listed on axynoxia.com
   {
     title: "Axynoxia ERP",
+    caseStudy: {
+      problem:
+        "Small and mid-sized companies juggle separate tools for operations, finance and inventory, with no single view of the business.",
+      role: "Founder and lead engineer: product design, architecture, backend, deployment and operations.",
+      approach: [
+        "NestJS, Prisma and PostgreSQL in a pnpm monorepo, with modules discovered and enabled per client.",
+        "Dedicated deployments per client, Redis for jobs and caching, Docker Compose behind Traefik.",
+        "MFA, role-based access, access requests, forced first-login password rotation and Argon2 hashing.",
+      ],
+      result: "One ERP that each client gets in its own isolated deployment, with a public demo at erp.products.axynoxia.com.",
+    },
+    image: "projects/axynoxia-erp.webp",
     category: "product",
     featured: true,
     status: "Axynoxia product",
@@ -195,6 +246,7 @@ export const projects: Project[] = [
   },
   {
     title: "Axynoxia Energie",
+    image: "projects/axynoxia-energie.webp",
     category: "product",
     status: "Axynoxia product",
     description:
@@ -205,6 +257,7 @@ export const projects: Project[] = [
   },
   {
     title: "Axynoxia GymOS",
+    image: "projects/axynoxia-gymos.webp",
     category: "product",
     status: "Axynoxia product",
     description:
@@ -215,6 +268,7 @@ export const projects: Project[] = [
   },
   {
     title: "Axynoxia Tickets",
+    image: "projects/axynoxia-tickets.webp",
     category: "product",
     status: "Axynoxia product",
     description:
@@ -225,6 +279,7 @@ export const projects: Project[] = [
   },
   {
     title: "Axynoxia CRM Leasing",
+    image: "projects/axynoxia-crm.webp",
     category: "product",
     status: "Axynoxia product",
     description:
@@ -245,6 +300,7 @@ export const projects: Project[] = [
   },
   {
     title: "Axynoxia Website",
+    image: "projects/axynoxia-website.webp",
     category: "product",
     description:
       "Company site built with Astro, React and Three.js, with GSAP motion and a blog, deployed to Cloudflare Workers.",
