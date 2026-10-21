@@ -193,7 +193,7 @@ const SkillsSection: React.FC = () => {
                   key={skill.label}
                   className="inline-flex items-center gap-1.5 bg-gray-900/60 border border-yellow-600/10 rounded-md px-2 py-1 text-xs text-gray-300"
                 >
-                  <span className="text-yellow-500 text-sm">{skill.icon}</span>
+                  <span className="text-yellow-500 text-sm" aria-hidden="true">{skill.icon}</span>
                   {skill.label}
                 </span>
               ))}
