@@ -205,6 +205,7 @@ export const projects: Project[] = [
   },
   {
     title: "Habiter Mieux",
+    image: "projects/habiter-mieux.webp",
     category: "client",
     description:
       "Solar lead generation site for the French market: trust-focused landing page, qualification funnel and automated confirmation emails, from visit to qualified lead in under a minute.",
@@ -291,6 +292,7 @@ export const projects: Project[] = [
   },
   {
     title: "Axynoxia Invoice",
+    image: "projects/axynoxia-invoice.webp",
     category: "product",
     status: "Axynoxia product",
     description:
