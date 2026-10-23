@@ -62,9 +62,8 @@ export const experiences: Experience[] = [
   {
     title: "Founder & Software Engineer | Axynoxia",
     period: "Jan 2026 to Present",
-    details: ["Tunis, Tunisia"],
+    details: ["Self-employed"],
     email: "tamim.hmizi@axynoxia.com",
-    tagline: "Elevating Enterprise Standards.",
     current: true,
     logo: { file: "axynoxia-logo.png", alt: "Axynoxia", dark: true },
     cta: { label: "Book a discovery call", url: "https://calendly.com/axynoxia/axynoxia-discovery-call" },
