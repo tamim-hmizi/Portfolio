@@ -252,7 +252,7 @@ export const projects: Project[] = [
     category: "product",
     status: "Axynoxia product",
     description:
-      "EMS and SCADA/HMI for hybrid solar and battery plants, modeled on the ADAM PV project: real-time supervision, control and reporting across TypeScript domain, API, control and simulation services.",
+      "EMS and SCADA/HMI demonstration for hybrid solar and battery plants, using simulated data: supervision, control and reporting across TypeScript domain, API, control and simulation services.",
     tech: [t(FaSolarPanel, "PV + BESS / SCADA"), t(FaReact, "React"), t(SiTypescript, "TypeScript monorepo")],
     url: "https://energie.products.axynoxia.com",
     domain: "energie.products.axynoxia.com",
