@@ -47,14 +47,14 @@ const ProfileSection: React.FC = () => (
             View projects <FaArrowRight aria-hidden="true" />
           </a>
           <a
-            href={asset("resume-en-short.pdf")}
+            href={asset("resume-en.pdf")}
             download="Tamim-Hmizi-Resume-EN.pdf"
             className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg border-2 border-yellow-500/60 text-yellow-400 font-semibold hover:border-yellow-400 hover:bg-yellow-500/10 transition-colors"
           >
             <FaFileAlt aria-hidden="true" /> Resume (EN)
           </a>
           <a
-            href={asset("cv-fr-short.pdf")}
+            href={asset("cv-fr.pdf")}
             download="Tamim-Hmizi-CV-FR.pdf"
             className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg border-2 border-gray-600 text-gray-200 font-semibold hover:border-gray-400 hover:bg-white/5 transition-colors"
           >
@@ -65,16 +65,6 @@ const ProfileSection: React.FC = () => (
           {...fadeUp(0.3)}
           className="mt-4 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-sm text-gray-300"
         >
-          <span>
-            Full versions with every project:{" "}
-            <a href={asset("resume-en.pdf")} download="Tamim-Hmizi-Resume-EN-full.pdf" className="text-yellow-400 underline underline-offset-4 hover:text-yellow-300">
-              EN
-            </a>{" "}
-            ·{" "}
-            <a href={asset("cv-fr.pdf")} download="Tamim-Hmizi-CV-FR-complet.pdf" className="text-yellow-400 underline underline-offset-4 hover:text-yellow-300">
-              FR
-            </a>
-          </span>
           <a
             href="https://calendly.com/axynoxia/axynoxia-discovery-call"
             target="_blank"

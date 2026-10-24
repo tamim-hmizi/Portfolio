@@ -101,7 +101,7 @@ describe("projects", () => {
 });
 
 describe("downloads", () => {
-  it.each(["resume-en.pdf", "resume-en-short.pdf", "cv-fr.pdf", "cv-fr-short.pdf"])("ships %s", (file: string) => {
+  it.each(["resume-en.pdf", "cv-fr.pdf"])("ships %s", (file: string) => {
     expect(existsSync(resolve(publicDir, file))).toBe(true);
   });
 });

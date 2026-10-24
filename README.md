@@ -2,7 +2,7 @@
 
 Personal portfolio for **Software Engineer | Cloud, DevOps & AI**, built with React 19, TypeScript, Vite 8, Tailwind CSS 4 and Framer Motion.
 
-[Live portfolio](https://tamim-hmizi.github.io/Portfolio/) · Resume: [EN, 2 pages](https://tamim-hmizi.github.io/Portfolio/resume-en-short.pdf), [EN, full](https://tamim-hmizi.github.io/Portfolio/resume-en.pdf) · CV: [FR, 2 pages](https://tamim-hmizi.github.io/Portfolio/cv-fr-short.pdf), [FR, complet](https://tamim-hmizi.github.io/Portfolio/cv-fr.pdf)
+[Live portfolio](https://tamim-hmizi.github.io/Portfolio/) · [Resume (EN)](https://tamim-hmizi.github.io/Portfolio/resume-en.pdf) · [CV (FR)](https://tamim-hmizi.github.io/Portfolio/cv-fr.pdf)
 
 ## Local development
 
@@ -20,7 +20,7 @@ Vite serves the site at `http://localhost:5173/Portfolio/`. The `/Portfolio/` ba
 * Projects: `src/data/projects.ts`. Live projects (with a URL or store link) are sorted first.
 * Career entries: `src/data/experience.tsx`.
 * Languages: `src/components/ContactSection.tsx`.
-* Resumes: `documents/resume-en.tex` and `documents/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. It builds the full PDFs and generates the two-page versions (`*-short.pdf`) from the same sources, keeping the projects listed in `SHORT_PROJECTS`. It requires pdfLaTeX and Poppler and checks the page limit, all project entries, contact and career text, embedded fonts and Unicode maps before replacing either PDF in `public/`.
+* Resumes: `documents/resume-en.tex` and `documents/cv-fr.tex`, then run `python3 scripts/build-resumes.py`. It builds only the full English and French PDFs. It requires pdfLaTeX and Poppler and checks the page limit, all project entries, contact and career text, embedded fonts and Unicode maps before replacing either PDF in `public/`.
 
 The social card is `public/og-image.svg`. To regenerate `public/og-image.png`, run `node scripts/build-share-image.mjs` with the `sharp` package available to Node.
 
