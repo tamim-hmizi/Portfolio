@@ -40,6 +40,7 @@ import {
   SiGrafana,
   SiFirebase,
   SiAstro,
+  SiThreedotjs,
   SiCloudflare,
   SiCaddy,
   SiTailwindcss,
@@ -61,7 +62,7 @@ export type ProjectCategory = "client" | "product" | "cloud" | "other";
 export const categories: { id: ProjectCategory | "all"; label: string }[] = [
   { id: "all", label: "All" },
   { id: "client", label: "Client work" },
-  { id: "product", label: "Products" },
+  { id: "product", label: "Axynoxia products" },
   { id: "cloud", label: "Cloud & DevOps" },
   { id: "other", label: "Other" },
 ];
@@ -128,13 +129,13 @@ export const projects: Project[] = [
     ],
   },
 
-  // Freelance client work
+  // Client work delivered through Axynoxia
   {
     title: "bmoovd Ticketing",
     caseStudy: {
       problem:
         "A sports bar in Wolfsburg needed to sell premium seats for FIFA World Cup 2026 public viewings, with high traffic at release time and fast entry on match day.",
-      role: "Lead engineer (freelance): architecture, full stack build, payments and deployment.",
+      role: "Lead engineer through Axynoxia: architecture, full stack build, payments and deployment.",
       approach: [
         "Next.js 14 App Router with tRPC and strict TypeScript, MongoDB through Prisma.",
         "Stripe, Mollie and PayPal checkout, with VAT invoices and PDF tickets sent by email.",
@@ -221,9 +222,9 @@ export const projects: Project[] = [
     status: "Client project",
   },
 
-  // Self-hosted products
+  // Axynoxia products, as listed on axynoxia.com
   {
-    title: "ERP Platform",
+    title: "Axynoxia ERP",
     caseStudy: {
       problem:
         "Small and mid-sized companies juggle separate tools for operations, finance and inventory, with no single view of the business.",
@@ -238,7 +239,7 @@ export const projects: Project[] = [
     image: "projects/axynoxia-erp.webp",
     category: "product",
     featured: true,
-    status: "Product",
+    status: "Axynoxia product",
     description:
       "Modular ERP for operations, finance, inventory and reporting. NestJS, Prisma, PostgreSQL and Redis with dedicated client deployments, module discovery, MFA and RBAC. Each deployment runs on Docker Compose with Traefik, behind the shared Caddy edge.",
     tech: [t(SiNestjs, "NestJS"), t(SiPrisma, "Prisma"), t(SiPostgresql, "PostgreSQL"), t(SiRedis, "Redis"), t(SiTraefikproxy, "Traefik")],
@@ -246,10 +247,10 @@ export const projects: Project[] = [
     domain: "erp.products.axynoxia.com",
   },
   {
-    title: "Energy Management Platform",
+    title: "Axynoxia Energie",
     image: "projects/axynoxia-energie.webp",
     category: "product",
-    status: "Product",
+    status: "Axynoxia product",
     description:
       "EMS and SCADA/HMI demonstration for hybrid solar and battery plants, using simulated data: supervision, control and reporting across TypeScript domain, API, control and simulation services.",
     tech: [t(FaSolarPanel, "PV + BESS / SCADA"), t(FaReact, "React"), t(SiTypescript, "TypeScript monorepo")],
@@ -257,10 +258,10 @@ export const projects: Project[] = [
     domain: "energie.products.axynoxia.com",
   },
   {
-    title: "GymOS",
+    title: "Axynoxia GymOS",
     image: "projects/axynoxia-gymos.webp",
     category: "product",
-    status: "Product",
+    status: "Axynoxia product",
     description:
       "Multi-tenant gym management SaaS: memberships and billing, class scheduling and bookings, member portal, front-desk kiosk and a public site per club, all from one Next.js app.",
     tech: [t(SiNextdotjs, "Next.js"), t(SiTypescript, "TypeScript"), t(FaDumbbell, "Gym management")],
@@ -268,10 +269,10 @@ export const projects: Project[] = [
     domain: "gymos.products.axynoxia.com",
   },
   {
-    title: "Ticketing Platform",
+    title: "Axynoxia Tickets",
     image: "projects/axynoxia-tickets.webp",
     category: "product",
-    status: "Product",
+    status: "Axynoxia product",
     description:
       "Event ticketing with QR entry control, ticket management and hosted Konnect payment. TypeScript pnpm monorepo with order expiry, concurrent refund handling and end to end tests.",
     tech: [t(FaReact, "React + Vite"), t(SiTypescript, "TypeScript"), t(SiExpress, "API"), t(FaDocker, "Docker")],
@@ -279,10 +280,10 @@ export const projects: Project[] = [
     domain: "tickets.products.axynoxia.com",
   },
   {
-    title: "CRM Leasing Platform",
+    title: "Axynoxia CRM Leasing",
     image: "projects/axynoxia-crm.webp",
     category: "product",
-    status: "Product",
+    status: "Axynoxia product",
     description:
       "CRM and lease contract management with a multi-tenant pipeline, IFRS 16/BCT oriented calculations, 10-role RBAC, Arabic RTL and financial report exports.",
     tech: [t(FaHandshake, "CRM"), t(SiMongodb, "MongoDB"), t(FaReact, "React"), t(FaNodeJs, "Node.js")],
@@ -290,10 +291,10 @@ export const projects: Project[] = [
     domain: "crm-leasing.products.axynoxia.com",
   },
   {
-    title: "Invoicing Platform",
+    title: "Axynoxia Invoice",
     image: "projects/axynoxia-invoice.webp",
     category: "product",
-    status: "Product",
+    status: "Axynoxia product",
     description:
       "Multi-currency invoicing with the tax mentions accountants need: two factor authentication, PDF/Excel export, transactional email and Swagger API documentation.",
     tech: [t(FaFileInvoiceDollar, "Invoicing"), t(FaReact, "React 19"), t(SiExpress, "Express"), t(SiMongodb, "MongoDB")],
@@ -301,11 +302,21 @@ export const projects: Project[] = [
     domain: "invoice.products.axynoxia.com",
   },
   {
-    title: "Edge Proxy",
+    title: "Axynoxia Website",
+    image: "projects/axynoxia-website.webp",
+    category: "product",
+    description:
+      "Company site built with Astro, React and Three.js, with GSAP motion and a blog, deployed to Cloudflare Workers.",
+    tech: [t(SiAstro, "Astro"), t(FaReact, "React"), t(SiThreedotjs, "Three.js"), t(SiCloudflare, "Cloudflare Workers")],
+    url: "https://www.axynoxia.com",
+    domain: "axynoxia.com",
+  },
+  {
+    title: "Axynoxia Edge Proxy",
     category: "cloud",
     status: "Infrastructure",
     description:
-      "Shared Caddy reverse proxy for every self-hosted project on one VPS: one TLS terminator, automatic certificates and per-site routing over an internal Docker network.",
+      "Shared Caddy reverse proxy for every project on the Axynoxia VPS: one TLS terminator, automatic certificates and per-site routing over an internal Docker network.",
     tech: [t(SiCaddy, "Caddy"), t(FaDocker, "Docker Compose"), t(FaServer, "VPS")],
   },
 

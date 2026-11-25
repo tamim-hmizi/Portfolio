@@ -27,7 +27,16 @@ const ProfileSection: React.FC = () => (
           I build software <span className="text-yellow-500">and the cloud it runs on.</span>
         </m.h1>
         <m.p {...fadeUp(0.16)} className="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
-          I&apos;m Tamim Hmizi, Full Stack Engineer at Bassetti Group. As a freelancer I have also delivered 8 client projects and several self-hosted products. I build web and mobile apps, run them on Azure, AWS and Kubernetes, and automate their delivery with Terraform, Ansible and CI/CD.
+          I&apos;m Tamim Hmizi, Full Stack Engineer at Bassetti Group and founder of{" "}
+          <a
+            href="https://www.axynoxia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 font-semibold underline-offset-4 hover:underline"
+          >
+            Axynoxia
+          </a>
+          , where I have delivered 8 client projects and 7 products. I build web and mobile apps, run them on Azure, AWS and Kubernetes, and automate their delivery with Terraform, Ansible and CI/CD.
         </m.p>
 
         <m.div {...fadeUp(0.24)} className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -57,12 +66,12 @@ const ProfileSection: React.FC = () => (
           className="mt-4 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-sm text-gray-300"
         >
           <a
-            href="https://www.linkedin.com/in/tamimhmizi/"
+            href="https://calendly.com/axynoxia/axynoxia-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-yellow-400 transition-colors"
           >
-            <FaCalendarCheck aria-hidden="true" /> Open to full stack, cloud and DevOps roles
+            <FaCalendarCheck aria-hidden="true" /> Book a discovery call
           </a>
         </m.div>
 
