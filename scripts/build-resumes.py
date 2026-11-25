@@ -16,10 +16,10 @@ DOCUMENTS = (
 )
 # Additional project titles required in the full versions.
 FULL_ONLY = ("Habiter Mieux", "Confortex", "Vie Sublime", "Digiqora", "OMHY", "Edge Proxy",
-             "Axynoxia Tickets", "Axynoxia Invoice", "OpenStack Private Cloud Lab", "MERN E-commerce", "New Journey", "Espro", "Bon Livraison")
-BOTH = ("Tamim Hmizi", "tamimhmizi@icloud.com", "+216 54 886 068", "Bassetti Group", "Axynoxia", "RFC",
+             "Ticketing Platform", "Invoicing Platform", "OpenStack Private Cloud Lab", "MERN E-commerce", "New Journey", "Espro", "Bon Livraison")
+BOTH = ("Tamim Hmizi", "tamimhmizi@icloud.com", "+216 54 886 068", "Bassetti Group", "RFC",
         "ESPRIT", "Tunisie Telecom", "QuickOps", "LLM", "Terraform", "Kubernetes", "B2",
-        "Enterprise Monitoring Platform", "bmoovd", "Roehrdanz", "Axynoxia ERP", "Energie", "GymOS")
+        "Enterprise Monitoring Platform", "bmoovd", "Roehrdanz", "ERP Platform", "Energy Management", "GymOS")
 
 
 def run(*args):
@@ -63,8 +63,8 @@ def main():
         outputs = []
         for name, heading, projects_heading, language in DOCUMENTS:
             full = (ROOT / "documents" / f"{name}.tex").read_text(encoding="utf-8")
-            if full.count("\\project{") != 24:
-                raise SystemExit(f"{name}: expected all 24 project entries")
+            if full.count("\\project{") != 23:
+                raise SystemExit(f"{name}: expected all 23 project entries")
             for tex, max_pages, required, forbidden in (
                 (ROOT / "documents" / f"{name}.tex", 4, BOTH + FULL_ONLY, ()),
             ):

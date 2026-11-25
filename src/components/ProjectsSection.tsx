@@ -147,8 +147,7 @@ const ProjectsSection: React.FC = () => {
             <span className="text-yellow-500">Key</span> Projects
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Client work delivered through <span className="text-yellow-400 font-semibold">Axynoxia</span>, the products
-            we build and run, and cloud and DevOps engineering from RFC and ESPRIT.
+            Freelance client work, the products I build and run, and cloud and DevOps engineering from RFC and ESPRIT.
           </p>
         </Reveal>
 
