@@ -36,7 +36,7 @@ describe("experience", () => {
 
   it("never has two employers at once, apart from my own company", () => {
     const employed = experiences.filter(
-      (e) => !e.title.includes("Axynoxia") && !/Intern|Final Year Project/.test(e.title + (e.details ?? []).join(" "))
+      (e) => !e.title.includes("Freelance") && !/Intern|Final Year Project/.test(e.title + (e.details ?? []).join(" "))
     );
     const ranges = employed.map((e) => ({ title: e.title, range: parsePeriod(e.period) }));
     for (let i = 0; i < ranges.length; i++) {
@@ -49,8 +49,8 @@ describe("experience", () => {
     }
   });
 
-  it("has at most one current employer besides Axynoxia", () => {
-    const current = experiences.filter((e) => e.current && !e.title.includes("Axynoxia"));
+  it("has at most one current employer besides freelance work", () => {
+    const current = experiences.filter((e) => e.current && !e.title.includes("Freelance"));
     expect(current.length).toBeLessThanOrEqual(1);
   });
 

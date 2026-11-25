@@ -37,16 +37,6 @@ const ContactSection: React.FC = () => {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
-              <FaEnvelope className="text-yellow-500 text-xl shrink-0 opacity-0 sm:opacity-100" />
-              <span className="text-sm md:text-base font-semibold">Axynoxia (client work):</span>
-              <a
-                href="mailto:tamim.hmizi@axynoxia.com?subject=Project%20Inquiry"
-                className="text-yellow-400 hover:text-yellow-500 transition-colors font-semibold break-all sm:break-normal"
-              >
-                tamim.hmizi@axynoxia.com
-              </a>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-gray-200">
               <FaPhoneAlt className="text-yellow-500 text-xl shrink-0" />
               <span className="text-sm md:text-base font-semibold">Phone:</span>
               <a
